@@ -16,8 +16,11 @@ jobs:
         with:
           submodules: true
 
-      - name: Wuppie
-        run: echo "${{ GITHUB_REF }}"
+      - name: WuppiePR
+        run: echo "${{ github.head_ref }}"
+
+      - name: WuppieRef
+        run: echo "${{ github.ref }}"
 
       - name: RunPandoc
         uses: ./.github/actions/alpine-pandoc-hugo
