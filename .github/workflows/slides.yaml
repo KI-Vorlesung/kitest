@@ -18,6 +18,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Wuppie
+        run: echo "${{ GITHUB_REF }}"
+      - name: Wuppie
+        run: git branch
+
       - name: RunPandocPR
         uses: ./.github/actions/alpine-pandoc-hugo
         if: ${{ github.head_ref }}
