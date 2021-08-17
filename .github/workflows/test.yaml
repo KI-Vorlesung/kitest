@@ -20,4 +20,4 @@ jobs:
       - name: RunHugo
         uses: ./.github/actions/alpine-pandoc-hugo
         with:
-          make-target: 'DOCKER=false all'
+          make-target: 'DOCKER=false  all'

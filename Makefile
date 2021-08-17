@@ -1,11 +1,13 @@
 ## Tools
-## In case this doesn't work, set the path manually (use absolute paths).
 ##
-## Launch tools via a Docker/container: make TARGET
-## Launch the tools directly (installed by default): make DOCKER=false TARGET
+## Launching tools via a Docker container: make TARGET
+## Launch the tools directly:              make DOCKER=false TARGET
+##
+## By default, a Docker container is used. To create this container,
+## run: make create-docker-image
 ifndef DOCKER
-PANDOC        = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc" alpine-pandoc-hugo
-HUGO          = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo" alpine-pandoc-hugo
+PANDOC        = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc"   alpine-pandoc-hugo
+HUGO          = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo"     alpine-pandoc-hugo
 LATEX         = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pdflatex" alpine-pandoc-hugo
 else
 PANDOC        = pandoc
@@ -114,8 +116,8 @@ $(ID)_%.html: $(MD)/%.md
 
 
 ## build Docker image alpine-pandoc-hugo locally
-.PHONY: docker-image
-docker-image:
+.PHONY: create-docker-image
+create-docker-image:
 	cd .github/actions/alpine-pandoc-hugo && make clean all
 
 ## clean up
