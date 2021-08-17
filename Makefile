@@ -1,11 +1,11 @@
 ## Tools
 ##
 ## Launching tools via a Docker container: make TARGET
-## Launch the tools directly:              make DOCKER=false TARGET
+## Launch the tools directly:              export DOCKER=false; make TARGET
 ##
 ## By default, a custom Docker image will be used. To create this
 ## image, run: make create-docker-image
-ifndef DOCKER
+ifneq ($(DOCKER), false)
 PANDOC        = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc"   alpine-pandoc-hugo
 HUGO          = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo"     alpine-pandoc-hugo
 LATEX         = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pdflatex" alpine-pandoc-hugo
