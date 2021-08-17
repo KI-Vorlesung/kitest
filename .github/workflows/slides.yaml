@@ -20,6 +20,7 @@ jobs:
 
       - name: Wuppie
         run: echo "${{ GITHUB_REF }}"
+        
       - name: Wuppie
         run: git branch
 
