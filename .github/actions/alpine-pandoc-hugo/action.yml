@@ -9,5 +9,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - export DOCKER=false
-    - ${{ inputs.make-target }}
+    - export DOCKER=false; ${{ inputs.make-target }}
