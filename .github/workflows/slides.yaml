@@ -28,7 +28,7 @@ jobs:
         uses: ./.github/actions/alpine-pandoc-hugo
         if: ${{ ! github.head_ref }}
         with:
-          make-target: 'DOCKER=false  slides'
+          make-target: 'make DOCKER=false  slides'
 
 
       - name: UploadArtefacts
