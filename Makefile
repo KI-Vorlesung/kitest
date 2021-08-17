@@ -29,9 +29,9 @@ PANDOC_DIRS   = --data-dir=pandoc --resource-path=".:pandoc"
 
 ## Some folder and file names
 CONTENT = content
+PAGE    = index.md
 PDF     = pdf
 DOCS    = docs
-PAGE    = index.md
 
 
 ## Pages from which slide decks are to be created
@@ -68,13 +68,8 @@ web:
 ## Auxiliary targets
 
 ## Create actual slides
-SLIDEOPTIONS = $(PANDOC_DIRS) -d slides -f markdown+rebase_relative_paths
-$(SLIDES): %: $(CONTENT)/%/$(PAGE) $(PDF)
-	echo "Pandoc: $(PANDOC)"
-	echo "Ziel: $@"
-	echo $(addsuffix .pdf,$(addprefix $(PDF)/,$(subst /,_,$@)))
-	echo "Quelle: $<"
-#	$(PANDOC) $(SLIDEOPTIONS) -o $@ $<
+$(SLIDES): %: $(CONTENT)/%/$(PAGE)  $(PDF)
+	$(PANDOC) $(PANDOC_DIRS) -d slides  $<  -o $(addsuffix .pdf,$(addprefix $(PDF)/,$(subst /,_,$@)))
 
 ## Create folder "$(PDF)/"
 $(PDF):
