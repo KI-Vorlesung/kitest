@@ -19,7 +19,7 @@ jobs:
       - name: RunPandoc
         uses: ./.github/actions/alpine-pandoc-hugo
         with:
-          make-target: 'DOCKER=false  slides'
+          make-target: 'make DOCKER=false  slides'
 
       - name: UploadArtefacts
         uses: actions/upload-artifact@v2
