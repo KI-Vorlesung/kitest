@@ -2,7 +2,7 @@
 ## In case this doesn't work, set the path manually (use absolute paths).
 ##
 ## Launch tools via a Docker/container: make TARGET
-## Launch the tools directly (installed by default): make DOCKER="false" TARGET
+## Launch the tools directly (installed by default): make DOCKER=false TARGET
 ifndef DOCKER
 PANDOC        = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc" alpine-pandoc-hugo
 HUGO          = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo" alpine-pandoc-hugo
