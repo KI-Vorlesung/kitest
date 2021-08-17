@@ -1,0 +1,29 @@
+name: SLIDES
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: CheckOut
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: RunPandoc
+        uses: ./.github/actions/alpine-pandoc-hugo
+        with:
+          make-target: 'DOCKER=false  slides'
+
+      - name: UploadArtefacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: slides
+          path: ./pdf/
+          retention-days: 1
