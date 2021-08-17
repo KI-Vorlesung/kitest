@@ -42,6 +42,7 @@ bin/**/*
 .metadata/
 public/
 docs/
+pdf/
 
 
 # JAVA #
