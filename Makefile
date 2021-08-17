@@ -27,6 +27,13 @@ endif
 PANDOC_DIRS   = --data-dir=pandoc --resource-path=".:pandoc"
 
 
+## Some folder and file names
+CONTENT = content
+PDF     = pdf
+DOCS    = docs
+PAGE    = index.md
+
+
 ## Pages from which slide decks are to be created
 ##
 ## Use all sections and the page name, but leave out "content/" and "index.md".
@@ -39,7 +46,7 @@ SLIDES   += tbd/testseite
 SLIDES   += tbd/test2
 SLIDES   += tbd/test4
 
-SRC           = $(patsubst content/%/index.md,%,$(shell find content -type f -name 'index.md'))
+SRC           = $(patsubst $(CONTENT)/%/$(PAGE),%,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
 
 
 ## Targets
@@ -50,7 +57,7 @@ all: slides web
 
 ## Create slides
 .PHONY: slides
-slides: pdf $(SLIDES)
+slides: $(PDF) $(SLIDES)
 
 ## Create web page
 .PHONY: web
@@ -62,16 +69,16 @@ web:
 
 ## Create actual slides
 SLIDEOPTIONS = $(PANDOC_DIRS) -d slides -f markdown+rebase_relative_paths
-$(SLIDES): %: content/%/index.md pdf
+$(SLIDES): %: $(CONTENT)/%/$(PAGE) $(PDF)
 	echo "Pandoc: $(PANDOC)"
 	echo "Ziel: $@"
-	echo $(addsuffix .pdf,$(addprefix pdf/,$(subst /,_,$@)))
+	echo $(addsuffix .pdf,$(addprefix $(PDF)/,$(subst /,_,$@)))
 	echo "Quelle: $<"
 #	$(PANDOC) $(SLIDEOPTIONS) -o $@ $<
 
-## Create folder "pdf/"
-pdf:
-	mkdir pdf/
+## Create folder "$(PDF)/"
+$(PDF):
+	mkdir $(PDF)
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
@@ -81,4 +88,4 @@ create-docker-image:
 ## Clean up
 .PHONY: clean
 clean:
-	rm -rf pdf/ docs/
+	rm -rf $(PDF) $(DOCS)
