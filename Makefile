@@ -3,8 +3,8 @@
 ## Launching tools via a Docker container: make TARGET
 ## Launch the tools directly:              make DOCKER=false TARGET
 ##
-## By default, a Docker container is used. To create this container,
-## run: make create-docker-image
+## By default, a custom Docker image will be used. To create this
+## image, run: make create-docker-image
 ifndef DOCKER
 PANDOC        = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc"   alpine-pandoc-hugo
 HUGO          = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo"     alpine-pandoc-hugo
@@ -16,111 +16,69 @@ LATEX         = pdflatex
 endif
 
 
-## Data-Dir: Path to the git submodule of Pandoc-Lecture
+## Data-Dir: Path to the Git submodule of Pandoc-Lecture
 ## Resource-Path: Where to search for bib files and other resources?
-## (Note: If pandoc is used via a Docker container, DATADIR must be the
-## working directory (or a subdirectory), as the working directory will
-## be mounted into the Docker container! A reference to a parent directory
-## of the working directory (as in this example) therefore does not work
-## when using the Docker container!)
-PANDOCDIRS    = --data-dir=pandoc --resource-path=".:pandoc"
+##
+## Note: If Pandoc is used via a Docker container, DATADIR must be the
+## working directory or a subdirectory, as the working directory will
+## be mounted into the Docker container! References to a parent directory
+## of the working directory therefore will not work when using a Docker
+## container!
+PANDOC_DIRS   = --data-dir=pandoc --resource-path=".:pandoc"
 
 
-## Source files, path prefix to sources, and lecture prefix
-## either defined here (all files) or given at cmd line like `make vl02`
-SRC_SLIDES    =
-SRC_SLIDES   += tbd/testseite
-SRC_SLIDES   += tbd/testseite
-SRC_SLIDES   += tbd/testseite
-SRC_SLIDES   += tbd/testseite
-SRC_SLIDES   += tbd/testseite
-SRC_SLIDES   += tbd/testseite
-
-SRC_PRE       =
-SRC_PRE      += tbd/testseite
+## Pages from which slide decks are to be created
+##
+## Use all sections and the page name, but leave out "content/" and "index.md".
+## Example: "content/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
+##
+## The "topic/subtopic/lecture" is also a make target for creating the slide desk
+## for this page.
+SLIDES    =
+SLIDES   += tbd/testseite
+SLIDES   += tbd/test2
+SLIDES   += tbd/test4
 
 SRC           = $(patsubst content/%/index.md,%,$(shell find content -type f -name 'index.md'))
 
 
 ## Targets
 
-## create slides and web page
-## run Pandoc and Hugo directly
+## Create slides and web page
 .PHONY: all
-all: $(SRC)
+all: slides web
 
-## create slides and web page
-## use Docker image alpine-pandoc-hugo and run 'make all' inside the container
-.PHONY: docker-all
-docker-all:
-	$(DOCKER) all
-
-## create slides
-SLIDEOPTIONS        = $(PANDOCDIRS) -d slides -f markdown+rebase_relative_paths
-HTMLOPTIONS         = $(PANDOCDIRS) -d html -f markdown+rebase_relative_paths
-HTMLTEMPLATEOPTIONS = $(PANDOCDIRS) -d htmltemplate
-
-$(SRC): %: content/%/index.md pdf
-	echo $(DOCKER)
-	echo $(PANDOC)
-	echo $@
-	echo pdf/$(subst /,_,$@).pdf
-	echo $(addsuffix .pdf,$(addprefix pdf/,$(subst /,_,$@)))
-	echo $<
-
-
-## Generates targets for all lecture pages.
-## $1: lecture page (incl. sections)
-## This allows for convenient tab completion.
-#define page
-#.PHONY: $(1)
-#$(1): IFILE = content/$(1)/index.md
-#$(1): OFILE = pdf/$(subst /,_,$(1)).pdf
-#$(1): slides
-#endef
-## Generate convenience targets for all lectures.
-#$(foreach lecture,$(SRC),$(eval $(call page,$(lecture))))
-
-
-pdf:
-	mkdir pdf/
-
+## Create slides
 .PHONY: slides
-slides: pdf
-	echo $(IFILE)
-	echo $(OFILE)
-	$(PANDOC) $(SLIDEOPTIONS) -o $(OFILE) $(IFILE)
-#	$(PANDOC) $(HTMLOPTIONS) -o content/tbd/testseite/testseite.md content/tbd/testseite/index.md
+slides: pdf $(SLIDES)
 
-## create web page
+## Create web page
 .PHONY: web
 web:
 	$(HUGO)
 
 
+## Auxiliary targets
 
-#$(SRC): %: $(ID)_%.pdf $(ID)_%.html
+## Create actual slides
+SLIDEOPTIONS = $(PANDOC_DIRS) -d slides -f markdown+rebase_relative_paths
+$(SLIDES): %: content/%/index.md pdf
+	echo "Pandoc: $(PANDOC)"
+	echo "Ziel: $@"
+	echo $(addsuffix .pdf,$(addprefix pdf/,$(subst /,_,$@)))
+	echo "Quelle: $<"
+#	$(PANDOC) $(SLIDEOPTIONS) -o $@ $<
 
+## Create folder "pdf/"
+pdf:
+	mkdir pdf/
 
-## Auxiliary Targets
-
-SLIDES        = $(SRC:%=$(ID)_%.pdf)
-HTML          = $(SRC:%=$(ID)_%.html)
-WEB           = $(WORKDIR)/docs
-
-$(ID)_%.pdf: $(MD)/%.md
-	$(PANDOC) $(SLIDEOPTIONS) -o $@ $<
-
-$(ID)_%.html: $(MD)/%.md
-	$(PANDOC) $(HTMLTEMPLATEOPTIONS) $< | $(PANDOC) $(HTMLOPTIONS) -o $@
-
-
-## build Docker image alpine-pandoc-hugo locally
+## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
 create-docker-image:
 	cd .github/actions/alpine-pandoc-hugo && make clean all
 
-## clean up
+## Clean up
 .PHONY: clean
 clean:
-	rm -rf $(SLIDES) $(HTML) $(WEB)
+	rm -rf pdf/ docs/
