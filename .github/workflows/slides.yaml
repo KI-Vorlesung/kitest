@@ -18,24 +18,20 @@ jobs:
         with:
           submodules: true
 
-      - name: Wuppie
-        run: echo "${{ github.head_ref }}"
+      - name: DefaultTarget
+        env:
+          TARGET: slides
 
-      - name: Wuppie
-        run: git branch
+      - name: PrTargetBranch
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          TARGET: ${{ github.head_ref }}
 
-      - name: RunPandocPR
-        uses: ./.github/actions/alpine-pandoc-hugo
-        if: ${{ github.head_ref }}
-        with:
-          make-target: 'make ${{ github.head_ref }}'
-
-      - name: RunPandocAll
+      - name: RunPandoc
         uses: ./.github/actions/alpine-pandoc-hugo
         if: ${{ ! github.head_ref }}
         with:
-          make-target: 'make slides'
-
+          make-target: 'make $TARGET'
 
       - name: UploadArtefacts
         uses: actions/upload-artifact@v2
