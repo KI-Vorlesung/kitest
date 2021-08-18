@@ -2,14 +2,18 @@ name: SLIDES
 
 
 on:
+  # push on master branch: create all slides
   push:
     branches: [master]
+  # change on pull-request: create single slide desk using source branch name of pr
   pull_request:
     types: [assigned, opened, synchronize, edited, reopened]
+  # manually triggered: create all slides
   workflow_dispatch:
 
 
 jobs:
+  # create single slide desk using source branch name of pr
   build-single-slide:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' }}
@@ -29,6 +33,7 @@ jobs:
           path: ./pdf/*.pdf
           retention-days: 1
 
+  # create all slides
   build-all-slidedesks:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
