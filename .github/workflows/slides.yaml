@@ -19,7 +19,7 @@ jobs:
           submodules: true
 
       - name: Wuppie
-        run: echo "${{ GITHUB_REF }}"
+        run: echo "${{ github.head_ref }}"
 
       - name: Wuppie
         run: git branch
