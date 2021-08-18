@@ -21,13 +21,13 @@ jobs:
       - name: DefaultTarget
         env:
           TARGET: slides
-        run: echo default: make $TARGET
+        run: "echo default: make $TARGET"
 
       - name: PrTargetBranch
         if: ${{ github.event_name == 'pull_request' }}
         env:
           TARGET: ${{ github.head_ref }}
-        run: echo PR: make $TARGET
+        run: "echo PR: make $TARGET"
 
       - name: RunPandoc
         uses: ./.github/actions/alpine-pandoc-hugo
