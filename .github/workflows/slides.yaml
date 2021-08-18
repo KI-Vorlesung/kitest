@@ -13,7 +13,7 @@ on:
 
 
 jobs:
-  # create single slide desk using source branch name of pr
+  # create single slide desk using source branch name of pr as make target
   build-single-slide:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' }}
@@ -26,14 +26,18 @@ jobs:
         uses: ./.github/actions/alpine-pandoc-hugo
         with:
           make-target: 'make ${{ github.head_ref }}'
+      - name: GetNameOfPdf
+        id: file_name
+        run: |
+          echo "::set-output name=file::$(printf '"%s" ' pdf/*.pdf)"
       - name: UploadArtefacts
         uses: actions/upload-artifact@v2
         with:
           name: slides
-          path: ./pdf/*.pdf
+          path: ${{ steps.file_name.outputs.file }}
           retention-days: 1
 
-  # create all slides
+  # create all slides: "make slides"
   build-all-slidedesks:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
