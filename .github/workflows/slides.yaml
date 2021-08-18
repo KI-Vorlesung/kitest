@@ -29,7 +29,8 @@ jobs:
       - name: GetNameOfPdf
         id: file_name
         run: |
-          echo "Lorem ipsum" > pdf/lorem_1.md
+          mkdir wuppie
+          echo "Lorem ipsum" > wuppie/lorem_1.md
           echo "::set-output name=file::$(printf '%s' ./pdf/*.pdf)"
       - name: UploadArtefacts
         uses: actions/upload-artifact@v2
@@ -41,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: lorem
-          path: ./pdf/lorem_1.md
+          path: ./wuppie/lorem_1.md
           retention-days: 1
 
   # create all slides: "make slides"
