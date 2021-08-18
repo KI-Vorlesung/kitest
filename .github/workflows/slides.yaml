@@ -1,40 +1,46 @@
 name: SLIDES
 
+
 on:
   push:
-    branches:
-      - master
+    branches: [master]
   pull_request:
     types: [assigned, opened, synchronize, edited, reopened]
   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
+jobs:
+  build-single-slide:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: CheckOut
         uses: actions/checkout@v2
         with:
           submodules: true
-
-      - name: DefaultTarget
-        env:
-          TARGET: slides
-        run: "echo default: make $TARGET"
-
-      - name: PrTargetBranch
-        if: ${{ github.event_name == 'pull_request' }}
-        env:
-          TARGET: ${{ github.head_ref }}
-        run: "echo PR: make $TARGET"
-
       - name: RunPandoc
         uses: ./.github/actions/alpine-pandoc-hugo
-        if: ${{ ! github.head_ref }}
         with:
-          make-target: 'make $TARGET'
+          make-target: 'make ${{ github.head_ref }}'
+      - name: UploadArtefacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: slides
+          path: ./pdf/*.pdf
+          retention-days: 1
 
+  build-all-slidedesks:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - name: CheckOut
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: RunPandoc
+        uses: ./.github/actions/alpine-pandoc-hugo
+        with:
+          make-target: 'make slides'
       - name: UploadArtefacts
         uses: actions/upload-artifact@v2
         with:
