@@ -4,9 +4,9 @@ inputs:
   make-target:
     description: 'makefile target to run'
     required: true
-    default: 'all'
+    default: 'make'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.make-target }}
+    - export DOCKER=false; ${{ inputs.make-target }}

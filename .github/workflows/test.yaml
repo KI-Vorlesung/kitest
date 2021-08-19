@@ -1,24 +1,39 @@
 name: TEST
-
 on:
-  push:
-    branches:
-      - master
-  pull_request:
   workflow_dispatch:
 
+
 jobs:
-  build:
+  build-inside-container:
     runs-on: ubuntu-latest
-
+    container:
+      image: pandoc/latex:latest
+      options: "--entrypoint /bin/sh"
     steps:
-      - name: CheckOut
-        uses: actions/checkout@v2
+      - run: apk --no-cache add git
+      - uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch submodules (Hugo themes, pandoc)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true
+      - run: .github/actions/alpine-pandoc-hugo/install-packages.sh
+      - run: export DOCKER=false; make slides
+      - uses: actions/upload-artifact@v2
+        with:
+          path: pdf/
+          retention-days: 1
 
-      - name: RunHugo
-        uses: ./.github/actions/alpine-pandoc-hugo
+  build-using-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
         with:
-          make-target: 'all'
+          submodules: true
+      - uses: ./.github/actions/alpine-pandoc-hugo
+        with:
+          make-target: 'make slides'
+      - uses: actions/upload-artifact@v2
+        with:
+          path: pdf/
+          retention-days: 1
+
+
+

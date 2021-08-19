@@ -1,74 +1,86 @@
 ## Tools
-## In case this doesn't work, set the path manually (use absolute paths).
-DOCKER = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="make" alpine-pandoc-hugo
-PANDOC = /usr/local/bin/pandoc
-HUGO   = /usr/bin/hugo
+##
+## Launching tools via a Docker container: make TARGET
+## Launch the tools directly:              export DOCKER=false; make TARGET
+##
+## By default, a custom Docker image will be used. To create this
+## image, run: make create-docker-image
+ifneq ($(DOCKER), false)
+PANDOC        = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc"   alpine-pandoc-hugo
+HUGO          = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo"     alpine-pandoc-hugo
+LATEX         = docker run --rm -i -v "$(shell pwd):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="pdflatex" alpine-pandoc-hugo
+else
+PANDOC        = pandoc
+HUGO          = hugo
+LATEX         = pdflatex
+endif
 
 
-## Data-Dir: Path to the git submodule of Pandoc-Lecture
+## Data-Dir: Path to the Git submodule of Pandoc-Lecture
 ## Resource-Path: Where to search for bib files and other resources?
-## (Note: If pandoc is used via a Docker container, DATADIR must be the
-## working directory (or a subdirectory), as the working directory will
-## be mounted into the Docker container! A reference to a parent directory
-## of the working directory (as in this example) therefore does not work
-## when using the Docker container!)
-PANDOCDIRS       = --data-dir=pandoc --resource-path=".:pandoc"
+##
+## Note: If Pandoc is used via a Docker container, DATADIR must be the
+## working directory or a subdirectory, as the working directory will
+## be mounted into the Docker container! References to a parent directory
+## of the working directory therefore will not work when using a Docker
+## container!
+PANDOC_DIRS   = --data-dir=pandoc --resource-path=".:pandoc"
 
 
-## Source files, path prefix to sources, and lecture prefix
-## either defined here (all files) or given at cmd line like `make vl02`
-CONTENT       = content
-SRC           = $(patsubst $(MD)/%.md,%,$(wildcard $(MD)/*.md))
+## Some folder and file names
+CONTENT = content
+PAGE    = index.md
+PDF     = pdf
+DOCS    = docs
+
+
+## Pages from which slide decks are to be created
+##
+## Use all sections and the page name, but leave out "content/" and "index.md".
+## Example: "content/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
+##
+## The "topic/subtopic/lecture" is also a make target for creating the slide desk
+## for this page.
+SLIDES    =
+SLIDES   += tbd/testseite
+SLIDES   += tbd/test2
+SLIDES   += tbd/test4
+
+SRC           = $(patsubst $(CONTENT)/%/$(PAGE),%,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
 
 
 ## Targets
 
-## create slides and web page
-## run Pandoc and Hugo directly
+## Create slides and web page
+.PHONY: all
 all: slides web
 
-## create slides and web page
-## use Docker image alpine-pandoc-hugo and run 'make all' inside the container
-docker-all:
-	$(DOCKER) all
+## Create slides
+.PHONY: slides
+slides: $(PDF) $(SLIDES)
 
-## create slides
-SLIDEOPTIONS        = $(PANDOCDIRS) -d slides -f markdown+rebase_relative_paths
-HTMLOPTIONS         = $(PANDOCDIRS) -d html -f markdown+rebase_relative_paths
-HTMLTEMPLATEOPTIONS = $(PANDOCDIRS) -d htmltemplate
-slides:
-	$(PANDOC) $(SLIDEOPTIONS) -o content/tbd/testseite/testseite.pdf content/tbd/testseite/index.md
-	$(PANDOC) $(HTMLOPTIONS) -o content/tbd/testseite/testseite.html content/tbd/testseite/index.md
-
-## create web page
+## Create web page
+.PHONY: web
 web:
-	$(HUGO) --minify
+	$(HUGO)
 
 
+## Auxiliary targets
 
-$(SRC): %: $(ID)_%.pdf $(ID)_%.html
+## Create actual slides
+$(SLIDES): %: $(CONTENT)/%/$(PAGE)  $(PDF)
+	$(PANDOC) $(PANDOC_DIRS) -d slides  $<  -o $(addsuffix .pdf,$(addprefix $(PDF)/,$(subst /,_,$@)))
 
+## Create folder "$(PDF)/"
+$(PDF):
+	mkdir $(PDF)
 
-## Auxiliary Targets
-
-SLIDES        = $(SRC:%=$(ID)_%.pdf)
-HTML          = $(SRC:%=$(ID)_%.html)
-WEB           = $(WORKDIR)/docs
-
-$(ID)_%.pdf: $(MD)/%.md
-	$(PANDOC) $(SLIDEOPTIONS) -o $@ $<
-
-$(ID)_%.html: $(MD)/%.md
-	$(PANDOC) $(HTMLTEMPLATEOPTIONS) $< | $(PANDOC) $(HTMLOPTIONS) -o $@
-
-
-## build Docker image alpine-pandoc-hugo locally
-docker-image:
+## Build Docker image "alpine-pandoc-hugo"
+.PHONY: create-docker-image
+create-docker-image:
 	cd .github/actions/alpine-pandoc-hugo && make clean all
 
-## clean up
+## Clean up
+.PHONY: clean
 clean:
-	rm -rf $(SLIDES) $(HTML) $(WEB)
-
-
-.PHONY: all docker-all docker-image slides web clean
+	rm -rf $(PDF) $(DOCS)
