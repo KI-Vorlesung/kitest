@@ -38,6 +38,11 @@ PANDOC_DIRS   = --data-dir=pandoc --resource-path=".:pandoc"
 LATEX_ARGS = -shell-escape
 
 
+## Define options to be used by Hugo
+## local.yaml allows to override settings in config.yaml
+HUGO_ARGS = --config config.yaml,$(wildcard local.yaml)
+
+
 ## Some folder and file names
 CONTENT = content
 PAGE    = index.md
@@ -95,7 +100,7 @@ $(PDF):
 ## Any necessary pre-processing steps should already be done in the calling step!
 .PHONY: hugo
 hugo:
-	$(HUGO)
+	$(HUGO) $(HUGO_ARGS)
 
 ## Process stand-alone LaTeX files
 $(ALGORITHM): %.png: %.tex
