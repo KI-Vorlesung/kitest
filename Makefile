@@ -123,4 +123,4 @@ clean_algo:
 ## Clean up
 .PHONY: clean
 clean: clean_algo
-	rm -rf $(PDF) $(DOCS)
+	rm -rf $(PDF) $(DOCS) resources/_gen/
