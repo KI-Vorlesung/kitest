@@ -155,6 +155,45 @@ Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Par
 **Hinweis**: Hugo und/oder MathJax hatten Probleme mit `\left\{`, `\right.` und `\begin{array}`. Wenn man die Display-Style-Formel in ein `<div>...</div>` einschließt, klappt es dann wieder.
 
 
+### Listings und Math
+
+Wenn man in LaTeX `lstlistings` nutzt, kann man dort mit "Math-Escapes" arbeiten und mathematische Symbole darstellen lassen.
+
+Beispiel:
+
+```
+\begin{lstlisting}[mathescape,basicstyle=\scriptsize\ttfamily]
+a = $w_1$
+X = top
+while (X $ \neq \perp)$
+    if X = a
+        a = next symbol of w
+        pop
+    else if X $\in T$
+        error
+    else if $M[X, a]$ leer
+        error
+    else if $M[X, a] = X \rightarrow Y_1 Y_2 \ldots Y_k$
+        output($X \rightarrow Y_1 Y_2 \ldots Y_k$)
+        pop
+        push($Y_1 Y_2 \ldots Y_k$) ($Y_1$ = top of stack))
+    X = top
+\end{lstlisting}
+```
+
+Für diese spezielle Code-Umgebung gibt es in Pandoc-Markdown und in Hugo keinen Ersatz.
+Um diese Technik dennoch einsetzen zu können, wurde folgender Workaround definiert:
+
+1.  Das Listing wird in eine TeX-Datei im Abbildungsordner der Seite ausgelagert, etwa `images/fancy_math.tex`
+2.  In einem Vorverarbeitungsschritt werden alle `*.tex`-Dateien in allen Unterordnern `images/` gesucht
+    und mit LaTeX nach `.png` übersetzt
+3.  Im Markdown wird entsprechend eine Abbildung eingebaut, die den Namen der TeX-Datei hat
+
+Hier die Abbildung für das Beispiel: `![Listings mit Mathescape](images/fancy_math.png)`
+
+![Listings mit Mathescape](images/fancy_math.png)
+
+
 ## Verlinkungen
 
 -   Links nach außen: [Pandoc](https://pandoc.org/)
@@ -346,8 +385,8 @@ Dabei wird die Datei `data/schedule.yaml` ausgelesen und verarbeitet.
 ### Aufruf ohne Parameter
 {{< schedule >}}
 
-### Aufruf mit `type="table"``
+### Aufruf mit `type="table"`
 {{< schedule type="table">}}
 
-### Aufruf mit `type="list"``
+### Aufruf mit `type="list"`
 {{< schedule type="list">}}

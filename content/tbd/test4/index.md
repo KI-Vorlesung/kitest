@@ -111,6 +111,11 @@ Also with syntax highlighting like `int main()`{.c} ...
 Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Partials implementiert werden. Hier eine [Anleitung](https://geoffruddock.com/math-typesetting-in-hugo/).
 
 
+### Listings und Math
+
+![Listings mit Mathescape](images/fancy2.png)
+
+
 ## Verlinkungen
 
 -   Links nach außen: [Pandoc](https://pandoc.org/)
