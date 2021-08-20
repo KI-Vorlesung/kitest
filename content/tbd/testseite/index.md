@@ -18,7 +18,13 @@ youtube:
   - id: JOmyP1ypJBs
   - name: "Use This As Header H3 Before Video"
     link: https://youtu.be/ooWCzdWL2Co
-fhmedia: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
+fhmedia:
+  - id: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
+  - id: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
+    name: "wuppie"
+  - name: "direktlink xyz"
+    link: https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
+  - id: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
 ---
 
 
@@ -398,6 +404,8 @@ youtube:
 ```
 
 Diese werden dann über das `lecture`-Template automatisch im Block "TL;DR" am Anfang des Scripts eingebunden.
+
+Analog funktioniert der Eintrag `fhmedia` im YAML-Header. Hier wird die ID bzw. die URL des Direkt-Links des Videos eingetragen.
 
 
 ## Schedule
