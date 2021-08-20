@@ -342,10 +342,6 @@ Blablabla
 
 ### Quizzes und Challenges
 
-#### Using Page Resources
-{{< quizzes />}}
-
-### Using inner Content
 {{% quizzes %}}
 *   Was bedeutet "Refactoring"?
 *   Erklären Sie ...
