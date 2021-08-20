@@ -1,5 +1,5 @@
 ---
-# type: lecture
+type: lecture
 title: "Test der verschiedenen Markdown-Elemente"
 weight: 1
 readings:
@@ -9,6 +9,11 @@ readings:
   - key: "Wuppie"
   - key: "Fluppie"
     comment: "UGH!!"
+quizzes:
+  - name: "Testquizz 1"
+    link: https://kahoot.it/challenge/01262821?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629455219268
+  - name: "Testquizz 2"
+    link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
 youtube: JOmyP1ypJBs
 fhmedia: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
 ---
@@ -340,16 +345,26 @@ Blablabla
 {{< outcomes />}}
 
 
-### Quizzes und Challenges
+### Quizzes
 
-#### Using Page Resources
-{{< quizzes />}}
+Quizzes werden auf Kahoot angelegt. Diese kann man entweder in der Vorlesung nutzen/starten oder als einzeln zu spielendes Quizz einstellen. Die bisherigen Quizzfragen werden als Kahoot-Quizzes in der zweiten Form (einzeln zu spielen) eingepflegt.
 
-### Using inner Content
-{{% quizzes %}}
-*   Was bedeutet "Refactoring"?
-*   Erklären Sie ...
-{{% /quizzes %}}
+Über "Play > Assign > Invite more Players > Copy URL" wird die URL zu einem Self-Play-Kahoot kopiert.
+
+Im YAML-Block einer Seite wird unter dem Schlüssel `quizzes` dann die URL sowie ein Name oder kurze Beschreibung hinterlegt. Dies kann mehrfach wiederholt werden. Alle Quizzes werden über das `lecture`-Template am Ende des Skripts mit einem buntem Hintergrund aufgelistet.
+
+```yaml
+quizzes:
+  - name: "Quizz Thema X"
+    link: https://kahoot.it/challenge/01262821?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629455219268
+  - name: "Quizz Thema Y"
+    link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
+```
+
+
+### Challenges
+
+Zum Einsatz als Bonusaufgabe steht der Shortcode `challenges` bereit. Der Inhalt wird als Markdown gerendert und leicht farbig vom Rest abgehoben.
 
 {{% challenges %}}
 Erstellen Sie ...
