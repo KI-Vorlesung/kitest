@@ -340,12 +340,13 @@ Blablabla
 {{< outcomes />}}
 
 
-### Quizzes und Challenges
+### Quizzes
 
-{{% quizzes %}}
-*   Was bedeutet "Refactoring"?
-*   Erklären Sie ...
-{{% /quizzes %}}
+tbd
+
+### Challenges
+
+Zum Einsatz als Bonusaufgabe steht der Shortcode `challenges` bereit. Der Inhalt wird als Markdown gerendert und leicht farbig vom Rest abgehoben.
 
 {{% challenges %}}
 Erstellen Sie ...
