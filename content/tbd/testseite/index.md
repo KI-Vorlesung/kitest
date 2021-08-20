@@ -345,8 +345,6 @@ Blablabla
 #### Using Page Resources
 {{< quizzes />}}
 
-{{< challenges />}}
-
 ### Using inner Content
 {{% quizzes %}}
 *   Was bedeutet "Refactoring"?
