@@ -16,7 +16,8 @@ quizzes:
     link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
 youtube:
   - id: JOmyP1ypJBs
-  - id: ooWCzdWL2Co
+  - name: "Use This As Header H3 Before Video"
+    link: https://youtu.be/ooWCzdWL2Co
 fhmedia: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
 ---
 
@@ -386,12 +387,14 @@ Beispiel:
 {{< fhmedia c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67 >}}
 
 
-Zusätzlich kann man im YAML-Header der Page zum Schlüssel `youtube` eine oder mehrere IDs ablegen:
+Zusätzlich kann man im YAML-Header der Page zum Schlüssel `youtube` eine oder mehrere Video-IDs in `id` ablegen oder alternativ mit `link` den Link zum Video eingeben. In `name` kann man optional jeweils einen String eingeben, der als H3-Header vor dem Video gesetzt wird:
 
 ```yaml
 youtube:
   - id: JOmyP1ypJBs
   - id: ooWCzdWL2Co
+  - name: "Use As Header H3 Before Video"
+    link: https://youtu.be/ooWCzdWL2Co
 ```
 
 Diese werden dann über das `lecture`-Template automatisch im Block "TL;DR" am Anfang des Scripts eingebunden.
