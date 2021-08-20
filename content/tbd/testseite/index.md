@@ -14,7 +14,9 @@ quizzes:
     link: https://kahoot.it/challenge/01262821?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629455219268
   - name: "Testquizz 2"
     link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
-youtube: JOmyP1ypJBs
+youtube:
+  - id: JOmyP1ypJBs
+  - id: ooWCzdWL2Co
 fhmedia: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
 ---
 
@@ -373,20 +375,26 @@ Erstellen Sie ...
 
 ## Videos
 
-Es gibt einen Shortcode für YouTube: `youtube` ...
+Es gibt einen Shortcode für YouTube: `youtube`. Hier kann man die ID eines Videos als Parameter übergeben, und das Video wird an dieser Stelle mit einem Player in der Webseite eingebettet.
 
 Beispiel:
 {{< youtube JOmyP1ypJBs >}}
 
-Für das FH-Medienportal gibt es einen Shortcode `fhmedia`, der als Parameter den Key des Direkt-Links bekommt.
+Für das FH-Medienportal gibt es analog einen Shortcode `fhmedia`, der als Parameter den Key des Direkt-Links bekommt.
 
 Beispiel:
 {{< fhmedia c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67 >}}
 
 
-**TODO**: Definition eines eigenen Partials für die Generierung eines Direktlinks (https://gohugo.io/templates/partials/).
+Zusätzlich kann man im YAML-Header der Page zum Schlüssel `youtube` eine oder mehrere IDs ablegen:
 
-**TODO**: Konfiguration Sitzung/Video über eine YAML-Konfiguration in `data/` (vgl. https://gohugo.io/templates/data-templates/, https://github.com/sampsyo/cs6120/blob/2020fa/data/schedule.toml und https://github.com/sampsyo/cs6120/blob/2020fa/templates/post.html)
+```yaml
+youtube:
+  - id: JOmyP1ypJBs
+  - id: ooWCzdWL2Co
+```
+
+Diese werden dann über das `lecture`-Template automatisch im Block "TL;DR" am Anfang des Scripts eingebunden.
 
 
 ## Schedule
