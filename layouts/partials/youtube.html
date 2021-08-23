@@ -5,13 +5,14 @@
         <p><strong>{{ . }}</strong></p>
     {{ end }}
 
-    {{ $l := "https://www.youtube-nocookie.com/embed/" }}
+    {{ $l := "" }}
     {{ with index . "id" }}
-        {{ $l = . | printf "%s%s" $l }}
-    {{ end }}
-    {{ with index . "link" }}
         {{ $l = . }}
     {{ end }}
+    {{ with index . "link" }}
+        {{ $l = . | path.Base }}
+    {{ end }}
+    {{ $l = printf "https://www.youtube-nocookie.com/embed/%s" $l }}
 
     <div class="embed-video-player">
         <iframe class="youtube-player" src="{{- $l | safeURL -}}" title="YouTube video player" allowfullscreen></iframe>
