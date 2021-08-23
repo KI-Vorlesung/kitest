@@ -10,7 +10,8 @@
         {{ .Content }}
     {{ end }}
 
-    {{ range $yt }}
+    {{ if $yt }}
+        <h3>Videos (YouTube)</h3>
         {{ partial "youtube.html" . }}
     {{ end }}
 
