@@ -6,13 +6,14 @@
         {{ $n = . }}
     {{ end }}
 
-    {{ $l := "https://www.fh-bielefeld.de/medienportal/m/" }}
+    {{ $l := "" }}
     {{ with index . "id" }}
-        {{ $l = . | printf "%s%s" $l }}
-    {{ end }}
-    {{ with index . "link" }}
         {{ $l = . }}
     {{ end }}
+    {{ with index . "link" }}
+        {{ $l = . | path.Base }}
+    {{ end }}
+    {{ $l = printf "https://www.fh-bielefeld.de/medienportal/m/%s" $l }}
 
     <div class="fhmedia">
         <a href="{{- $l | safeURL -}}" target="_blank" rel="nofollow noopener noreferrer">{{- $n -}}</a>
