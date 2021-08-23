@@ -22,7 +22,7 @@
                 {{ $topic := index $l "topic" }}
                 {{ $leader := index $l "leader" }}
                 {{ $notes := index $l "notes" }}
-                {{ if ge $n 1}}<br>{{ end }}
+                <p>
                 {{ with $.Site.GetPage $topic }}
                     {{ $path := replace (strings.TrimSuffix "/" .File.Dir | path.Dir) "/" " > " | upper }}
                     {{if gt (len $path) 1}}
@@ -31,7 +31,8 @@
                     <a href="{{- .Permalink | safeURL -}}"><strong>{{- .Title -}}</strong></a>
                 {{ end }}
                 {{ if $leader }} ({{- $leader -}}) {{ end }}
-                {{ if $notes }}<br>Hinweis: &nbsp; {{- $notes -}}{{ end }}
+                {{ if $notes }}<br><em>Hinweis: &nbsp; {{- $notes -}}</em>{{ end }}
+                </p>
             {{ end }}
             </td><td>
             {{ range $assignment }}
@@ -69,7 +70,7 @@
                 <a href="{{- .Permalink | safeURL -}}"><strong>{{- .Title -}}</strong></a>
             {{ end }}
             {{ if $leader }} ({{- $leader -}}) {{ end }}
-            {{ if $notes }}<br>Hinweis: &nbsp; {{- $notes -}}{{ end }}
+            {{ if $notes }}<br><em>Hinweis: &nbsp; {{- $notes -}}</em>{{ end }}
         {{ end }}
         {{ range $assignment }}
             {{ $title := index . "title" }}
