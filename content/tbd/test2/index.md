@@ -12,7 +12,7 @@ weight: 2
 
 ## Lokale Abbildungen mit Shortcodes
 
-{{< figure src="images/somefig.png" title="Bildunterschrift" >}}
+{{% figure src="images/somefig.png" title="Bildunterschrift" %}}
 
 **Achtung**: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt `tbd/testseite.md` und referenziert eine Abbildung `images/somefig.png`. Dann muss diese im Ordner `tbd/testseite/images/somefig.png` liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!
 
@@ -46,4 +46,4 @@ Siehe [Anleitung](https://learn.netlify.app/en/shortcodes/attachments/): Wenn di
 
 Über den [Shortcode](https://gohugo.io/content-management/shortcodes/) `attachments` können dann die zur Seite gehörigen Anhänge an dieser Stelle eingebunden werden. Im Beispiel werden nur PDF-Dateien angezeigt/verlinkt.
 
-{{%attachments title="Anhänge" pattern=".*(pdf)"/%}}
+{{% attachments title="Anhänge" pattern=".*(pdf)" /%}}
