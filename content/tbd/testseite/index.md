@@ -410,11 +410,11 @@ Analog funktioniert der Eintrag `fhmedia` im YAML-Header. Hier wird die ID bzw. 
 
 ## Schedule
 
-Zum Erzeugen eines Schedules (aka "Fahrplan") gibt es den Shortcode `schedule`. Dieser kann mit dem Parameter `type` verwendet werden: Mit dem Wert `table` wird eine tabellenbasierter Schedule erzeugt, mit dem Wert `list` ein listenbasierter Schedule.
+Zum Erzeugen eines Schedules (aka "Fahrplan") gibt es den Shortcode `schedule`. Dieser kann mit dem Parameter `type` verwendet werden: Mit dem Wert `table` wird ein tabellenbasierter Schedule erzeugt, mit dem Wert `list` ein listenbasierter Schedule.
 
 Dabei wird die Datei `data/schedule.yaml` ausgelesen und verarbeitet.
 
-### Aufruf ohne Parameter
+### Aufruf ohne Parameter: Default ist "table"
 {{< schedule >}}
 
 ### Aufruf mit `type="table"`
