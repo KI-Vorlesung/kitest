@@ -77,7 +77,7 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit `1.`, `2.`, ...
 
 #### Lokale Abbildungen mit Shortcodes
 
-{{< figure src="images/somefig.png" title="Bildunterschrift" >}}
+{{% figure src="images/somefig.png" title="Bildunterschrift" %}}
 
 **Achtung**: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt `tbd/testseite.md` und referenziert eine Abbildung `images/somefig.png`. Dann muss diese im Ordner `tbd/testseite/images/somefig.png` liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!
 
@@ -223,10 +223,10 @@ Hier die Abbildung für das Beispiel: `![Listings mit Mathescape](images/fancy_m
 -   Links nach außen: [Pandoc](https://pandoc.org/)
 -   Links im Dokument (automatische Label): ["Stichpunkte"](#stichpunkte)
 -   Links auf andere Dokumente:
-    * [Fahrplan]({{%ref "/fahrplan.md" %}})
-    * [Note und Credits]({{%ref "note_und_credits" %}})
-    * [Syllabus]({{%ref "syllabus.md" %}})
-    * [Reading]({{%ref "reading.md" %}})
+    * [Fahrplan]({{% ref "/fahrplan.md" %}})
+    * [Note und Credits]({{% ref "note_und_credits" %}})
+    * [Syllabus]({{% ref "syllabus.md" %}})
+    * [Reading]({{% ref "reading.md" %}})
 
 
 ## Tabellen
@@ -256,7 +256,7 @@ Siehe [Anleitung](https://learn.netlify.app/en/shortcodes/attachments/): Wenn di
 
 Über den [Shortcode](https://gohugo.io/content-management/shortcodes/) `attachments` können dann die zur Seite gehörigen Anhänge an dieser Stelle eingebunden werden. Im Beispiel werden nur PDF-Dateien angezeigt/verlinkt.
 
-{{%attachments title="Anhänge" pattern=".*(pdf)"/%}}
+{{% attachments title="Anhänge" pattern=".*(pdf)" /%}}
 
 
 ## Tooggles ("ShowMe")
@@ -311,7 +311,7 @@ Dabei ist `readings` die Variable, unter der Tupel mit `key` und `comment` defin
 
 Dann wird mit dem Shortcode `bib` (ohne Parameter) das Literaturverzeichnis generiert (inkl. H2-Überschrift "Literatur").
 
-{{< bib />}}
+{{% bib /%}}
 
 **Achtung**: Die Einträge für `key` müssen als Schlüssel in `data/readings.yaml` vorkommen. Anderenfalls wird der Eintrag stillschweigend ignoriert (keine Fehlermeldung, da Verwendung in GH-Actions). Im Beispiel oben würden die Keys "Wuppie" und "Fluppie" nicht gefunden und die Einträge entsprechend nicht in die Seite aufgenommen.
 
@@ -347,7 +347,7 @@ Blablabla
 {{% /tldr %}}
 
 #### Ohne Parameter: Auslesen der Page-Resource `tldr.md`
-{{< tldr />}}
+{{% tldr /%}}
 
 
 ### Lernziele
@@ -361,7 +361,7 @@ Blablabla
 {{% /outcomes %}}
 
 #### Ohne Parameter: Auslesen der Page-Resource `outcomes.md`
-{{< outcomes />}}
+{{% outcomes /%}}
 
 
 ### Quizzes
@@ -395,12 +395,12 @@ Erstellen Sie ...
 Es gibt einen Shortcode für YouTube: `youtube`. Hier kann man die ID eines Videos als Parameter übergeben, und das Video wird an dieser Stelle mit einem Player in der Webseite eingebettet.
 
 Beispiel:
-{{< youtube JOmyP1ypJBs >}}
+{{% youtube JOmyP1ypJBs %}}
 
 Für das FH-Medienportal gibt es analog einen Shortcode `fhmedia`, der als Parameter den Key des Direkt-Links bekommt.
 
 Beispiel:
-{{< fhmedia c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67 >}}
+{{% fhmedia c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67 %}}
 
 
 Zusätzlich kann man im YAML-Header der Page zum Schlüssel `youtube` eine oder mehrere Video-IDs in `id` ablegen oder alternativ mit `link` den Link zum Video eingeben. In `name` kann man optional jeweils einen String eingeben, der als H3-Header vor dem Video gesetzt wird:
