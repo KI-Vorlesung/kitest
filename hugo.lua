@@ -11,21 +11,3 @@ function RawBlock(el)
         return {}
     end
 end
-
--- Encapsulate TeX Math
-function Math(el)
-    if el.mathtype:match 'InlineMath' then
-        return {
-            pandoc.RawInline('html', '<span>'),
-            el,
-            pandoc.RawInline('html', '</span>')
-          }
-    end
-    if el.mathtype:match 'DisplayMath' then
-        return {
-            pandoc.RawInline('html', '<div>'),
-            el,
-            pandoc.RawInline('html', '</div>')
-          }
-    end
-end
