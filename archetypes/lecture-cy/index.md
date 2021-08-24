@@ -18,11 +18,6 @@ assignments:
 ---
 
 
-## Materialien
-
-{{% attachments title="Folien" pattern=".*(pdf)" /%}}
-
-
 ## Zusammenfassung
 
 ...
