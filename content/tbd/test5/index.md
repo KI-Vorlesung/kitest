@@ -18,11 +18,6 @@ assignments:
 ---
 
 
-## Materialien
-
-{{% attachments title="Folien" pattern=".*(pdf)" /%}}
-
-
 ## Zusammenfassung
 
 Hier könnte eine längere oder kürzere Zusammenfassung stehen. Sogar mit weiterer Untergliederung (H3 und tiefer) ...
