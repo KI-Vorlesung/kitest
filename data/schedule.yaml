@@ -1,12 +1,12 @@
 ---
-- date: "Oct 30"
+- week: "KW40"
   lecture:
     - topic: "/orga/syllabus"
   assignment:
     - topic: "blatt01"
       due: "Oct 30"
 
-- date: "Nov 30"
+- week: "KW41"
   lecture:
     - topic: "/suche/intro"
       leader: "cagi"
@@ -18,7 +18,7 @@
     - topic: "blatt01"
       due: "Dez 30"
 
-- date: "Dez 30"
+- week: "KW42"
   lecture:
     - topic: "/mlp"
     - topic: "/csp/ac3"
