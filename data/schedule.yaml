@@ -20,7 +20,6 @@
       leader: "bc"
   assignment:
     - topic: "blatt01"
-      due: "21.10."
     - topic: "blatt01"
       due: "21.10."
 ---

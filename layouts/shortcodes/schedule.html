@@ -30,7 +30,7 @@
             {{ with $.Site.GetPage $topic }}
                 <br>
                 <a href="{{- .Permalink | safeURL -}}"><strong>{{- .Title -}}</strong></a>
-                {{- printf " (Abgabe: %s)" $due -}}
+                {{ if $due }}{{- printf " (Abgabe: %s)" $due -}}{{ end }}
             {{ end }}
         {{ end }}
         </li>
@@ -80,7 +80,7 @@
                 {{ with $.Site.GetPage $topic }}
                 <p>
                     <a href="{{- .Permalink | safeURL -}}"><strong>{{- .Title -}}</strong></a>
-                    {{- printf " (Abgabe: %s)" $due -}}
+                    {{ if $due }}{{- printf " (Abgabe: %s)" $due -}}{{ end }}
                 </p>
                 {{ end }}
             {{ end }}
