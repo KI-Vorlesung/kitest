@@ -7,7 +7,7 @@ hidden: true
 
 Hier kommt eine Tabelle hin: In welcher Woche gibt es welches Thema, verlinkt auf die Unterseiten.
 
-{{< schedule >}}
+`{{< schedule >}}`{=markdown}
 
 
 **Legende**:

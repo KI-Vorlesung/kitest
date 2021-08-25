@@ -16,25 +16,15 @@ quizzes:
     link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
 youtube:
   - id: JOmyP1ypJBs
-  - id: JOmyP1ypJBs
-    name: "wuppie"
-  - link: https://youtu.be/ooWCzdWL2Co
-  - name: "direktlink, but not fh-media ..."
-    link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
-  - name: "this shouldn't show up as link"
+  - name: "Use This As Header H3 Before Video"
+    link: https://youtu.be/ooWCzdWL2Co
 fhmedia:
   - id: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
   - id: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
     name: "wuppie"
-  - link: https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
-  - name: "direktlink, but not fh-media ..."
-    link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
-  - name: "this shouldn't show up as link"
-attachments:
-  - name: "Extra Material, e.g. annotated slides ... Use This As Link Text"
-    link: https://www.fh-bielefeld.de
-  - link: https://www.fh-bielefeld.de
-  - name: "this shouldn't show up as link"
+  - name: "direktlink xyz"
+    link: https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
+  - id: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
 ---
 
 ## Some Chapter title
@@ -451,7 +441,15 @@ Analog funktioniert der Eintrag `fhmedia` im YAML-Header. Hier wird die ID bzw. 
 
 ## Schedule
 
-Zum Erzeugen eines Schedules (aka "Fahrplan") gibt es den Shortcode `schedule`.
+Zum Erzeugen eines Schedules (aka "Fahrplan") gibt es den Shortcode `schedule`. Dieser kann mit dem Parameter `type` verwendet werden: Mit dem Wert `table` wird ein tabellenbasierter Schedule erzeugt, mit dem Wert `list` ein listenbasierter Schedule.
+
 Dabei wird die Datei `data/schedule.yaml` ausgelesen und verarbeitet.
 
+### Aufruf ohne Parameter: Default ist "table"
 `{{< schedule >}}`{=markdown}
+
+### Aufruf mit `type="table"`
+`{{< schedule type="table" >}}`{=markdown}
+
+### Aufruf mit `type="list"`
+`{{< schedule type="list" >}}`{=markdown}
