@@ -25,9 +25,9 @@
             {{ if $notes }}<br><em>Hinweis: &nbsp; {{- $notes -}}</em>{{ end }}
         {{ end }}
         {{ range $assignment }}
-            {{ $title := index . "title" }}
+            {{ $topic := index . "topic" }}
             {{ $due := index . "due" }}
-            {{ with $.Site.GetPage $title }}
+            {{ with $.Site.GetPage $topic }}
                 <br>
                 <a href="{{- .Permalink | safeURL -}}"><strong>{{- .Title -}}</strong></a>
                 (Abgabe: &nbsp; {{- $due -}})
@@ -75,9 +75,9 @@
             </ul>
             </td><td>
             {{ range $assignment }}
-                {{ $title := index . "title" }}
+                {{ $topic := index . "topic" }}
                 {{ $due := index . "due" }}
-                {{ with $.Site.GetPage $title }}
+                {{ with $.Site.GetPage $topic }}
                 <p>
                     <a href="{{- .Permalink | safeURL -}}"><strong>{{- .Title -}}</strong></a>
                     (Abgabe: &nbsp; {{- $due -}})

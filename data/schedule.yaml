@@ -3,8 +3,8 @@
   lecture:
     - topic: "/orga/syllabus"
   assignment:
-    - title: "blatt01"
-      due: "Dez 30"
+    - topic: "blatt01"
+      due: "Oct 30"
 
 - date: "Nov 30"
   lecture:
@@ -13,9 +13,9 @@
       notes: "Classes go all-virtual"
     - topic: "/suche/informiert/astar"
   assignment:
-    - title: "blatt01"
+    - topic: "blatt01"
       due: "Dez 30"
-    - title: "blatt01"
+    - topic: "blatt01"
       due: "Dez 30"
 
 - date: "Dez 30"
@@ -23,4 +23,9 @@
     - topic: "/mlp"
     - topic: "/csp/ac3"
       leader: "bc"
+  assignment:
+    - topic: "blatt01"
+      due: "Dez 30"
+    - topic: "blatt01"
+      due: "Dez 30"
 ---
