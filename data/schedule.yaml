@@ -1,26 +1,25 @@
 ---
-- date: "Oct 30"
+- week: "KW40"
   lecture:
     - topic: "/orga/syllabus"
-  assignment:
-    - title: "blatt01"
-      due: "Dez 30"
 
-- date: "Nov 30"
+- week: "KW41"
   lecture:
     - topic: "/suche/intro"
       leader: "cagi"
       notes: "Classes go all-virtual"
     - topic: "/suche/informiert/astar"
   assignment:
-    - title: "blatt01"
-      due: "Dez 30"
-    - title: "blatt01"
-      due: "Dez 30"
+    - topic: "blatt01"
+      due: "14.10."
 
-- date: "Dez 30"
+- week: "KW42"
   lecture:
     - topic: "/mlp"
     - topic: "/csp/ac3"
       leader: "bc"
+  assignment:
+    - topic: "blatt01"
+    - topic: "blatt01"
+      due: "21.10."
 ---
