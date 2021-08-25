@@ -2,9 +2,6 @@
 - week: "KW40"
   lecture:
     - topic: "/orga/syllabus"
-  assignment:
-    - topic: "blatt01"
-      due: "Oct 30"
 
 - week: "KW41"
   lecture:
@@ -14,9 +11,7 @@
     - topic: "/suche/informiert/astar"
   assignment:
     - topic: "blatt01"
-      due: "Dez 30"
-    - topic: "blatt01"
-      due: "Dez 30"
+      due: "14.10."
 
 - week: "KW42"
   lecture:
@@ -25,7 +20,7 @@
       leader: "bc"
   assignment:
     - topic: "blatt01"
-      due: "Dez 30"
+      due: "21.10."
     - topic: "blatt01"
-      due: "Dez 30"
+      due: "21.10."
 ---
