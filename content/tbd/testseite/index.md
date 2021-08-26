@@ -331,6 +331,15 @@ Und mit "native Divs" aus Pandoc-Markdown (muss vorverarbeitet werden) ....
 :::
 
 
+## Buttons
+
+{{% button href="https://fh-bielefeld.de" %}}FHB{{% /button %}}
+
+{{% button %}}FHB{{% /button %}}
+
+[Beispiel: Wuppie]{.bsp}
+
+
 ## Literatur
 
 ### Einsatz von Variablen im YAML-Header der Seite

@@ -40,3 +40,14 @@ function Div(el)
             { pandoc.RawBlock('markdown', '</div>'), pandoc.RawBlock('markdown', '{{% /expand %}}') }
     end
 end
+
+
+-- Replace "bsp" Span with "button" shortcode
+function Span(el)
+    if el.classes[1] == "bsp" then
+        return
+            { pandoc.RawInline('markdown', '{{% button %}}') } ..
+            el.content ..
+            { pandoc.RawInline('markdown', '{{% /button %}}') }
+    end
+end
