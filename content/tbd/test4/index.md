@@ -3,8 +3,8 @@ type: lecture
 title: "Test eines spezifischen Templates"
 weight: 4
 readings:
-  - key: "AIMA"
-  - key: "Ertel"
+  - key: "Russell2020"
+  - key: "Ertel2017"
     comment: "Kapitel 2 und 3"
   - key: "Wuppie"
   - key: "Fluppie"

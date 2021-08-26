@@ -3,8 +3,8 @@ type: lecture
 title: "Test der verschiedenen Markdown-Elemente"
 weight: 1
 readings:
-  - key: "AIMA"
-  - key: "Ertel"
+  - key: "Russell2020"
+  - key: "Ertel2017"
     comment: "Kapitel 2 und 3"
   - key: "Wuppie"
   - key: "Fluppie"
@@ -348,8 +348,8 @@ Im YAML-Header der Seite können Einträge definiert werden:
 
 ```yaml
 readings:
-  - key: "AIMA"
-  - key: "Ertel"
+  - key: "Russell2020"
+  - key: "Ertel2017"
     comment: "Kapitel 2 und 3"
   - key: "Wuppie"
   - key: "Fluppie"
@@ -375,6 +375,20 @@ Hier könnte ein Literaturverzeichnis entstehen ...
 ### Vorrang
 
 Der Aufruf des Shortcodes `bib` mit Inhalt hat Vorrang von dem Aufruf ohne Inhalte (aber mit gesetztem Parameter `readings`). Wenn beides nicht gesetzt/vorhanden ist, passiert nichts.
+
+### Zitieren
+
+Im Text werden die Keys normal benutzt: `@key`.
+
+Beim Erzeugen der Slides (Beamer/PDF) erzeugt Pandoc mit dem Bibtex-File und den Keys einen verlinkten Eintrag im Text und ggf. am Ende der Folien ein Literaturverzeichnis.
+
+Beim Erzeugen der Webseiten wird zunächst bei der Vorverarbeitung mit Pandoc plus einem Filter aus den Keys ein Link ins lokale Literaturverzeichnis erstellt und in den Text eingebettet. Danach kann beim Ausführen von Hugo der Shortcode/Partial `bib` das Literaturverzeichnis mit den entsprechenden Ankern generieren.
+
+Blablab @Russell2020 blublbubl [@Russell2020] bla [@Russell2020, S.10] ...
+
+Hier eine Mehrfachzitierung [@Russell2014; @Russell2020; @Pedregosa2011]
+
+Lorem Ipsum.
 
 
 ## Sonstige Special Sections
