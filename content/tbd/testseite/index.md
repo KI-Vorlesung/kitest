@@ -322,6 +322,15 @@ Toggle mit Namen ...
 **Achtung**: Es gibt scheinbar Shortcodes (["Videos"](#videos)), die nur mit `<` funktionieren ...
 
 
+::: showme
+Und mit "native Divs" aus Pandoc-Markdown (muss vorverarbeitet werden) ....
+
+- Stichpunkt 1
+- Stichpunkt 2
+- ...
+:::
+
+
 ## Literatur
 
 ### Einsatz von Variablen im YAML-Header der Seite
