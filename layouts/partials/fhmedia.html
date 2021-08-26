@@ -8,14 +8,15 @@
 
     {{ $l := "" }}
     {{ with index . "id" }}
-        {{ $l = . }}
+        {{ $l = printf "https://www.fh-bielefeld.de/medienportal/m/%s" . }}
     {{ end }}
     {{ with index . "link" }}
-        {{ $l = . | path.Base }}
+        {{ $l = . }}
     {{ end }}
-    {{ $l = printf "https://www.fh-bielefeld.de/medienportal/m/%s" $l }}
 
+    {{ if $l }}
     <div class="fhmedia">
         <a href="{{- $l | safeURL -}}" target="_blank" rel="nofollow noopener noreferrer">{{- $n -}}</a>
     </div>
+    {{ end }}
 {{ end }}
