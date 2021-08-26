@@ -30,6 +30,11 @@ fhmedia:
   - name: "direktlink, but not fh-media ..."
     link: https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499
   - name: "this shouldn't show up as link"
+attachments:
+  - name: "Extra Material, e.g. annotated slides ... Use This As Link Text"
+    link: https://www.fh-bielefeld.de
+  - link: https://www.fh-bielefeld.de
+  - name: "this shouldn't show up as link"
 ---
 
 
