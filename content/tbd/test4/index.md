@@ -54,7 +54,7 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit `1.`, `2.`, ...
 
 ### Lokale Abbildungen mit Shortcodes
 
-{{< figure src="images/somefig.png" title="Bildunterschrift" >}}
+{{% figure src="images/somefig.png" title="Bildunterschrift" %}}
 
 
 ## Code und Syntax-Highlighting
@@ -124,10 +124,12 @@ Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Par
 -   Links nach außen: [Pandoc](https://pandoc.org/)
 -   Links im Dokument (automatische Label): ["Stichpunkte"](#stichpunkte)
 -   Links auf andere Dokumente:
-    * [Fahrplan]({{%ref "/fahrplan.md" %}})
-    * [Note und Credits]({{%ref "note_und_credits" %}})
-    * [Syllabus]({{%ref "syllabus.md" %}})
-    * [Reading]({{%ref "reading.md" %}})
+    * [Fahrplan]({{% ref "/fahrplan.md" %}})
+    * [Note und Credits]({{% ref "note_und_credits" %}})
+    * [Syllabus]({{% ref "syllabus.md" %}})
+    * [Reading]({{% ref "reading.md" %}})
+    * [Reading]( {{% ref "reading.md" %}} )
+    * <a href='{{% ref "reading.md" %}}'>Reading</a>
 
 
 ## Tabellen
@@ -157,7 +159,7 @@ Siehe [Anleitung](https://learn.netlify.app/en/shortcodes/attachments/): Wenn di
 
 Über den [Shortcode](https://gohugo.io/content-management/shortcodes/) `attachments` können dann die zur Seite gehörigen Anhänge an dieser Stelle eingebunden werden. Im Beispiel werden nur PDF-Dateien angezeigt/verlinkt.
 
-{{%attachments title="Anhänge" pattern=".*(pdf)"/%}}
+{{% attachments title="Anhänge" pattern=".*(pdf)" /%}}
 
 
 ## Tooggles ("ShowMe")
