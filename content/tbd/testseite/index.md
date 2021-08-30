@@ -508,3 +508,12 @@ Das hier ist erstmal versteckt!
 :::
 
 [Hier ein Beispiel]{.bsp}
+
+::: slides
+Dieser Text erscheint nur auf den Folien, nicht aber auf den Webseiten.
+:::
+
+::: notes
+Dieser Text erscheint nur auf den Webseiten, nicht aber auf den Folien.
+:::
+
