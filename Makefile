@@ -44,14 +44,14 @@ HUGO_ARGS = --config config.yaml,$(wildcard local.yaml)
 
 
 ## Some folder and file names
-ORIG_CONTENT = content/
-TMP_CONTENT  = tmp/
+ORIG_CONTENT = content
+TMP_CONTENT  = tmp
 PAGE         = index.md
 PAGE_HTML    = $(patsubst %.md,%.html,$(PAGE))
 PAGE_PDF     = $(patsubst %.md,%.pdf,$(PAGE))
-PDF_FOLDER   = pdf/
-DOCS         = docs/
-RESOURCES    = resources/
+PDF_FOLDER   = pdf
+DOCS         = docs
+RESOURCES    = resources
 
 
 ## Pages from which slide decks are to be created
@@ -107,13 +107,13 @@ copy_content:
 ## Create actual slides without any pre-processing
 ## Any necessary pre-processing steps should already be done in the calling step!
 $(SLIDES): %.pdf: %.md $(PDF_FOLDER)
-	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(subst index,,$(subst /,_,$(patsubst $(TMP_CONTENT)/%,$(PDF_FOLDER)/%,$@)))
+	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(patsubst $(TMP_CONTENT)_%,$(PDF_FOLDER)/%,$(subst _index,,$(subst /,_,$@)))
 
 ## Process stand-alone LaTeX files
 $(ALGORITHM): %.png: %.tex
 	$(LATEX) $(LATEX_ARGS) $(notdir $<)
 
-## Create folder "$(PDF_FOLDER)/"
+## Create folder "$(PDF_FOLDER)"
 $(PDF_FOLDER):
 	mkdir $(PDF_FOLDER)
 
