@@ -121,7 +121,7 @@ $(HTML): %.html: %.md
 
 ## Create readings data template
 $(READINGS): $(BIBTEX)
-	$(PANDOC) $(PANDOC_DIRS) -s -f biblatex -t markdown $< -o $@
+	$(PANDOC) -s -f biblatex -t markdown $< -o $@
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
