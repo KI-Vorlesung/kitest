@@ -96,8 +96,19 @@ slides: copy_content $(ALGORITHM) $(PDF_FOLDER) $(SLIDES)
 .PHONY: web
 web: copy_content $(ALGORITHM) $(READINGS) $(HTML) hugo
 
+## Build Docker image "alpine-pandoc-hugo"
+.PHONY: create-docker-image
+create-docker-image:
+	cd .github/actions/alpine-pandoc-hugo && make clean all
 
-## Auxiliary targets
+## Clean up
+.PHONY: clean
+clean:
+	rm -rf $(TMP_CONTENT) $(READINGS) $(PDF_FOLDER) $(DOCS) $(RESOURCES)
+
+
+
+## Auxiliary targets -- Do NOT call these directly!
 
 ## Copy $(ORIG_CONTENT) to $(TMP_CONTENT)
 .PHONY: copy_content
@@ -130,13 +141,3 @@ $(HTML): %.html: %.md
 ## Create readings data template
 $(READINGS): $(BIBTEX)
 	$(PANDOC) -s -f biblatex -t markdown $< -o $@
-
-## Build Docker image "alpine-pandoc-hugo"
-.PHONY: create-docker-image
-create-docker-image:
-	cd .github/actions/alpine-pandoc-hugo && make clean all
-
-## Clean up
-.PHONY: clean
-clean:
-	rm -rf $(TMP_CONTENT) $(READINGS) $(PDF_FOLDER) $(DOCS) $(RESOURCES)
