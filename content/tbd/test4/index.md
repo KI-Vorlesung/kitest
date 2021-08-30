@@ -153,15 +153,6 @@ Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Par
 Es gehen lt. Doku nur **Pipe-Tables**?!
 
 
-## Anhänge
-
-Siehe [Anleitung](https://learn.netlify.app/en/shortcodes/attachments/): Wenn die Seite eine Markdown-Datei `<name>.md` ist, dann können Anhänge im Ordner `<name>.files/` gespeichert werden.
-
-Über den [Shortcode](https://gohugo.io/content-management/shortcodes/) `attachments` können dann die zur Seite gehörigen Anhänge an dieser Stelle eingebunden werden. Im Beispiel werden nur PDF-Dateien angezeigt/verlinkt.
-
-{{% attachments title="Anhänge" pattern=".*(pdf)" /%}}
-
-
 ## Tooggles ("ShowMe")
 
 Mit dem Shortcode `expand` können Toggles realisiert werden.
