@@ -62,8 +62,9 @@ SLIDES   += tbd/testseite
 SLIDES   += tbd/test2
 SLIDES   += tbd/test4
 
-SRC           = $(patsubst $(CONTENT)/%/$(PAGE),%,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
-
+SRC       = $(patsubst $(CONTENT)/%/$(PAGE),%,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
+#HTML      = $(patsubst %.md,%.html,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
+HTML = content/tbd/testseite/index.html
 
 ## LaTeX files
 ## Find all ".tex" files and translate them with LaTeX to ".png"
@@ -82,7 +83,7 @@ slides: $(ALGORITHM) $(PDF) $(SLIDES)
 
 ## Create web page
 .PHONY: web
-web: $(ALGORITHM) hugo
+web: $(ALGORITHM) $(HTML) hugo
 
 
 ## Auxiliary targets
@@ -91,6 +92,10 @@ web: $(ALGORITHM) hugo
 ## Any necessary pre-processing steps should already be done in the calling step!
 $(SLIDES): %: $(CONTENT)/%/$(PAGE) $(PDF)
 	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(addsuffix .pdf,$(addprefix $(PDF)/,$(subst /,_,$@)))
+
+## Process stand-alone LaTeX files
+$(ALGORITHM): %.png: %.tex
+	$(LATEX) $(LATEX_ARGS) $(notdir $<)
 
 ## Create folder "$(PDF)/"
 $(PDF):
@@ -102,9 +107,12 @@ $(PDF):
 hugo:
 	$(HUGO) $(HUGO_ARGS)
 
-## Process stand-alone LaTeX files
-$(ALGORITHM): %.png: %.tex
-	$(LATEX) $(LATEX_ARGS) $(notdir $<)
+## Pre-Process Markdown using Pandoc
+$(HTML): %.html: %.md
+#	$(PANDOC) $(PANDOC_DIRS) -f markdown-smart+lists_without_preceding_blankline -t markdown+smart --wrap=preserve --template=empty.md -s  $<  >  $@
+#	$(PANDOC) $(PANDOC_DIRS) -f markdown-smart+lists_without_preceding_blankline -t html-smart --wrap=preserve -L hugo.lua --mathjax --strip-comments  $<  >>  $@
+#	rm -f $<
+	$(PANDOC) $(PANDOC_DIRS) -d hugo $< -o $<
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
@@ -120,7 +128,12 @@ clean_algo:
 	rm -rf $(patsubst %.png,%.ps,$(ALGORITHM))
 	rm -rf $(ALGORITHM)
 
+## Clean up HTML mess
+.PHONY: clean_html
+clean_html:
+	rm -rf $(HTML)
+
 ## Clean up
 .PHONY: clean
-clean: clean_algo
+clean: clean_algo clean_html
 	rm -rf $(PDF) $(DOCS) resources/_gen/

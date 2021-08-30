@@ -37,6 +37,39 @@ attachments:
   - name: "this shouldn't show up as link"
 ---
 
+## Some Chapter title
+
+\smallskip
+
+Lorem \blueArrow Ipsum.
+
+## Math
+$E = m c^2$
+
+Statt $P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)|}{|S(h)|}$ nutze $P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)| + m \cdot p_i}{|S(h)| + m}$
+
+$$
+    \begin{array}{rcl}
+    h_{MAP} &=& \operatorname{argmax}_{h \in H} P(h|D_1, ..., D_n) \\\\[5pt]
+            &=& \operatorname{argmax}_{h \in H} P(h) \prod_i P(D_i|h) \\\\[5pt]
+            &=& \operatorname{argmax}_{h \in H} [\log(P(h)) + \sum_i \log(P(D_i|h))]
+    \end{array}
+$$
+
+*   **Entscheidungsbaum** $\alpha$:
+    $$
+        \alpha = \left\{ \begin{array}{ll}
+            \kappa  & \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\
+            x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Ausprägungen}
+        \end{array} \right.
+    $$
+
+## Images
+![Sky](images/somefig.png)
+
+## Data Table
+`{{< schedule >}}`{=markdown}
+
 
 ## Standard-Markdown
 
@@ -77,7 +110,7 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit `1.`, `2.`, ...
 
 #### Lokale Abbildungen mit Shortcodes
 
-{{% figure src="images/somefig.png" title="Bildunterschrift" %}}
+`{{< figure src="images/somefig.png" title="Bildunterschrift" >}}`{=markdown}
 
 **Achtung**: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt `tbd/testseite.md` und referenziert eine Abbildung `images/somefig.png`. Dann muss diese im Ordner `tbd/testseite/images/somefig.png` liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!
 
@@ -165,14 +198,12 @@ Also with syntax highlighting like `int main()`{.c} ...
     $$
 
 *   **Entscheidungsbaum** $\alpha$:
-    <div>
     $$
         \alpha = \left\{ \begin{array}{ll}
             \kappa  & \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\
             x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Ausprägungen}
         \end{array} \right.
     $$
-    </div>
 
 Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Partials implementiert werden. Hier eine [Anleitung](https://geoffruddock.com/math-typesetting-in-hugo/), hier noch eine [ähnliche Lösung](https://www.morch.com/posts/2021-07-24-mathjax-in-hugo/). Die beiden Anleitungen gehen auch auf das bedarfsweise Laden von MathJax ein. Dabei werden Mathe-Elemente in Spans/Divs oder Code-Blöcke eingeschlossen und eine Page-Variable `has-mathjax` gesetzt, um nur im Bedarfsfall die MathJax-Lib zu laden. Möglicherweise bietet es sich an, in einem Pandoc-Zwischenschritt die Inline- und Display-Math-Elemente entsprechend in Spans/Divs einzuschließen und die Page-Variable `has-mathjax` zu setzen.
 
@@ -223,10 +254,10 @@ Hier die Abbildung für das Beispiel: `![Listings mit Mathescape](images/fancy_m
 -   Links nach außen: [Pandoc](https://pandoc.org/)
 -   Links im Dokument (automatische Label): ["Stichpunkte"](#stichpunkte)
 -   Links auf andere Dokumente:
-    * [Fahrplan]({{% ref "/fahrplan.md" %}})
-    * [Note und Credits]({{% ref "note_und_credits" %}})
-    * [Syllabus]({{% ref "syllabus.md" %}})
-    * [Reading]({{% ref "reading.md" %}})
+    * [Fahrplan](`{{< ref "/fahrplan.md" >}}`{=markdown})
+    * [Note und Credits](`{{< ref "note_und_credits" >}}`{=markdown})
+    * [Syllabus](`{{< ref "syllabus.md" >}}`{=markdown})
+    * [Reading](`{{< ref "reading.md" >}}`{=markdown})
 
 
 ## Tabellen
@@ -256,7 +287,7 @@ Siehe [Anleitung](https://learn.netlify.app/en/shortcodes/attachments/): Wenn di
 
 Über den [Shortcode](https://gohugo.io/content-management/shortcodes/) `attachments` können dann die zur Seite gehörigen Anhänge an dieser Stelle eingebunden werden. Im Beispiel werden nur PDF-Dateien angezeigt/verlinkt.
 
-{{% attachments title="Anhänge" pattern=".*(pdf)" /%}}
+`{{< attachments title="Anhänge" pattern=".*(pdf)" />}}`{=markdown}
 
 
 ## Tooggles ("ShowMe")
@@ -311,7 +342,7 @@ Dabei ist `readings` die Variable, unter der Tupel mit `key` und `comment` defin
 
 Dann wird mit dem Shortcode `bib` (ohne Parameter) das Literaturverzeichnis generiert (inkl. H2-Überschrift "Literatur").
 
-{{% bib /%}}
+`{{< bib />}}`{=markdown}
 
 **Achtung**: Die Einträge für `key` müssen als Schlüssel in `data/readings.yaml` vorkommen. Anderenfalls wird der Eintrag stillschweigend ignoriert (keine Fehlermeldung, da Verwendung in GH-Actions). Im Beispiel oben würden die Keys "Wuppie" und "Fluppie" nicht gefunden und die Einträge entsprechend nicht in die Seite aufgenommen.
 
@@ -347,7 +378,7 @@ Blablabla
 {{% /tldr %}}
 
 #### Ohne Parameter: Auslesen der Page-Resource `tldr.md`
-{{% tldr /%}}
+`{{< tldr />}}`{=markdown}
 
 
 ### Lernziele
@@ -361,7 +392,7 @@ Blablabla
 {{% /outcomes %}}
 
 #### Ohne Parameter: Auslesen der Page-Resource `outcomes.md`
-{{% outcomes /%}}
+`{{< outcomes />}}`{=markdown}
 
 
 ### Quizzes
@@ -395,12 +426,12 @@ Erstellen Sie ...
 Es gibt einen Shortcode für YouTube: `youtube`. Hier kann man die ID eines Videos als Parameter übergeben, und das Video wird an dieser Stelle mit einem Player in der Webseite eingebettet.
 
 Beispiel:
-{{% youtube JOmyP1ypJBs %}}
+`{{< youtube JOmyP1ypJBs >}}`{=markdown}
 
 Für das FH-Medienportal gibt es analog einen Shortcode `fhmedia`, der als Parameter den Key des Direkt-Links bekommt.
 
 Beispiel:
-{{% fhmedia c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67 %}}
+`{{< fhmedia c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67 >}}`{=markdown}
 
 
 Zusätzlich kann man im YAML-Header der Page zum Schlüssel `youtube` eine oder mehrere Video-IDs in `id` ablegen oder alternativ mit `link` den Link zum Video eingeben. In `name` kann man optional jeweils einen String eingeben, der als H3-Header vor dem Video gesetzt wird:
@@ -423,4 +454,4 @@ Analog funktioniert der Eintrag `fhmedia` im YAML-Header. Hier wird die ID bzw. 
 Zum Erzeugen eines Schedules (aka "Fahrplan") gibt es den Shortcode `schedule`.
 Dabei wird die Datei `data/schedule.yaml` ausgelesen und verarbeitet.
 
-{{< schedule >}}
+`{{< schedule >}}`{=markdown}
