@@ -516,4 +516,3 @@ Dieser Text erscheint nur auf den Folien, nicht aber auf den Webseiten.
 ::: notes
 Dieser Text erscheint nur auf den Webseiten, nicht aber auf den Folien.
 :::
-
