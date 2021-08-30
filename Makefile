@@ -44,11 +44,14 @@ HUGO_ARGS = --config config.yaml,$(wildcard local.yaml)
 
 
 ## Some folder and file names
-CONTENT     = content/
-PAGE        = index.md
-PDF_FOLDER  = pdf/
-DOCS        = docs/
-RESOURCES   = resources/
+ORIG_CONTENT = content/
+TMP_CONTENT  = tmp/
+PAGE         = index.md
+PAGE_HTML    = $(patsubst %.md,%.html,$(PAGE))
+PAGE_PDF     = $(patsubst %.md,%.pdf,$(PAGE))
+PDF_FOLDER   = pdf/
+DOCS         = docs/
+RESOURCES    = resources/
 
 
 ## Pages from which slide decks are to be created
@@ -58,14 +61,14 @@ RESOURCES   = resources/
 ##
 ## The "topic/subtopic/lecture" is also a make target for creating the slide desk
 ## for this page.
-SLIDES    =
-SLIDES   += tbd/testseite
-SLIDES   += tbd/test2
-SLIDES   += tbd/test4
+SRC    =
+SRC   += tbd/testseite
+SRC   += tbd/test2
+SRC   += tbd/test4
 
-SRC       = $(patsubst $(CONTENT)/%/$(PAGE),%,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
-#HTML      = $(patsubst %.md,%.html,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
-HTML = content/tbd/testseite/index.html
+## Use different file extensions so that Make can distinguish the targets
+SLIDES = $(patsubst %,$(TMP_CONTENT)/%/$(PAGE_PDF),$(SRC))
+HTML   = $(patsubst %,$(TMP_CONTENT)/%/$(PAGE_HTML),$(SRC))
 
 
 ## Readings data template
@@ -74,7 +77,7 @@ BIBTEX   = ki.bib
 
 ## LaTeX files
 ## Find all ".tex" files and translate them with LaTeX to ".png"
-ALGORITHM  = $(patsubst %.tex,%.png,$(shell find $(CONTENT) -type f -name '*.tex'))
+ALGORITHM  = $(patsubst $(ORIG_CONTENT)/%.tex,$(TMP_CONTENT)/%.png,$(shell find $(ORIG_CONTENT) -type f -name '*.tex'))
 
 
 ## Targets
@@ -85,19 +88,24 @@ all: slides web
 
 ## Create slides
 .PHONY: slides
-slides: $(ALGORITHM) $(PDF_FOLDER) $(SLIDES)
+slides: copy_content $(ALGORITHM) $(PDF_FOLDER) $(SLIDES)
 
 ## Create web page
 .PHONY: web
-web: $(ALGORITHM) $(READINGS) $(HTML) hugo
+web: copy_content $(ALGORITHM) $(READINGS) $(HTML) hugo
 
 
 ## Auxiliary targets
 
+## Copy $(ORIG_CONTENT) to $(TMP_CONTENT)
+.PHONY: copy_content
+copy_content:
+	cp -a $(ORIG_CONTENT) $(TMP_CONTENT)
+
 ## Create actual slides without any pre-processing
 ## Any necessary pre-processing steps should already be done in the calling step!
-$(SLIDES): %: $(CONTENT)/%/$(PAGE) $(PDF_FOLDER)
-	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(addsuffix .pdf,$(addprefix $(PDF_FOLDER)/,$(subst /,_,$@)))
+$(SLIDES): %.pdf: %.md $(PDF_FOLDER)
+	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(subst /,_,$(patsubst $(TMP_CONTENT)/%,$(PDF_FOLDER)/%,$@))
 
 ## Process stand-alone LaTeX files
 $(ALGORITHM): %.png: %.tex
@@ -115,9 +123,6 @@ hugo:
 
 ## Pre-Process Markdown using Pandoc
 $(HTML): %.html: %.md
-#	$(PANDOC) $(PANDOC_DIRS) -f markdown-smart+lists_without_preceding_blankline -t markdown+smart --wrap=preserve --template=empty.md -s  $<  >  $@
-#	$(PANDOC) $(PANDOC_DIRS) -f markdown-smart+lists_without_preceding_blankline -t html-smart --wrap=preserve -L hugo.lua --mathjax --strip-comments  $<  >>  $@
-#	rm -f $<
 	$(PANDOC) $(PANDOC_DIRS) -d hugo $< -o $<
 
 ## Create readings data template
@@ -138,12 +143,7 @@ clean_algo:
 	rm -rf $(patsubst %.png,%.ps,$(ALGORITHM))
 	rm -rf $(ALGORITHM)
 
-## Clean up HTML mess
-.PHONY: clean_html
-clean_html:
-	rm -rf $(HTML)
-
 ## Clean up
 .PHONY: clean
-clean: clean_algo clean_html
-	rm -rf $(READINGS) $(PDF_FOLDER) $(DOCS) $(RESOURCES)
+clean: clean_algo
+	rm -rf $(TMP_CONTENT) $(READINGS) $(PDF_FOLDER) $(DOCS) $(RESOURCES)
