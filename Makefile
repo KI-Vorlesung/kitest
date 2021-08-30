@@ -13,13 +13,13 @@
 ## to the folder of the current .tex file. When called directly, we
 ## need to first change-dir to this folder.
 ifneq ($(DOCKER), false)
-PANDOC        = docker run --rm -i -v "$(shell pwd):/data" -w "/data"          -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc" alpine-pandoc-hugo
-HUGO          = docker run --rm -i -v "$(shell pwd):/data" -w "/data"          -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo"   alpine-pandoc-hugo
-LATEX         = docker run --rm -i -v "$(dir $(realpath $<)):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="latex"  alpine-pandoc-hugo
+PANDOC = docker run --rm -i -v "$(shell pwd):/data" -w "/data"          -u "$(shell id -u):$(shell id -g)" --entrypoint="pandoc" alpine-pandoc-hugo
+HUGO   = docker run --rm -i -v "$(shell pwd):/data" -w "/data"          -u "$(shell id -u):$(shell id -g)" --entrypoint="hugo"   alpine-pandoc-hugo
+LATEX  = docker run --rm -i -v "$(dir $(realpath $<)):/data" -w "/data" -u "$(shell id -u):$(shell id -g)" --entrypoint="latex"  alpine-pandoc-hugo
 else
-PANDOC        = pandoc
-HUGO          = hugo
-LATEX         = cd $(dir $<) && latex
+PANDOC = pandoc
+HUGO   = hugo
+LATEX  = cd $(dir $<) && latex
 endif
 
 
@@ -31,7 +31,7 @@ endif
 ## be mounted into the Docker container! References to a parent directory
 ## of the working directory therefore will not work when using a Docker
 ## container!
-PANDOC_DIRS   = --data-dir=pandoc --resource-path=".:pandoc"
+PANDOC_DIRS = --data-dir=pandoc --resource-path=".:pandoc"
 
 
 ## Define options for generating image from ".tex" file
@@ -78,7 +78,7 @@ BIBTEX   = ki.bib
 
 ## LaTeX files
 ## Find all ".tex" files and translate them with LaTeX to ".png"
-ALGORITHM  = $(patsubst $(ORIG_CONTENT)/%.tex,$(TMP_CONTENT)/%.png,$(shell find $(ORIG_CONTENT) -type f -name '*.tex'))
+ALGORITHM = $(patsubst $(ORIG_CONTENT)/%.tex,$(TMP_CONTENT)/%.png,$(shell find $(ORIG_CONTENT) -type f -name '*.tex'))
 
 
 
