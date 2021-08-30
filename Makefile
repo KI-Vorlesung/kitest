@@ -55,6 +55,7 @@ RESOURCES    = resources/
 
 
 ## Pages from which slide decks are to be created
+## Pages which need Pandoc pre-processing before the Hugo step
 ##
 ## Use all sections and the page name, but leave out "content/" and "index.md".
 ## Example: "content/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
@@ -63,10 +64,9 @@ RESOURCES    = resources/
 ## for this page.
 SRC    =
 SRC   += tbd/testseite
-SRC   += tbd/test2
 SRC   += tbd/test4
 
-## Use different file extensions so that Make can distinguish the targets
+## Use different file extensions so Make can distinguish these targets
 SLIDES = $(patsubst %,$(TMP_CONTENT)/%/$(PAGE_PDF),$(SRC))
 HTML   = $(patsubst %,$(TMP_CONTENT)/%/$(PAGE_HTML),$(SRC))
 
@@ -75,9 +75,11 @@ HTML   = $(patsubst %,$(TMP_CONTENT)/%/$(PAGE_HTML),$(SRC))
 READINGS = data/readings.yaml
 BIBTEX   = ki.bib
 
+
 ## LaTeX files
 ## Find all ".tex" files and translate them with LaTeX to ".png"
 ALGORITHM  = $(patsubst $(ORIG_CONTENT)/%.tex,$(TMP_CONTENT)/%.png,$(shell find $(ORIG_CONTENT) -type f -name '*.tex'))
+
 
 
 ## Targets
@@ -105,7 +107,7 @@ copy_content:
 ## Create actual slides without any pre-processing
 ## Any necessary pre-processing steps should already be done in the calling step!
 $(SLIDES): %.pdf: %.md $(PDF_FOLDER)
-	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(subst /,_,$(patsubst $(TMP_CONTENT)/%,$(PDF_FOLDER)/%,$@))
+	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(subst index,,$(subst /,_,$(patsubst $(TMP_CONTENT)/%,$(PDF_FOLDER)/%,$@)))
 
 ## Process stand-alone LaTeX files
 $(ALGORITHM): %.png: %.tex
@@ -134,16 +136,7 @@ $(READINGS): $(BIBTEX)
 create-docker-image:
 	cd .github/actions/alpine-pandoc-hugo && make clean all
 
-## Clean up LaTeX mess
-.PHONY: clean_algo
-clean_algo:
-	rm -rf $(patsubst %.png,%.aux,$(ALGORITHM))
-	rm -rf $(patsubst %.png,%.dvi,$(ALGORITHM))
-	rm -rf $(patsubst %.png,%.log,$(ALGORITHM))
-	rm -rf $(patsubst %.png,%.ps,$(ALGORITHM))
-	rm -rf $(ALGORITHM)
-
 ## Clean up
 .PHONY: clean
-clean: clean_algo
+clean:
 	rm -rf $(TMP_CONTENT) $(READINGS) $(PDF_FOLDER) $(DOCS) $(RESOURCES)
