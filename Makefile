@@ -145,4 +145,4 @@ clean_html:
 ## Clean up
 .PHONY: clean
 clean: clean_algo clean_html
-	rm -rf $(PDF) $(DOCS) resources/_gen/
+	rm -rf $(PDF) $(DOCS) $(READINGS) resources/_gen/
