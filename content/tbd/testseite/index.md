@@ -322,6 +322,24 @@ Toggle mit Namen ...
 **Achtung**: Es gibt scheinbar Shortcodes (["Videos"](#videos)), die nur mit `<` funktionieren ...
 
 
+::: showme
+Und mit "native Divs" aus Pandoc-Markdown (muss vorverarbeitet werden) ....
+
+- Stichpunkt 1
+- Stichpunkt 2
+- ...
+:::
+
+
+## Buttons
+
+{{% button href="https://fh-bielefeld.de" %}}FHB{{% /button %}}
+
+{{% button %}}FHB{{% /button %}}
+
+[Beispiel: Wuppie]{.bsp}
+
+
 ## Literatur
 
 ### Einsatz von Variablen im YAML-Header der Seite
@@ -455,3 +473,46 @@ Zum Erzeugen eines Schedules (aka "Fahrplan") gibt es den Shortcode `schedule`.
 Dabei wird die Datei `data/schedule.yaml` ausgelesen und verarbeitet.
 
 `{{< schedule >}}`{=markdown}
+
+
+## Pandoc native Divs/Spans
+
+Native Divs `::: slides ... :::` and `::: notes ... :::` werden je nach Kontext durch den Pandoc-Filter entfernt, also beim Erzeugen von Folien (PDF/Beamer) wird der Inhalt von `::: slides` berücksichtigt und `::: notes` komplett entfernt und beim Generien der Webseiten anders herum.
+
+Andere native Divs wie `::: cbox ... :::` und `::: center ... :::` werden in "normale" Divs mit der entsprechenden Klasse umgewandelt, so dass über Hugo und das passende CSS die Formatierung erreicht wird.
+
+Analoges gilt für native Spans wie `[]{.origin}` und `[]{.alert}`.
+
+Für manche Elemente wie `::: showme ... :::` und `[]{.bsp}` werden passende Shortcodes eingesetzt.
+
+::: cbox
+Hier ein wichtiger Text!
+:::
+
+Oder zentriert:
+
+::: center
+Hier wird zentriert ...
+:::
+
+Dies ist eine [wichtige]{.alert} Bemerkung. Und noch [**wichtiger**]{.alert} ... Und hier noch ein [Quellenhinweis: [URL](https://www.google.de/)]{.origin}.
+
+Für `::: columns ... :::` wurde noch kein passender Ersatz gefunden.
+
+::: showme
+Das hier ist erstmal versteckt!
+
+- Punkt 1
+- Punkt 2
+- Punkt 3
+:::
+
+[Hier ein Beispiel]{.bsp}
+
+::: slides
+Dieser Text erscheint nur auf den Folien, nicht aber auf den Webseiten.
+:::
+
+::: notes
+Dieser Text erscheint nur auf den Webseiten, nicht aber auf den Folien.
+:::
