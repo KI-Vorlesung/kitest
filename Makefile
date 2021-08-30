@@ -44,10 +44,11 @@ HUGO_ARGS = --config config.yaml,$(wildcard local.yaml)
 
 
 ## Some folder and file names
-CONTENT     = content
+CONTENT     = content/
 PAGE        = index.md
-PDF_FOLDER  = pdf
-DOCS        = docs
+PDF_FOLDER  = pdf/
+DOCS        = docs/
+RESOURCES   = resources/
 
 
 ## Pages from which slide decks are to be created
@@ -145,4 +146,4 @@ clean_html:
 ## Clean up
 .PHONY: clean
 clean: clean_algo clean_html
-	rm -rf $(PDF_FOLDER) $(DOCS) $(READINGS) resources/_gen/
+	rm -rf $(READINGS) $(PDF_FOLDER) $(DOCS) $(RESOURCES)
