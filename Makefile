@@ -102,7 +102,7 @@ web: copy_content $(ALGORITHM) $(READINGS) $(HTML) hugo
 ## Copy $(ORIG_CONTENT) to $(TMP_CONTENT)
 .PHONY: copy_content
 copy_content:
-	cp -a $(ORIG_CONTENT) $(TMP_CONTENT)
+	cp -a $(ORIG_CONTENT)/ $(TMP_CONTENT)/
 
 ## Create actual slides without any pre-processing
 ## Any necessary pre-processing steps should already be done in the calling step!
