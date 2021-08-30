@@ -112,7 +112,7 @@ $(HTML): %.html: %.md
 #	$(PANDOC) $(PANDOC_DIRS) -f markdown-smart+lists_without_preceding_blankline -t markdown+smart --wrap=preserve --template=empty.md -s  $<  >  $@
 #	$(PANDOC) $(PANDOC_DIRS) -f markdown-smart+lists_without_preceding_blankline -t html-smart --wrap=preserve -L hugo.lua --mathjax --strip-comments  $<  >>  $@
 #	rm -f $<
-	$(PANDOC) $(PANDOC_DIRS) -f markdown-smart+lists_without_preceding_blankline -t markdown+smart-grid_tables-multiline_tables-simple_tables --wrap=preserve -L hugo.lua --strip-comments -s  $<  -o $<
+	$(PANDOC) $(PANDOC_DIRS) -d hugo $< -o $<
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
