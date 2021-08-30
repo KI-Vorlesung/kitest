@@ -44,8 +44,8 @@ HUGO_ARGS = --config config.yaml,$(wildcard local.yaml)
 
 
 ## Some folder and file names
-ORIG_CONTENT = content
-TMP_CONTENT  = tmp
+ORIG_CONTENT = markdown
+TMP_CONTENT  = content
 PAGE         = index.md
 PAGE_HTML    = $(patsubst %.md,%.html,$(PAGE))
 PAGE_PDF     = $(patsubst %.md,%.pdf,$(PAGE))
