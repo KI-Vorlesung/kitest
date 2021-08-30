@@ -66,6 +66,11 @@ SRC       = $(patsubst $(CONTENT)/%/$(PAGE),%,$(shell find $(CONTENT) -type f -n
 #HTML      = $(patsubst %.md,%.html,$(shell find $(CONTENT) -type f -name '$(PAGE)'))
 HTML = content/tbd/testseite/index.html
 
+
+## Readings data template
+READINGS = data/readings.yaml
+BIBTEX   = ki.bib
+
 ## LaTeX files
 ## Find all ".tex" files and translate them with LaTeX to ".png"
 ALGORITHM  = $(patsubst %.tex,%.png,$(shell find $(CONTENT) -type f -name '*.tex'))
@@ -83,7 +88,7 @@ slides: $(ALGORITHM) $(PDF) $(SLIDES)
 
 ## Create web page
 .PHONY: web
-web: $(ALGORITHM) $(HTML) hugo
+web: $(ALGORITHM) $(READINGS) $(HTML) hugo
 
 
 ## Auxiliary targets
@@ -114,6 +119,10 @@ $(HTML): %.html: %.md
 #	rm -f $<
 	$(PANDOC) $(PANDOC_DIRS) -d hugo $< -o $<
 
+## Create readings data template
+$(READINGS): $(BIBTEX)
+	$(PANDOC) -s -f biblatex -t markdown $< -o $@
+
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
 create-docker-image:
@@ -136,4 +145,4 @@ clean_html:
 ## Clean up
 .PHONY: clean
 clean: clean_algo clean_html
-	rm -rf $(PDF) $(DOCS) resources/_gen/
+	rm -rf $(PDF) $(DOCS) $(READINGS) resources/_gen/

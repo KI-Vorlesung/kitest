@@ -3,9 +3,9 @@ type: lecture-cy
 title: "Test-Vorlesung für Canan"
 weight: 5
 readings:
-  - key: "AIMA"
+  - key: "Russell2020"
     comment: "Kapitel 2 und 3"
-  - key: "Ertel"
+  - key: "Ertel2017"
 quizzes:
   - name: "Testquizz 1"
     link: https://kahoot.it/challenge/01262821?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629455219268
