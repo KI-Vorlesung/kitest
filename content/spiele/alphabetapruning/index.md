@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Alpha-Beta-Pruning"
 weight: 4
 ---

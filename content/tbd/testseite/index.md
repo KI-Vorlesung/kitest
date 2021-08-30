@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Test der verschiedenen Markdown-Elemente"
 weight: 1
 readings:

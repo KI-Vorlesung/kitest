@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Machine Learning 101"
 weight: 1
 ---

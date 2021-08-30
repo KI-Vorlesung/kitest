@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Test2: Ordner statt Datei"
 weight: 2
 ---

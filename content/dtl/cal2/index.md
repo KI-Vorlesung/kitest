@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "CAL2"
 weight: 2
 ---

@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Suche mit Best First"
 weight: 2
 ---

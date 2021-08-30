@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Modellierung"
 weight: 2
 ---

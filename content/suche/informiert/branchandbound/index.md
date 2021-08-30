@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Suche mit Branch-and-Bound"
 weight: 1
 ---
