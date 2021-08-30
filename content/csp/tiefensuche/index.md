@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Lösen von diskreten CSP"
 weight: 2
 ---

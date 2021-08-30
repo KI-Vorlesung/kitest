@@ -1,6 +1,6 @@
 ---
-type: lecture
-title: "Test eines spezifischen Templates"
+type: lecture-cg
+title: "Test-Vorlesung für Carsten"
 weight: 4
 readings:
   - key: "Russell2020"

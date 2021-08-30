@@ -1,5 +1,5 @@
 ---
-type: lecture
+type: lecture-cg
 title: "Optimale Spiele"
 weight: 1
 ---
