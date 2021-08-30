@@ -391,6 +391,23 @@ Hier eine Mehrfachzitierung [@Russell2014; @Russell2020; @Pedregosa2011]
 Lorem Ipsum.
 
 
+::: slides
+## Zitieren (Test für Folien)
+
+Im Text werden die Keys normal benutzt: `@key`.
+
+Beim Erzeugen der Slides (Beamer/PDF) erzeugt Pandoc mit dem Bibtex-File und den Keys einen verlinkten Eintrag im Text und ggf. am Ende der Folien ein Literaturverzeichnis.
+
+Beim Erzeugen der Webseiten wird zunächst bei der Vorverarbeitung mit Pandoc plus einem Filter aus den Keys ein Link ins lokale Literaturverzeichnis erstellt und in den Text eingebettet. Danach kann beim Ausführen von Hugo der Shortcode/Partial `bib` das Literaturverzeichnis mit den entsprechenden Ankern generieren.
+
+Blablab @Russell2020 blublbubl [@Russell2020] bla [@Russell2020, S.10] ...
+
+Hier eine Mehrfachzitierung [@Russell2014; @Russell2020; @Pedregosa2011]
+
+Lorem Ipsum.
+:::
+
+
 ## Sonstige Special Sections
 
 In der Datei `static/css/tldr.css` finden sich die Klassen für "TLDR" etc. aus meinem [Pandoc-Lecture](https://github.com/cagix/pandoc-lecture).
