@@ -44,10 +44,10 @@ HUGO_ARGS = --config config.yaml,$(wildcard local.yaml)
 
 
 ## Some folder and file names
-CONTENT = content
-PAGE    = index.md
-PDF     = pdf
-DOCS    = docs
+CONTENT     = content
+PAGE        = index.md
+PDF_FOLDER  = pdf
+DOCS        = docs
 
 
 ## Pages from which slide decks are to be created
@@ -84,7 +84,7 @@ all: slides web
 
 ## Create slides
 .PHONY: slides
-slides: $(ALGORITHM) $(PDF) $(SLIDES)
+slides: $(ALGORITHM) $(PDF_FOLDER) $(SLIDES)
 
 ## Create web page
 .PHONY: web
@@ -95,16 +95,16 @@ web: $(ALGORITHM) $(READINGS) $(HTML) hugo
 
 ## Create actual slides without any pre-processing
 ## Any necessary pre-processing steps should already be done in the calling step!
-$(SLIDES): %: $(CONTENT)/%/$(PAGE) $(PDF)
-	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(addsuffix .pdf,$(addprefix $(PDF)/,$(subst /,_,$@)))
+$(SLIDES): %: $(CONTENT)/%/$(PAGE) $(PDF_FOLDER)
+	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(addsuffix .pdf,$(addprefix $(PDF_FOLDER)/,$(subst /,_,$@)))
 
 ## Process stand-alone LaTeX files
 $(ALGORITHM): %.png: %.tex
 	$(LATEX) $(LATEX_ARGS) $(notdir $<)
 
-## Create folder "$(PDF)/"
-$(PDF):
-	mkdir $(PDF)
+## Create folder "$(PDF_FOLDER)/"
+$(PDF_FOLDER):
+	mkdir $(PDF_FOLDER)
 
 ## Create actual website without any pre-processing
 ## Any necessary pre-processing steps should already be done in the calling step!
@@ -145,4 +145,4 @@ clean_html:
 ## Clean up
 .PHONY: clean
 clean: clean_algo clean_html
-	rm -rf $(PDF) $(DOCS) $(READINGS) resources/_gen/
+	rm -rf $(PDF_FOLDER) $(DOCS) $(READINGS) resources/_gen/
