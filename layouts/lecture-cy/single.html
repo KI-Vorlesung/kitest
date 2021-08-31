@@ -10,7 +10,9 @@
 {{ .Scratch.Set "attachments_level" 2 }}
 {{ partial "attachments.html" . }}
 
+<div class="recap">
 {{ .Content }}
+</div>
 
 {{ partial "assignments.html" . }}
 {{ partial "outcomes.html" . }}
