@@ -103,10 +103,10 @@ web: copy_content $(ALGORITHM) $(READINGS) $(HTML) hugo
 TOPIC ?=
 PHONY: new_lecture-cy
 new_lecture-cy:
-	$(HUGO) new -c "markdown" -k lecture-cy $(TOPIC)
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cy $(TOPIC)
 PHONY: new_lecture-cg
 new_lecture-cg:
-	$(HUGO) new -c "markdown" -k lecture-cg $(TOPIC)
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cg $(TOPIC)
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
