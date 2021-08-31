@@ -58,9 +58,9 @@ RESOURCES    = resources
 ## Pages which need Pandoc pre-processing before the Hugo step
 ##
 ## Use all sections and the page name, but leave out "content/" and "index.md".
-## Example: "content/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
+## Example: "markdown/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
 ##
-## The "topic/subtopic/lecture" is also a make target for creating the slide desk
+## The "topic/subtopic/lecture" is also a make target for creating the lecture slides
 ## for this page.
 SRC    =
 SRC   += tbd/testseite
@@ -95,6 +95,18 @@ slides: copy_content $(ALGORITHM) $(PDF_FOLDER) $(SLIDES)
 ## Create web page
 .PHONY: web
 web: copy_content $(ALGORITHM) $(READINGS) $(HTML) hugo
+
+## Create new lecture stub based on archetype
+## Use all sections and the page name, but leave out "content/" and "index.md".
+## Example: "markdown/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
+## => "make new_lecture-cy TOPIC=topic/subtopic/lecture"
+TOPIC ?=
+PHONY: new_lecture-cy
+new_lecture-cy:
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cy $(TOPIC)
+PHONY: new_lecture-cg
+new_lecture-cg:
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cg $(TOPIC)
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
