@@ -8,7 +8,7 @@ contentDir: content
 publishDir: docs
 
 params:
-  editURL: "https://github.com/KI-Vorlesung/kitest/edit/master/content/"
+  editURL: "https://github.com/KI-Vorlesung/kitest/edit/master/markdown/"
   author: "cagix"
   themeVariant: "green"
   titleSeparator: " "
