@@ -15,7 +15,7 @@ params:
   showVisitedLinks: true
   disableBreadcrumb: false
   disableInlineCopyToClipBoard: true
-  disableNextPrev: false
+  disableNextPrev: true
   disableSearch: true
   disableLandingPageButton: true
   disableMermaid: true
