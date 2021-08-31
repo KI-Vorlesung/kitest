@@ -1,10 +1,10 @@
 ---
 type: lecture-cg
-title: "Suche mit A*"
+title: "Suche mit `A*`{=markdown}"
 weight: 3
 ---
 
 
-## A*
+## `A*`{=markdown}
 
-...
+`...`{=markdown}
