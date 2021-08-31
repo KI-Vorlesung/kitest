@@ -65,6 +65,7 @@ RESOURCES    = resources
 SRC    =
 SRC   += tbd/testseite
 SRC   += tbd/test4
+SRC   += suche/informiert/astar
 
 ## Use different file extensions so Make can distinguish these targets
 SLIDES = $(patsubst %,$(TMP_CONTENT)/%/$(PAGE_PDF),$(SRC))
