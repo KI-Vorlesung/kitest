@@ -117,6 +117,9 @@ new_lecture-bc:
 PHONY: new_lecture-cg
 new_lecture-cg:
 	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cg $(TOPIC)
+PHONY: new_assignment
+new_assignment:
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k assignment $(TOPIC)
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image

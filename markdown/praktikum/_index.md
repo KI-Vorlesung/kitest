@@ -1,7 +1,6 @@
 ---
-title: "Praktikum"
 chapter: true
-weight: 0
+title: "Praktikum"
 hidden: true
 ---
 
