@@ -1,7 +1,6 @@
 ---
 title: "Orga"
 chapter: true
-weight: 0
 hidden: true
 ---
 

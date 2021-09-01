@@ -1,7 +1,6 @@
 ---
 title: "Misc"
 chapter: true
-weight: 999
 hidden: true
 ---
 

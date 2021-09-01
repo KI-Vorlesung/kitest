@@ -1,6 +1,5 @@
 ---
 title: "Datenschutzerklärung"
-menuTitle: "Datenschutz"
 disableToc: true
 hidden: true
 ---
