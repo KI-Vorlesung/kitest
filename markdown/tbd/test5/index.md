@@ -1,6 +1,7 @@
 ---
 type: lecture-cy
 title: "Test-Vorlesung für Canan"
+author: "Carsten Gips (FH Bielefeld)"
 weight: 5
 readings:
   - key: "Russell2020"

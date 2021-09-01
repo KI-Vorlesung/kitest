@@ -1,5 +1,6 @@
 ---
 type: lecture-cg
+author: "Carsten Gips (FH Bielefeld)"
 title: "Test-Vorlesung für Carsten"
 weight: 4
 readings:

@@ -1,5 +1,6 @@
 ---
 type: lecture-cg
+author: "AUTHOR (INSTITUTION)"
 title: "{{ replace .Name "-" " " | title }}"
 weight: 5
 readings:
