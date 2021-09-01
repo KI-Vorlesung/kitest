@@ -26,6 +26,9 @@ fhmedia:
 attachments:
   - name: "Extra Material, e.g. annotated slides ... Use This As Link Text"
     link: https://www.fh-bielefeld.de
+assignments:
+  - topic: blatt01
+  - topic: blatt02
 ---
 
 
