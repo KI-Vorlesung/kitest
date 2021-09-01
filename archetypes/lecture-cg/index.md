@@ -1,7 +1,8 @@
 ---
 type: lecture-cg
-author: "AUTHOR (INSTITUTION)"
 title: "{{ replace .Name "-" " " | title }}"
+menuTitle: : "{{ replace .Name "-" " " | title }}"
+author: "AUTHOR (INSTITUTION)"
 weight: 5
 readings:
   - key: "AIMA"
