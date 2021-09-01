@@ -16,10 +16,10 @@ assignments:
 youtube:
   - id: XYZ (ID)
   - link: https://youtu.be/XYZ
-    name: "Use This As Link Text (Link from 'share'-Button)"
+    name: "Use This As Link Text (Link from `'share'`{=markdown}-Button)"
 fhmedia:
   - link: https://www.fh-bielefeld.de/medienportal/m/XYZ
-    name: "Use This As Link Text (Direkt-Link from 'share'-Button)"
+    name: "Use This As Link Text (Direkt-Link from `'share'`{=markdown}-Button)"
 attachments:
   - link: https://www.fh-bielefeld.de
     name: "Extra Material, e.g. annotated slides `...`{=markdown} Use This As Link Text"
