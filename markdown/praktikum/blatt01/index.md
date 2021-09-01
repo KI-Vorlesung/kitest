@@ -1,6 +1,6 @@
 ---
 title: "Blatt 01"
-weight: 1
+author: "Carsten Gips (FH Bielefeld)"
 disableToc: true
 hidden: true
 ---

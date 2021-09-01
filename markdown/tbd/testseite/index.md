@@ -1,5 +1,6 @@
 ---
 type: lecture-cg
+author: "Carsten Gips (FH Bielefeld)"
 title: "Test der verschiedenen Markdown-Elemente"
 weight: 1
 readings:

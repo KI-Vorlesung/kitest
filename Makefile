@@ -64,7 +64,8 @@ RESOURCES    = resources
 ## for this page.
 SRC    =
 SRC   += tbd/testseite
-SRC   += tbd/test4
+SRC   += tbd/lecture-cg
+SRC   += tbd/lecture-bc
 SRC   += suche/informiert/astar
 
 ## Use different file extensions so Make can distinguish these targets
@@ -100,14 +101,25 @@ web: copy_content $(ALGORITHM) $(READINGS) $(HTML) hugo
 ## Create new lecture stub based on archetype
 ## Use all sections and the page name, but leave out "content/" and "index.md".
 ## Example: "markdown/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
-## => "make new_lecture-cy TOPIC=topic/subtopic/lecture"
+## 1. "make new_chapter TOPIC=topic"
+## 2. "make new_chapter TOPIC=topic/subtopic"
+## 3. "make new_lecture-cy TOPIC=topic/subtopic/lecture"
 TOPIC ?=
+PHONY: new_chapter
+new_chapter:
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k chapter $(TOPIC)
 PHONY: new_lecture-cy
 new_lecture-cy:
 	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cy $(TOPIC)
+PHONY: new_lecture-bc
+new_lecture-bc:
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-bc $(TOPIC)
 PHONY: new_lecture-cg
 new_lecture-cg:
 	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cg $(TOPIC)
+PHONY: new_assignment
+new_assignment:
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k assignment $(TOPIC)
 
 ## Build Docker image "alpine-pandoc-hugo"
 .PHONY: create-docker-image
