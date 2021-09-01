@@ -2,7 +2,7 @@
 type: lecture-cg
 title: "{{ replace .Name "-" " " | title }}"
 menuTitle: : "{{ replace .Name "-" " " | title }}"
-author: "AUTHOR (INSTITUTION)"
+author: "Carsten Gips (FH Bielefeld)"
 weight: 5
 readings:
   - key: "AIMA"

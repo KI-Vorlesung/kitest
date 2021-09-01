@@ -2,7 +2,7 @@
 type: lecture-cy
 title: "{{ replace .Name "-" " " | title }}"
 menuTitle: : "{{ replace .Name "-" " " | title }}"
-author: "AUTHOR (INSTITUTION)"
+author: "Canan Yıldız (Türkisch-Deutsche Universität)"
 weight: 5
 readings:
   - key: "AIMA"
