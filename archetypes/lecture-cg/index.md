@@ -1,34 +1,25 @@
 ---
 type: lecture-cg
 title: "{{ replace .Name "-" " " | title }}"
-menuTitle: : "{{ replace .Name "-" " " | title }}"
+menuTitle: "{{ replace .Name "-" " " | title }}"
 author: "Carsten Gips (FH Bielefeld)"
 weight: 5
 readings:
-  - key: "AIMA"
+  - key: "Russell2020"
     comment: "Kapitel 2 und 3"
-  - key: "Ertel"
+  - key: "Ertel2017"
 quizzes:
-  - name: "Testquizz"
-    link: XYZ (URL from "Invite more Players")
-youtube:
-  - id: XYZ (ID)
-  - name: "Use This As Header H3 Before Video"
-    id: XYZ (ID)
-  - name: "Use This As Header H3 Before Video"
-    link: https://youtu.be/XYZ
-fhmedia:
-  - id: XYZ (KEY)
-  - name: "Use This As Link Text"
-    id: XYZ (KEY)
-  - name: "Use This As Link Text"
-    link: https://www.fh-bielefeld.de/medienportal/m/XYZ
-attachments:
-  - name: "Extra Material, e.g. annotated slides ... Use This As Link Text"
-    link: https://www.fh-bielefeld.de
+  - link: XYZ (URL from 'Invite more Players')
+    name: "Testquizz"
 assignments:
   - topic: blatt01
-  - topic: blatt02
+youtube:
+  - id: XYZ (ID)
+  - link: https://youtu.be/XYZ
+    name: "Use This As Link Text (Link from 'share'-Button)"
+fhmedia:
+  - link: https://www.fh-bielefeld.de/medienportal/m/XYZ
+    name: "Use This As Link Text (Direkt-Link from 'share'-Button)"
 ---
 
 
