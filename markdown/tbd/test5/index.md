@@ -18,23 +18,6 @@ assignments:
 ---
 
 
-## Zusammenfassung
+## Zusammenfassung / Recap
 
-Hier könnte eine längere oder kürzere Zusammenfassung stehen. Sogar mit weiterer Untergliederung (H3 und tiefer) ...
-
-
-{{% outcomes %}}
-## Lernziele oder Was muss ich wissen?
-
-Platz für Lernziele
-*   Behebung von Bad Smells durch Refactoring
-
-
-{{% k1 %}}
--   Wuppie
--   Fluppie
-{{% /k1 %}}
-
-...
-
-{{% /outcomes %}}
+Hier könnte eine längere oder kürzere Zusammenfassung ("Recap") stehen. Sogar mit weiterer Untergliederung (H3 und tiefer) ...
