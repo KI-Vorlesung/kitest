@@ -101,8 +101,13 @@ web: copy_content $(ALGORITHM) $(READINGS) $(HTML) hugo
 ## Create new lecture stub based on archetype
 ## Use all sections and the page name, but leave out "content/" and "index.md".
 ## Example: "markdown/topic/subtopic/lecture/index.md" becomes "topic/subtopic/lecture"
-## => "make new_lecture-cy TOPIC=topic/subtopic/lecture"
+## 1. "make new_chapter TOPIC=topic"
+## 2. "make new_chapter TOPIC=topic/subtopic"
+## 3. "make new_lecture-cy TOPIC=topic/subtopic/lecture"
 TOPIC ?=
+PHONY: new_chapter
+new_chapter:
+	$(HUGO) new -c "$(ORIG_CONTENT)/" -k chapter $(TOPIC)
 PHONY: new_lecture-cy
 new_lecture-cy:
 	$(HUGO) new -c "$(ORIG_CONTENT)/" -k lecture-cy $(TOPIC)
