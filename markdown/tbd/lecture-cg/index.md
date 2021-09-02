@@ -130,6 +130,10 @@ Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Par
 
 ![Listings mit Mathescape](images/fancy2.png){width="60%"}
 
+## Listings und Math: Pandoc (empty title/alt)
+
+![](images/fancy2.png){width="60%"}
+
 
 ## Verlinkungen
 
