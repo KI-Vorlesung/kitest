@@ -254,11 +254,16 @@ Hier die Abbildung für das Beispiel: `![Listings mit Mathescape](images/fancy_m
 
 -   Links nach außen: [Pandoc](https://pandoc.org/)
 -   Links im Dokument (automatische Label): ["Stichpunkte"](#stichpunkte)
--   Links auf andere Dokumente:
-    * [Fahrplan](`{{< ref "/fahrplan.md" >}}`{=markdown})
-    * [Note und Credits](`{{< ref "note_und_credits" >}}`{=markdown})
-    * [Syllabus](`{{< ref "syllabus.md" >}}`{=markdown})
-    * [Reading](`{{< ref "reading.md" >}}`{=markdown})
+-   Links auf andere Dokumente
+
+    ```
+    * [Fahrplan]({{< ref "/fahrplan.md" >}}
+    * [Note und Credits]({{< ref "note_und_credits" >}}
+    * [Syllabus]({{< ref "syllabus.md" >}}
+    * [Reading]({{< ref "reading.md" >}}
+    ```
+
+    Hinweis: Shortcodes funktionieren nicht so gut im Zusammenhang mit Pandoc! Also entweder Einsatz von Shortcodes plus direktes Erzeugen der Seiten mit Hugo, oder Verzicht auf Shortcodes plus Vorverarbeitung der Webseiten-Sourcen mit Pandoc und Erzeugung von Folien mit Pandoc!
 
 
 ## Tabellen
