@@ -126,20 +126,6 @@ Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Par
 
 ![Listings mit Mathescape](images/fancy2.png)
 
-## Listings und Math: HTML
-
-<div style="max-width:60%">
-<img alt="Listings mit Mathescape" src="images/fancy2.png" />
-</div>
-
-## Listings und Math: Hugo-Learn-Theme
-
-![Listings mit Mathescape](images/fancy2.png?width=600px)
-
-## Listings und Math: Hugo (Shortcode)
-
-{{% figure src="images/fancy2.png" title="Listings mit Mathescape" width="60%" %}}
-
 ## Listings und Math: Pandoc
 
 ![Listings mit Mathescape](images/fancy2.png){width="60%"}
