@@ -5,6 +5,6 @@ weight: 3
 ---
 
 
-## `A*`{=markdown}
+## A*
 
-`...`{=markdown}
+...

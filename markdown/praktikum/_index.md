@@ -7,4 +7,4 @@ hidden: true
 
 # Praktikum
 
-{{% children description="true" showhidden="true" %}}
+{{< children description="true" showhidden="true" >}}
