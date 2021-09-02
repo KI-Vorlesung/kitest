@@ -79,14 +79,14 @@ $$
 *   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
     -   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
     -   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-*   sed diam nonumy eirmod tempor invidunt ut labore et dolore `...`{=markdown}
-    a)  sed diam nonumy eirmod tempor invidunt ut labore et dolore `...`{=markdown}
-    b)  sed diam nonumy eirmod tempor invidunt ut labore et dolore `...`{=markdown}
+*   sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+    a)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+    b)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
 *   magna aliquyam erat, sed diam voluptua.
     1.  magna aliquyam erat, sed diam voluptua.
     2.  magna aliquyam erat, sed diam voluptua.
 
-Nummerierte Aufzählungen funktionieren scheinbar nur mit `1.`, `2.`, `...`{=markdown}
+Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., ...
 
 ### Hervorhebungen
 
@@ -160,7 +160,7 @@ Dann könnte der Abbildungsordner unterhalb von `content/mypage/` liegen und wä
 ```
 
 Well, inline code like `int main()` works too :)
-Also with syntax highlighting like `int main()`{.c} `...`{=markdown}
+Also with syntax highlighting like `int main()`{.c} ...
 
 
 ## Mathe und Formeln
@@ -296,12 +296,12 @@ Siehe [Anleitung](https://learn.netlify.app/en/shortcodes/attachments/): Wenn di
 Mit dem Shortcode `expand` können Toggles realisiert werden.
 
 {{% expand %}}
-Kurzer Toggle ohne extra Namen `...`{=markdown}
+Kurzer Toggle ohne extra Namen ...
 {{% /expand %}}
 
 
 {{% expand "Was ist die Antwort?" %}}
-Toggle mit Namen `...`{=markdown}
+Toggle mit Namen ...
 
 ### Hier Überschrift im Toggle
 
@@ -320,15 +320,15 @@ Toggle mit Namen `...`{=markdown}
 {{% /expand %}}
 
 **Anmerkung**: Laut https://gohugo.io/content-management/shortcodes/ werden Shortcodes mit `%` interpretiert und gerendert, während bei der Verwendung von `<` der eingeschlossene Code kein weiteres Rendering erfährt.
-**Achtung**: Es gibt scheinbar Shortcodes (["Videos"](#videos)), die nur mit `<` funktionieren `...`{=markdown}
+**Achtung**: Es gibt scheinbar Shortcodes (["Videos"](#videos)), die nur mit `<` funktionieren ...
 
 
 ::: showme
-Und mit "native Divs" aus Pandoc-Markdown (muss vorverarbeitet werden) `...`{=markdown}
+Und mit "native Divs" aus Pandoc-Markdown (muss vorverarbeitet werden) ...
 
 - Stichpunkt 1
 - Stichpunkt 2
-- `...`{=markdown}
+- ...
 :::
 
 
@@ -370,7 +370,7 @@ Dann wird mit dem Shortcode `bib` (ohne Parameter) das Literaturverzeichnis gene
 Dem Shortcode `bib` (ohne Parameter) kann auch Inhalt übergeben werden (zw. öffnendem und schließendem Shortcode). Dieser wird dann als Literaturverzeichnis angezeigt (**ohne** Default-Überschrift!).
 
 {{% bib %}}
-Hier könnte ein Literaturverzeichnis entstehen `...`{=markdown}
+Hier könnte ein Literaturverzeichnis entstehen ...
 {{% /bib %}}
 
 ### Vorrang
@@ -385,7 +385,7 @@ Beim Erzeugen der Slides (Beamer/PDF) erzeugt Pandoc mit dem Bibtex-File und den
 
 Beim Erzeugen der Webseiten wird zunächst bei der Vorverarbeitung mit Pandoc plus einem Filter aus den Keys ein Link ins lokale Literaturverzeichnis erstellt und in den Text eingebettet. Danach kann beim Ausführen von Hugo der Shortcode/Partial `bib` das Literaturverzeichnis mit den entsprechenden Ankern generieren.
 
-Blablab @Russell2020 blublbubl [@Russell2020] bla [@Russell2020, S.10] `...`{=markdown}
+Blablab @Russell2020 blublbubl [@Russell2020] bla [@Russell2020, S.10] ...
 
 Hier eine Mehrfachzitierung [@Russell2014; @Russell2020; @Pedregosa2011]
 
@@ -401,7 +401,7 @@ Beim Erzeugen der Slides (Beamer/PDF) erzeugt Pandoc mit dem Bibtex-File und den
 
 Beim Erzeugen der Webseiten wird zunächst bei der Vorverarbeitung mit Pandoc plus einem Filter aus den Keys ein Link ins lokale Literaturverzeichnis erstellt und in den Text eingebettet. Danach kann beim Ausführen von Hugo der Shortcode/Partial `bib` das Literaturverzeichnis mit den entsprechenden Ankern generieren.
 
-Blablab @Russell2020 blublbubl [@Russell2020] bla [@Russell2020, S.10] `...`{=markdown}
+Blablab @Russell2020 blublbubl [@Russell2020] bla [@Russell2020, S.10] ...
 
 Hier eine Mehrfachzitierung [@Russell2014; @Russell2020; @Pedregosa2011]
 
@@ -413,7 +413,7 @@ Lorem Ipsum.
 
 In der Datei `static/css/tldr.css` finden sich die Klassen für "TLDR" etc. aus meinem [Pandoc-Lecture](https://github.com/cagix/pandoc-lecture).
 
-Ein Versuch wäre, diese Klassen explizit über ein `<div class="tldr">` etc. einzubauen. `...`{=markdown} Wird aber von Hugo aus Sicherheitsgründen unterdrückt, im Output steht dann nur noch `<!-- raw HTML omitted -->` `...`{=markdown} Das könnte man ggf. durch eine Konfiguration aktivieren (siehe [Stackoverflow](https://stackoverflow.com/questions/63198652/hugo-shortcode-ignored-saying-raw-html-omitted)).
+Ein Versuch wäre, diese Klassen explizit über ein `<div class="tldr">` etc. einzubauen. ... Wird aber von Hugo aus Sicherheitsgründen unterdrückt, im Output steht dann nur noch `<!-- raw HTML omitted -->` ... Das könnte man ggf. durch eine Konfiguration aktivieren (siehe [Stackoverflow](https://stackoverflow.com/questions/63198652/hugo-shortcode-ignored-saying-raw-html-omitted)).
 
 Ein anderer Weg könnten ["Custom Shortcode Templates"](https://gohugo.io/templates/shortcode-templates/) sein. Aber auch hier muss man letztlich das "unsafe" Rendering explizit freischalten. Offenbar wird ein Unterscheid zwischen eigenen Shortcode Templates und denen aus einem Theme gemacht (warum?!).
 
@@ -467,7 +467,7 @@ quizzes:
 Zum Einsatz als Bonusaufgabe steht der Shortcode `challenges` bereit. Der Inhalt wird als Markdown gerendert und leicht farbig vom Rest abgehoben.
 
 {{% challenges %}}
-Erstellen Sie `...`{=markdown}
+Erstellen Sie ...
 {{% /challenges %}}
 
 
@@ -524,10 +524,10 @@ Hier ein wichtiger Text!
 Oder zentriert:
 
 ::: center
-Hier wird zentriert `...`{=markdown}
+Hier wird zentriert ...
 :::
 
-Dies ist eine [wichtige]{.alert} Bemerkung. Und noch [**wichtiger**]{.alert} `...`{=markdown} Und hier noch ein [Quellenhinweis: [URL](https://www.google.de/)]{.origin}.
+Dies ist eine [wichtige]{.alert} Bemerkung. Und noch [**wichtiger**]{.alert} ... Und hier noch ein [Quellenhinweis: [URL](https://www.google.de/)]{.origin}.
 
 Für `::: columns ... :::` wurde noch kein passender Ersatz gefunden.
 

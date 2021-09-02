@@ -67,6 +67,7 @@ SRC   += tbd/testseite
 SRC   += tbd/lecture-cg
 SRC   += tbd/lecture-bc
 SRC   += suche/informiert/astar
+SRC   += dtl/cal2
 
 ## Use different file extensions so Make can distinguish these targets
 SLIDES = $(patsubst %,$(TMP_CONTENT)/%/$(PAGE_PDF),$(SRC))

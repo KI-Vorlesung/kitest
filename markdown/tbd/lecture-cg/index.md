@@ -32,14 +32,14 @@ fhmedia:
 *   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
     -   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
     -   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-*   sed diam nonumy eirmod tempor invidunt ut labore et dolore `...`{=markdown}
-    a)  sed diam nonumy eirmod tempor invidunt ut labore et dolore `...`{=markdown}
-    b)  sed diam nonumy eirmod tempor invidunt ut labore et dolore `...`{=markdown}
+*   sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+    a)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+    b)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
 *   magna aliquyam erat, sed diam voluptua.
     1.  magna aliquyam erat, sed diam voluptua.
     2.  magna aliquyam erat, sed diam voluptua.
 
-Nummerierte Aufzählungen funktionieren scheinbar nur mit `1.`, `2.`, `...`{=markdown}
+Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., ...
 
 ### Hervorhebungen
 
@@ -81,7 +81,7 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit `1.`, `2.`, `...`{=mar
 ```
 
 Well, inline code like `int main()` works too :)
-Also with syntax highlighting like `int main()`{.c} `...`{=markdown}
+Also with syntax highlighting like `int main()` ...
 
 
 ## Mathe und Formeln
@@ -166,12 +166,12 @@ Es gehen lt. Doku nur **Pipe-Tables**?!
 Mit dem Shortcode `expand` können Toggles realisiert werden.
 
 {{% expand %}}
-Kurzer Toggle ohne extra Namen `...`{=markdown}
+Kurzer Toggle ohne extra Namen ...
 {{% /expand %}}
 
 
 {{% expand "Was ist die Antwort?" %}}
-Toggle mit Namen `...`{=markdown}
+Toggle mit Namen ...
 
 ### Hier Überschrift im Toggle
 
@@ -190,4 +190,4 @@ Toggle mit Namen `...`{=markdown}
 {{% /expand %}}
 
 **Anmerkung**: Laut https://gohugo.io/content-management/shortcodes/ werden Shortcodes mit `%` interpretiert und gerendert, während bei der Verwendung von `<` der eingeschlossene Code kein weiteres Rendering erfährt.
-**Achtung**: Es gibt scheinbar Shortcodes (["Videos"](#videos)), die nur mit `<` funktionieren `...`{=markdown}
+**Achtung**: Es gibt scheinbar Shortcodes (["Videos"](#videos)), die nur mit `<` funktionieren ...
