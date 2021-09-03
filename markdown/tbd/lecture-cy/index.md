@@ -29,3 +29,6 @@ Hier könnte eine längere oder kürzere Zusammenfassung ("Recap") stehen. Sogar
 <div style="width:60%" class="center">
 <img alt="Listings mit Mathescape" src="images/fancy2.png" />
 </div>
+
+
+{{< img src="images/fancy2.png" title="Listings mit Mathescape" width="40%" >}}
