@@ -4,4 +4,4 @@ all: Dockerfile
 
 .PHONY: clean
 clean:
-	docker rmi alpine-pandoc-hugo
+	-docker rmi alpine-pandoc-hugo
