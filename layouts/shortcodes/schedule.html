@@ -57,7 +57,7 @@
                 {{ $notes := index . "notes" }}
                 {{ if $page }}
                     {{ with $.Site.GetPage $page }}
-                        <p><a href="{{- .Permalink | safeURL -}}">{{- $notes | default .Title -}}</strong></a></p>
+                        <p><a href="{{- .Permalink | safeURL -}}"><strong>{{- $notes | default .Title -}}</strong></a></p>
                     {{ end }}
                 {{ else if $notes }}
                     <p>{{- $notes -}}</p>
