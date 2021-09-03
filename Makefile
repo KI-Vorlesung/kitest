@@ -54,7 +54,7 @@ DOCS         = docs
 RESOURCES    = resources
 
 
-## Pages from which slide decks are to be created
+## Pages from which slide sets are to be created (Pandoc, LaTeX/Beamer)
 ## Pages which need Pandoc pre-processing before the Hugo step
 ##
 ## Use all sections and the page name, but leave out "content/" and "index.md".
@@ -91,9 +91,13 @@ ALGORITHM = $(patsubst $(ORIG_CONTENT)/%.tex,$(TMP_CONTENT)/%.png,$(shell find $
 .PHONY: all
 all: slides web
 
-## Create slides
+## Create all slides
 .PHONY: slides
 slides: copy_content $(ALGORITHM) $(PDF_FOLDER) $(SLIDES)
+
+## Create single slide set
+$(SRC): copy_content $(ALGORITHM) $(PDF_FOLDER)
+$(SRC): %: $(TMP_CONTENT)/%/$(PAGE_PDF)
 
 ## Create web page
 .PHONY: web
@@ -141,7 +145,7 @@ clean:
 copy_content:
 	cp -a $(ORIG_CONTENT)/ $(TMP_CONTENT)/
 
-## Create actual slides without any pre-processing
+## Create actual slides
 ## Any necessary pre-processing steps should already be done in the calling step!
 $(SLIDES): %.pdf: %.md $(PDF_FOLDER)
 	$(PANDOC) $(PANDOC_DIRS) -d slides $< -o $(patsubst $(TMP_CONTENT)_%,$(PDF_FOLDER)/%,$(subst _index,,$(subst /,_,$@)))
