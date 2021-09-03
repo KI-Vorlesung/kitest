@@ -2,6 +2,11 @@
 - week: "KW40"
   lecture:
     - topic: "/orga/syllabus"
+  misc:
+    - page: "/dtl/cal2"
+      notes: "Vortrag Thema I"
+    - notes: "Coden mit Edmonton"
+    - page: "/suche/informiert/astar"
 
 - week: "KW41"
   lecture:
@@ -22,4 +27,6 @@
     - topic: "blatt01"
     - topic: "blatt01"
       due: "21.10."
+  misc:
+    - notes: "Vortrag XYZ"
 ---
