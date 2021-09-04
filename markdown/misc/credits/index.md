@@ -43,6 +43,7 @@ In den generierten Webseiten werden sich diese Projekte genutzt:
 ## Weitere genutzte Tools
 
 *   [GNU Make](https://www.gnu.org/software/make/)
+*   [Pandoc Dockerfiles](https://github.com/pandoc/dockerfiles)
 *   [Docker](https://www.docker.com/)
 *   [GitHub](https://github.com/)
 
