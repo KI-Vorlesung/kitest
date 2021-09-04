@@ -5,9 +5,50 @@ hidden: true
 ---
 
 
-*   [Pandoc](https://pandoc.org)
-*   [Hugo](https://gohugo.io/)
-*   [Hugo-Theme-Learn](https://github.com/matcornic/hugo-theme-learn) from [Grav](https://getgrav.org)
+Beim Generieren der Vortrags-Folien und der Webseiten für das Unterrichtsmaterial
+kommen einige externe Projekte zum Einsatz, die unter eigenen Lizenzen stehen und
+nicht von der CC BY-SA 4.0 Lizenz dieses Projekts erfasst sind.
 
 
-* Contributors: **TBD**
+## Erzeugen der Folien
+
+Für das Erzeugen der Vortrags-Folien kommen u.a. folgende Projekte zum Einsatz:
+
+*   [Pandoc](https://github.com/jgm/pandoc)
+*   [Pandoc-Lecture](https://github.com/cagix/pandoc-lecture)
+*   [TeX Live](http://tug.org/texlive/)
+*   [Beamer](https://github.com/josephwright/beamer)
+*   [Metropolis](https://github.com/matze/mtheme)
+
+
+## Erzeugen der Webseiten
+
+Für die Vorverarbeitung des Materials werden die beiden Projekte eingesetzt:
+
+*   [Pandoc](https://github.com/jgm/pandoc)
+*   [Pandoc-Lecture](https://github.com/cagix/pandoc-lecture)
+
+Die Webseiten für das Unterrichtsmaterial werden mit folgenden Projekten erzeugt:
+
+*   [Hugo](https://github.com/gohugoio/hugo)
+*   [Hugo Learn Theme](https://github.com/matcornic/hugo-theme-learn)
+    (abgeleitet von [Grav](https://github.com/getgrav/grav))
+
+In den generierten Webseiten werden sich diese Projekte genutzt:
+
+*   Icons auf der Webseite stammen von [Font Awesome](https://fontawesome.com)
+*   Mathematische Formeln werden mit [MathJax](https://www.mathjax.org/) erzeugt
+
+
+## Weitere genutzte Tools
+
+*   [GNU Make](https://www.gnu.org/software/make/)
+*   [Docker](https://www.docker.com/)
+*   [GitHub](https://github.com/)
+
+
+## Beitragende
+
+Dieses Projekt wurde und wird erstellt und gepflegt von den Autoren
+[Canan Yıldız](https://github.com/cyildiz) und [Carsten Gips](https://github.com/cagix)
+sowie weiteren [Beitragenden](https://github.com/KI-Vorlesung/Lecture/graphs/contributors).
