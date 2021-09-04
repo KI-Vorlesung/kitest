@@ -26,9 +26,6 @@ youtube:
 Hier könnte eine längere oder kürzere Zusammenfassung ("Recap") stehen. Sogar mit weiterer Untergliederung (H3 und tiefer) ...
 
 
-
-
-
 {{< img src="images/fancy2.png" class="border1" title="Listings mit Mathescape" width="40%" >}}
 {{< img src="images/fancy2.png" class="border1" title="Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border" width="70%" >}}
 {{< img src="images/fancy2.png" class="border1" width="50%" >}}
