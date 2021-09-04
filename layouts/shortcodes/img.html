@@ -1,21 +1,12 @@
-{{ $src := ""}}
-{{ $title := ""}}
-{{ $class := ""}}
-{{ $width := "auto"}}
-
-{{ with .Get "src" }}{{ $src = . }}{{ end }}
-{{ with .Get "title" }}{{ $title = . }}{{ end }}
-{{ with .Get "width" }}{{ $width = . }}{{ end }}
-{{ with .Get "class" }}{{ $class = . }}{{ end }}
+{{ $src := .Get "src" | default "" }}
+{{ $title := .Get "title" | default "" }}
+{{ $class := .Get "class" | default "" }}
+{{ $width := .Get "width" | default "auto"}}
 
 {{ with $src }}
 <div class="center" style="width:{{- $width -}}">
 <figure>
-    {{ if $class }}
-        <img alt="{{- $title -}}" src="{{- $src -}}" class="{{- $class -}}" />
-    {{ else }}
-        <img alt="{{- $title -}}" src="{{- $src -}}" />
-    {{ end }}
+    <img alt="{{- $title -}}" src="{{- $src -}}" class="{{- $class -}}" />
     {{ with $title }}
     <figcaption><h4>{{- $title -}}</h4></figcaption>
     {{ end }}
