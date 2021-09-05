@@ -4,9 +4,6 @@
 [submodule "pandoc"]
 	path = pandoc
 	url = https://github.com/cagix/pandoc-lecture
-[submodule ".github"]
-	path = .github
-	url = https://github.com/cagix/Hugo-Lecture-Github
 [submodule "archetypes"]
 	path = archetypes
 	url = https://github.com/cagix/Hugo-Lecture-Archetypes
