@@ -34,7 +34,7 @@ Die Webseiten für das Unterrichtsmaterial werden mit folgenden Projekten erzeug
 *   [Hugo Learn Theme](https://github.com/matcornic/hugo-theme-learn)
     (abgeleitet von [Grav](https://github.com/getgrav/grav))
 
-In den generierten Webseiten werden sich diese Projekte genutzt:
+In den generierten Webseiten werden u.a. diese Projekte genutzt:
 
 *   Icons auf der Webseite stammen von [Font Awesome](https://fontawesome.com)
 *   Mathematische Formeln werden mit [MathJax](https://www.mathjax.org/) erzeugt
