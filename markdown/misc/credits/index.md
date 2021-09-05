@@ -33,6 +33,7 @@ Die Webseiten für das Unterrichtsmaterial werden mit folgenden Projekten erzeug
 *   [Hugo](https://github.com/gohugoio/hugo)
 *   [Hugo Learn Theme](https://github.com/matcornic/hugo-theme-learn)
     (abgeleitet von [Grav](https://github.com/getgrav/grav))
+*   [Hugo-Lecture-Layouts](https://github.com/cagix/Hugo-Lecture-Layouts)
 
 In den generierten Webseiten werden u.a. diese Projekte genutzt:
 
@@ -43,6 +44,7 @@ In den generierten Webseiten werden u.a. diese Projekte genutzt:
 ## Weitere genutzte Tools
 
 *   [GNU Make](https://www.gnu.org/software/make/)
+*   [Hugo-Lecture-Archetypes](https://github.com/cagix/Hugo-Lecture-Archetypes)
 *   [Pandoc Dockerfiles](https://github.com/pandoc/dockerfiles)
 *   [Docker](https://www.docker.com/)
 *   [GitHub](https://github.com/)
