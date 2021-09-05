@@ -7,7 +7,7 @@ hidden: true
 
 Beim Generieren der Vortrags-Folien und der Webseiten für das Unterrichtsmaterial
 kommen einige externe Projekte zum Einsatz, die unter eigenen Lizenzen stehen und
-nicht von der CC BY-SA 4.0 Lizenz dieses Projekts erfasst sind.
+die nicht von der CC BY-SA 4.0 Lizenz dieses Projekts erfasst sind.
 
 
 ## Erzeugen der Folien
