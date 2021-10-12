@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spiele on </title>
+    <link>https://ki-vorlesung.github.io/kitest/spiele/</link>
+    <description>Recent content in Spiele on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/spiele/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimale Spiele</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/optimalespiele/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/optimalespiele/</guid>
+      <description>Backgammon: Weiss hat 6+5 gewürfelt und hat 4 legale Züge &amp;hellip;
+Motivation: Unterschied zu Suche?! &amp;hellip;
+Spiele und Umgebungen &amp;hellip;
+Brettspiele sind interessant für KI &amp;hellip;
+Eigenschaften guter Spielalgorithmen &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Minimax</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/minimax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/minimax/</guid>
+      <description>Spiele als Suchproblem: Minimax &amp;hellip;
+Minimax-Algorithmus: Funktionen für MAX- und MIN-Knoten &amp;hellip;
+Minimax-Algorithmus: Sonderbehandlung Startknoten &amp;hellip;
+Minimax Beispiel &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Heuristiken</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/heuristiken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/heuristiken/</guid>
+      <description>Wenn die Zeit nicht reicht: Suchtiefe begrenzen &amp;hellip;
+Beispiel Schach &amp;hellip;
+Minimax mit mehreren Spielern &amp;hellip;
+Zufallsspiele &amp;hellip;
+Minimax mit Zufallsspielen: ZUFALLS-Knoten &amp;hellip;
+Minimax mit Zufall: Expectimax &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Alpha-Beta-Pruning</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/alphabetapruning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/alphabetapruning/</guid>
+      <description>Verbesserung Minimax-Algorithmus &amp;hellip;
+Beobachtungen &amp;hellip; alpha-beta-Pruning
+Pruning-Regeln &amp;hellip;
+alpha-beta-Pruning &amp;ndash; Der Algorithmus (Skizze) &amp;hellip;
+alpha-beta-Pruning &amp;ndash; Eigenschaften &amp;hellip;
+Verbesserungen für alpha-beta-Pruning &amp;hellip;
+Beispiele &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

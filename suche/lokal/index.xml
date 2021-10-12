@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lokale Suche on </title>
+    <link>https://ki-vorlesung.github.io/kitest/suche/lokal/</link>
+    <description>Recent content in Lokale Suche on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/suche/lokal/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

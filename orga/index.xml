@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Orga on </title>
+    <link>https://ki-vorlesung.github.io/kitest/orga/</link>
+    <description>Recent content in Orga on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/orga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fahrplan</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/fahrplan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/fahrplan/</guid>
+      <description>Hier kommt eine Tabelle hin: In welcher Woche gibt es welches Thema, verlinkt auf die Unterseiten.
+   Woche Vorlesung Praktikum/Übung      1 (KW40)     ORGA &amp;gt; Syllabus          2 (KW41)     SUCHE &amp;gt; Einführung (cagi) Hinweis: Classes go all-virtual   SUCHE &amp;gt; INFORMIERT &amp;gt; Suche mit A*      Blatt 01 (Abgabe: 14.</description>
+    </item>
+    
+    <item>
+      <title>Note_und_credits</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/note_und_credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/note_und_credits/</guid>
+      <description>Hinweise zur Prüfungsgestaltung: Prüfungsform, Ablauf, Bedingungen &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Reading</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/reading/</guid>
+      <description>Was brauche ich? Literatur &amp;hellip; &amp;hellip;
+Was brauche ich noch? Tools &amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Syllabus</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/syllabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/syllabus/</guid>
+      <description>Worum geht&amp;rsquo;s hier? Welche Inhalte kommen in diesem Semester in KI dran? Und welche explizit nicht? Was ist das Ziel der Veranstaltung?
+Überblick Modulinhalte &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

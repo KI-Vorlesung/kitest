@@ -1,0 +1,3900 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+<meta name="author" content="cagix">
+
+    <link rel="icon" href="/kitest/images/favicon.png" type="image/png">
+
+    <title>Test der verschiedenen Markdown-Elemente   </title>
+
+    
+    <link href="/kitest/css/nucleus.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/fontawesome-all.min.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/hybrid.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/featherlight.min.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/perfect-scrollbar.min.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/auto-complete.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/atom-one-dark-reasonable.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/theme.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/tabs.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/hugo-theme.css?1634036685" rel="stylesheet">
+    
+    <link href="/kitest/css/theme-green.css?1634036685" rel="stylesheet">
+    
+    
+
+    <script src="/kitest/js/jquery-3.3.1.min.js?1634036685"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    <style type="text/css">
+
+ 
+.center {
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+.alert {
+    color: #ff3333;
+}
+.bsp {
+    padding: 0.05cm;
+    border-width: 0.05cm;
+    border-style: solid;
+    border-color: #ddd;
+    background-color: #ddd;
+    border-radius: 25px;
+    float: right;
+}
+.cbox {
+    padding: 0.2cm;
+    border-width: 0.1cm;
+    border-style: solid;
+    border-color: #4070a0;
+    background-color: #f2f2f2;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    overflow: auto;
+}
+.blueArrow {
+    color: #4070a0;
+    font-family: "Courier New", "Courier", monospace;
+    font-weight: bold;
+}
+.origin {
+    background-color: #ededed;
+    font-size: 0.8em;
+}
+.showme {
+    background-color: #ededed;
+    font-size: 0.8em;
+}
+
+
+ 
+.tldr {
+    background: #dbe4ed;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.recap {
+    
+    
+   margin: 4px 0px 26px 0px;
+}
+.bib {
+    background: #dbe4ed;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.outcomes {
+    background: #d9e9d5;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.quizzes {
+    background: #d9e9d5;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.challenges {
+    background: #ebe4d6;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.assignments {
+    background: #ebe4d6;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+h1.tldr, h1.recap, h1.bib, h1.outcomes, h1.quizzes, h1.challenges, h1.assignments {
+    padding: 0px;
+}
+
+
+ 
+.noJsAlert {
+    padding: 20px;
+    background-color: #f44336;  
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+ 
+.embed-video-player {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+}
+.youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:0;
+}
+
+
+ 
+#header-wrapper {
+    padding:0.6rem;
+}
+
+
+ 
+#chapter p {
+    text-align: left;
+}
+
+
+ 
+figcaption h4 {
+    margin-top:-2.5rem;
+}
+.border1 {
+    border:1px solid black;
+}
+
+ 
+td ul, td ol {
+    margin: 0 0 1rem 0.5rem;
+    padding: 0 0 0 0.5rem;
+}
+
+ 
+h1 { font-size:2.8rem !important;}
+h2 { font-size:2.2rem; margin:1.2rem 0}
+h3 { font-size:1.9rem; text-align:left !important; font-weight:400 !important;}
+h4 { font-size:1.6rem}
+h5 { font-size:1.3rem}
+h6 { font-size:1rem}
+
+h2 {
+    width:100% !important;
+    border-bottom:1px solid #5e5e5e !important;
+    padding-bottom: 2px;
+}
+.tldr h2, .recap h2, .bib h2, .outcomes h2, .quizzes h2, .challenges h2, .assignments h2 {
+    margin:0.5rem 0
+}
+
+.btn-crossreference, .btn-crossreference:hover {
+    cursor: initial !important;
+    color: #333 !important;
+    background-color: #fff !important;
+    border-color: #ccc !important;
+}
+
+</style>
+
+  </head>
+  <body class="" data-url="/kitest/tbd/testseite/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='https://ki-vorlesung.github.io/kitest/'>
+    <img style="max-width:35%" alt="icon" src='/kitest/images/logo.png'>
+</a>
+
+    </div>
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/" title="Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/">
+          Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/intro/" title="Einführung" class="dd-item ">
+        <a href="/kitest/suche/intro/">
+        Einführung
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/modellierung/" title="Modellierung" class="dd-item ">
+        <a href="/kitest/suche/modellierung/">
+        Modellierung
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/uninformiert/" title="Uninformierte Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/uninformiert/">
+          Uninformierte Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/uninformiert/tiefensuche/" title="Suche mit Tiefensuche" class="dd-item ">
+        <a href="/kitest/suche/uninformiert/tiefensuche/">
+        Suche mit Tiefensuche
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/uninformiert/breitensuche/" title="Suche mit Breitensuche" class="dd-item ">
+        <a href="/kitest/suche/uninformiert/breitensuche/">
+        Suche mit Breitensuche
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/informiert/" title="Informierte Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/informiert/">
+          Informierte Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/informiert/branchandbound/" title="Suche mit Branch-and-Bound" class="dd-item ">
+        <a href="/kitest/suche/informiert/branchandbound/">
+        Suche mit Branch-and-Bound
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/informiert/bestfirst/" title="Suche mit Best First" class="dd-item ">
+        <a href="/kitest/suche/informiert/bestfirst/">
+        Suche mit Best First
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/informiert/astar/" title="Suche mit A*" class="dd-item ">
+        <a href="/kitest/suche/informiert/astar/">
+        Suche mit A*
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/lokal/" title="Lokale Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/lokal/">
+          Lokale Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/ea/" title="Genetische Algorithmen" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/ea/">
+          Genetische Algorithmen
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/spiele/" title="Spiele" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/spiele/">
+          Spiele
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/optimalespiele/" title="Optimale Spiele" class="dd-item ">
+        <a href="/kitest/spiele/optimalespiele/">
+        Optimale Spiele
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/minimax/" title="Minimax" class="dd-item ">
+        <a href="/kitest/spiele/minimax/">
+        Minimax
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/heuristiken/" title="Heuristiken" class="dd-item ">
+        <a href="/kitest/spiele/heuristiken/">
+        Heuristiken
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/alphabetapruning/" title="Alpha-Beta-Pruning" class="dd-item ">
+        <a href="/kitest/spiele/alphabetapruning/">
+        Alpha-Beta-Pruning
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/csp/" title="Constrainsolving" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/csp/">
+          Constrainsolving
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/intro/" title="Einführung" class="dd-item ">
+        <a href="/kitest/csp/intro/">
+        Einführung
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/tiefensuche/" title="Lösen von diskreten CSP" class="dd-item ">
+        <a href="/kitest/csp/tiefensuche/">
+        Lösen von diskreten CSP
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/heuristiken/" title="Heuristiken" class="dd-item ">
+        <a href="/kitest/csp/heuristiken/">
+        Heuristiken
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/ac3/" title="Kantenkonsistenz und AC-3" class="dd-item ">
+        <a href="/kitest/csp/ac3/">
+        Kantenkonsistenz und AC-3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/dtl/" title="Entscheidungsbäume" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/dtl/">
+          Entscheidungsbäume
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/mlbasics/" title="Machine Learning 101" class="dd-item ">
+        <a href="/kitest/dtl/mlbasics/">
+        Machine Learning 101
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/cal2/" title="CAL2" class="dd-item ">
+        <a href="/kitest/dtl/cal2/">
+        CAL2
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/pruning/" title="Pruning" class="dd-item ">
+        <a href="/kitest/dtl/pruning/">
+        Pruning
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/cal3/" title="CAL3" class="dd-item ">
+        <a href="/kitest/dtl/cal3/">
+        CAL3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/entropie/" title="Entropie" class="dd-item ">
+        <a href="/kitest/dtl/entropie/">
+        Entropie
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/id3/" title="ID3 und C4.5" class="dd-item ">
+        <a href="/kitest/dtl/id3/">
+        ID3 und C4.5
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/naivebayes/" title="Naive Bayes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/naivebayes/">
+          Naive Bayes
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/mlp/" title="ML: Perzeptron und MLP" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/mlp/">
+          ML: Perzeptron und MLP
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/tbd/" title="Testkapitel" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/kitest/tbd/">
+          Testkapitel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/testseite/" title="Test der verschiedenen Markdown-Elemente" class="dd-item active">
+        <a href="/kitest/tbd/testseite/">
+        Test der verschiedenen Markdown-Elemente
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/test2/" title="Test2: Ordner statt Datei" class="dd-item ">
+        <a href="/kitest/tbd/test2/">
+        Test2: Ordner statt Datei
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/test3/" title="Test3: Pure HTML" class="dd-item ">
+        <a href="/kitest/tbd/test3/">
+        Test3: Pure HTML
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/lecture-cg/" title="Test-Vorlesung für Carsten" class="dd-item ">
+        <a href="/kitest/tbd/lecture-cg/">
+        Test-Vorlesung für Carsten
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/lecture-cy/" title="Test-Vorlesung für Canan" class="dd-item ">
+        <a href="/kitest/tbd/lecture-cy/">
+        Test-Vorlesung für Canan
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/lecture-bc/" title="Test-Vorlesung für BC" class="dd-item ">
+        <a href="/kitest/tbd/lecture-bc/">
+        Test-Vorlesung für BC
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/fahrplan"><i class='fas fa-bookmark'></i> Fahrplan</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/praktikum"><i class='fas fa-bookmark'></i> Praktikum</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/note_und_credits"><i class='fas fa-bookmark'></i> Note/Credits</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/syllabus"><i class='fas fa-bookmark'></i> Syllabus</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/reading"><i class='fas fa-bookmark'></i> Reading</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>
+    <a href='/kitest/misc/imprint'>Impressum</a>,
+    <a href='/kitest/misc/privacy'>Datenschutz</a>,
+    <a href='/kitest/misc/credits'>Credits</a>
+</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/KI-Vorlesung/kitest/edit/master/markdown/tbd/testseite/index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/kitest/'>KI W21</a> > <a href='/kitest/tbd/'>Testkapitel</a> > Test der verschiedenen Markdown-Elemente
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#some-chapter-title">Some Chapter title</a></li>
+        <li><a href="#math">Math</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#data-table">Data Table</a></li>
+        <li><a href="#standard-markdown">Standard-Markdown</a>
+          <ul>
+            <li><a href="#stichpunkte">Stichpunkte</a></li>
+            <li><a href="#hervorhebungen">Hervorhebungen</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+          </ul>
+        </li>
+        <li><a href="#abbildungen">Abbildungen</a>
+          <ul>
+            <li><a href="#lokale-abbildungen">Lokale Abbildungen</a></li>
+            <li><a href="#abbildungen-im-web">Abbildungen im Web</a></li>
+          </ul>
+        </li>
+        <li><a href="#code-und-syntax-highlighting">Code und Syntax-Highlighting</a></li>
+        <li><a href="#mathe-und-formeln">Mathe und Formeln</a>
+          <ul>
+            <li><a href="#inline-math">Inline Math</a></li>
+            <li><a href="#display-math">Display Math</a></li>
+            <li><a href="#listings-und-math">Listings und Math</a></li>
+          </ul>
+        </li>
+        <li><a href="#verlinkungen">Verlinkungen</a></li>
+        <li><a href="#tabellen">Tabellen</a></li>
+        <li><a href="#anhänge">Anhänge</a></li>
+        <li><a href="#tooggles-showme">Tooggles (&quot;ShowMe&quot;)</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#literatur">Literatur</a>
+          <ul>
+            <li><a href="#einsatz-von-variablen-im-yaml-header-der-seite">Einsatz von Variablen im YAML-Header der Seite</a></li>
+            <li><a href="#freier-inhalt">Freier Inhalt</a></li>
+            <li><a href="#vorrang">Vorrang</a></li>
+            <li><a href="#zitieren">Zitieren</a></li>
+          </ul>
+        </li>
+        <li><a href="#sonstige-special-sections">Sonstige Special Sections</a>
+          <ul>
+            <li><a href="#tldr">TL;DR</a></li>
+            <li><a href="#lernziele">Lernziele</a></li>
+            <li><a href="#quizzes">Quizzes</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+          </ul>
+        </li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#pandoc-native-divsspans">Pandoc native Divs/Spans</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Test der verschiedenen Markdown-Elemente
+            </h1>
+          
+
+        
+
+
+
+
+    
+
+
+
+
+
+<div class="tldr">
+    <h2>TL;DR</h2>
+
+    
+        <p>hier kommt eine kurze Zusammenfassung der Lektion hin (&ldquo;TL;DR&rdquo;) &hellip; wird vom Partial/Template gezogen und an die richtige Stelle gesetzt.</p>
+<ul>
+<li>beliebiges Markdown sollte</li>
+<li>gehen
+<ul>
+<li>Einrückungen natürlich auch &hellip;</li>
+</ul>
+</li>
+</ul>
+
+    
+
+    
+        <h3>Videos (YouTube)</h3>
+        
+
+<ul>
+
+    
+    
+
+    
+        
+        
+        <div class="embed-video-player">
+            <iframe class="youtube-player" src="https://www.youtube-nocookie.com/embed/JOmyP1ypJBs" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+    
+
+    
+    
+
+    
+    
+        
+    
+
+    
+        
+        <p><strong>wuppie</strong></p>
+        <div class="embed-video-player">
+            <iframe class="youtube-player" src="https://www.youtube-nocookie.com/embed/JOmyP1ypJBs" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        <li><a href="https://youtu.be/ooWCzdWL2Co" target="_blank" rel="nofollow noopener noreferrer">Link YouTube</a></li>
+    
+
+    
+    
+        
+    
+
+    
+
+    
+    
+        <li><a href="https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499" target="_blank" rel="nofollow noopener noreferrer">direktlink, but not fh-media ...</a></li>
+    
+
+    
+    
+        
+    
+
+    
+
+    
+    
+
+</ul>
+
+    
+
+    
+        <h3>Videos (FH-Medienportal)</h3>
+        
+
+<ul>
+
+    
+    
+
+    
+    
+        
+    
+    
+
+    
+        <li><a href="https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67" target="_blank" rel="nofollow noopener noreferrer">Direkt-Link FH-Medienportal</a></li>
+    
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+    
+
+    
+        <li><a href="https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67" target="_blank" rel="nofollow noopener noreferrer">wuppie</a></li>
+    
+
+    
+    
+
+    
+    
+    
+        
+    
+
+    
+        <li><a href="https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67" target="_blank" rel="nofollow noopener noreferrer">Direkt-Link FH-Medienportal</a></li>
+    
+
+    
+    
+        
+    
+
+    
+    
+    
+        
+    
+
+    
+        <li><a href="https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499" target="_blank" rel="nofollow noopener noreferrer">direktlink, but not fh-media ...</a></li>
+    
+
+    
+    
+        
+    
+
+    
+    
+    
+
+    
+
+</ul>
+
+    
+
+    
+        
+        
+        
+
+
+
+    
+
+
+
+
+    
+
+
+
+<div class="attachments">
+    <h3>(Annotierte) Folien</h3>
+
+    <ul>
+    
+        
+        <li><a href="https://ki-vorlesung.github.io/kitest/tbd/testseite/files/somefig.pdf" target="_blank" rel="nofollow noopener noreferrer"><strong>somefig.pdf</strong></a></li>
+    
+
+    
+        
+        
+            
+        
+
+        
+            <li><a href="https://www.fh-bielefeld.de" target="_blank" rel="nofollow noopener noreferrer">Extra Material, e.g. annotated slides ... Use This As Link Text</a></li>
+        
+    
+        
+        
+
+        
+            <li><a href="https://www.fh-bielefeld.de" target="_blank" rel="nofollow noopener noreferrer">(annotierter) Foliensatz</a></li>
+        
+    
+        
+        
+            
+        
+
+        
+    
+    </ul>
+</div>
+
+
+    
+</div>
+
+
+    
+
+
+<div class="outcomes">
+    <h2>Lernziele</h2>
+    
+        <p>Lernziele aufschreiben.</p>
+<h3>Kennen (K1)</h3>
+<ul>
+<li>Wuppie</li>
+<li>Fluppie</li>
+</ul>
+<h3>Verstehen (K2)</h3>
+<ul>
+<li>foo</li>
+<li>bar</li>
+</ul>
+<h3>Anwenden (K3)</h3>
+<p>hammwanich</p>
+<h3>Analysieren (K4)</h3>
+<p>gibbetsooch</p>
+
+    
+</div>
+
+
+    <h2 id="some-chapter-title">Some Chapter title</h2>
+<p>Lorem Ipsum.</p>
+<h2 id="math">Math</h2>
+<p><span>$E = m c^2$</span></p>
+<p>Statt <span>$P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)|}{|S(h)|}$</span> nutze <span>$P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)| + m \cdot p_i}{|S(h)| + m}$</span></p>
+<div>$$
+    \begin{array}{rcl}
+    h_{MAP} &=& \operatorname{argmax}_{h \in H} P(h|D_1, ..., D_n) \\\\[5pt]
+            &=& \operatorname{argmax}_{h \in H} P(h) \prod_i P(D_i|h) \\\\[5pt]
+            &=& \operatorname{argmax}_{h \in H} [\log(P(h)) + \sum_i \log(P(D_i|h))]
+    \end{array}
+$$</div>
+<ul>
+<li><strong>Entscheidungsbaum</strong> <span>$\alpha$</span>:
+<div>$$
+    \alpha = \left\{ \begin{array}{ll}
+        \kappa  & \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\
+        x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Ausprägungen}
+    \end{array} \right.
+$$</div>
+</li>
+</ul>
+<h2 id="images">Images</h2>
+<div class="center" style="width:auto;height:auto;"><figure><img src="images/somefig.png" alt="Sky"><figcaption><h4>Sky</h4></figcaption></figure></div>
+<h2 id="data-table">Data Table</h2>
+
+
+
+<div class="schedule">
+    <table>
+    <thead>
+        <tr>
+        <th>Woche</th>
+        <th>Vorlesung</th>
+        <th>Praktikum/Übung</th>
+        
+        
+            
+        
+            
+        
+            
+        
+        
+        </tr>
+    </thead>
+    <tbody>
+    
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <td>
+                1
+                <br>
+                (KW40)
+            </td>
+            <td>
+            
+            <ul>
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        ORGA &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/orga/syllabus/"><strong>Syllabus</strong></a>
+                        
+                        
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td><td>
+            <ul>
+            
+            </ul>
+            
+            </td>
+            
+        </tr>
+    
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <td>
+                2
+                <br>
+                (KW41)
+            </td>
+            <td>
+            
+            <ul>
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        SUCHE &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/suche/intro/"><strong>Einführung</strong></a>
+                         (cagi)
+                        <br><em>Hinweis: Classes go all-virtual</em>
+                    </li>
+                    
+                
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        SUCHE &gt; INFORMIERT &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/suche/informiert/astar/"><strong>Suche mit A*</strong></a>
+                        
+                        
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td><td>
+            <ul>
+            
+                
+                
+                
+                    
+                    <li>
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/praktikum/blatt01/"><strong>Blatt 01</strong></a>
+                        <br>(Abgabe: 14.10.)
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td>
+            
+        </tr>
+    
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <td>
+                3
+                <br>
+                (KW42)
+            </td>
+            <td>
+            
+            <ul>
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/mlp/"><strong>ML: Perzeptron und MLP</strong></a>
+                        
+                        
+                    </li>
+                    
+                
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        CSP &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/csp/ac3/"><strong>Kantenkonsistenz und AC-3</strong></a>
+                         (bc)
+                        
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td><td>
+            <ul>
+            
+                
+                
+                
+                    
+                    <li>
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/praktikum/blatt01/"><strong>Blatt 01</strong></a>
+                        
+                    </li>
+                    
+                
+            
+                
+                
+                
+                    
+                    <li>
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/praktikum/blatt01/"><strong>Blatt 01</strong></a>
+                        <br>(Abgabe: 21.10.)
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td>
+            
+        </tr>
+    
+    </tbody>
+    </table>
+</div>
+
+
+<h2 id="standard-markdown">Standard-Markdown</h2>
+<h3 id="stichpunkte">Stichpunkte</h3>
+<ul>
+<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+<ul>
+<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</li>
+<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</li>
+</ul>
+</li>
+<li>sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+a)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+b)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...</li>
+<li>magna aliquyam erat, sed diam voluptua.
+<ol>
+<li>magna aliquyam erat, sed diam voluptua.</li>
+<li>magna aliquyam erat, sed diam voluptua.</li>
+</ol>
+</li>
+</ul>
+<p>Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., ...</p>
+<h3 id="hervorhebungen">Hervorhebungen</h3>
+<ul>
+<li>Use <code>*italic*</code> to <em>emphasize</em> in Markdown</li>
+<li>Use <code>**bold**</code> to <strong>emphasize</strong> in Markdown</li>
+</ul>
+<h3 id="quotes">Quotes</h3>
+<blockquote>
+<p>Artificial Intelligence is the study of how to make computers do things at
+which, at the moment, people are better.</p>
+<p>-- Elaine Rich (&quot;Artificial Intelligence&quot;, McGraw-Hill, 1983)</p>
+</blockquote>
+<h2 id="abbildungen">Abbildungen</h2>
+<h3 id="lokale-abbildungen">Lokale Abbildungen</h3>
+<h4 id="lokale-abbildungen-mit-markdown">Lokale Abbildungen mit Markdown</h4>
+<div class="center" style="width:auto;height:auto;"><figure><img src="images/somefig.png" alt="Bildunterschrift"><figcaption><h4>Bildunterschrift</h4></figcaption></figure></div>
+<h4 id="lokale-abbildungen-mit-shortcodes">Lokale Abbildungen mit Shortcodes</h4>
+<figure><img src="images/somefig.png"/><figcaption>
+            <h4>Bildunterschrift</h4>
+        </figcaption>
+</figure>
+
+<p><strong>Achtung</strong>: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt <code>tbd/testseite.md</code> und referenziert eine Abbildung <code>images/somefig.png</code>. Dann muss diese im Ordner <code>tbd/testseite/images/somefig.png</code> liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!</p>
+<p><strong>Anmerkung</strong>: Lt. der <a href="https://learn.netlify.app/en/shortcodes/attachments/">Doku</a> sind die folgenden Strukturen äquivalent:</p>
+<pre><code>content/
+|___  _index.md                         &lt;= mit Unterstrich (Chapter)
+|___  mypage.md
+|___  mypage.files/
+  |___  myattachments.pdf
+</code></pre>
+<p>und</p>
+<pre><code>content/
+|___  _index.md                         &lt;= mit Unterstrich (Chapter)
+|___  mypage/
+  |___  index.md                        &lt;= ohne Unterstrich (Default)
+  |___  files/
+    |___  myattachments.pdf
+</code></pre>
+<p>Dann könnte der Abbildungsordner unterhalb von <code>content/mypage/</code> liegen und wäre damit auch für Github/Gitlab erreichbar. Unschön ist dabei, dass die Seiten dann alle <code>index.md</code> heißen und man den Inhalt über den Ordnernamen ableiten muss.</p>
+<h3 id="abbildungen-im-web">Abbildungen im Web</h3>
+<div class="center" style="width:auto;height:auto;"><figure><img src="https://octodex.github.com/images/minion.png" alt="Minion"><figcaption><h4>Minion</h4></figcaption></figure></div>
+(Quelle: https://learn.netlify.app/en/cont/markdown/)
+<h2 id="code-und-syntax-highlighting">Code und Syntax-Highlighting</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">  <span style="color:#75715e">/*
+</span><span style="color:#75715e">   * cHelloWorld.c
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+      printf(<span style="color:#e6db74">&#34;Hello World from C  :-)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  }
+</code></pre></div><p>Well, inline code like <code>int main()</code> works too :)
+Also with syntax highlighting like <code>int main()</code>{.c} ...</p>
+<h2 id="mathe-und-formeln">Mathe und Formeln</h2>
+<h3 id="inline-math">Inline Math</h3>
+<ul>
+<li>Aktivierung Neuron <span>$j$</span>: <span>$a_j = \sum_i w_{ji} z_i$</span></li>
+<li>Ausgabe von Neuron <span>$j$</span>: <span>$z_j = g(a_j)$</span></li>
+<li>Transferfunktion: <span>$g(a) = 1/(1+\exp(-a))$</span></li>
+<li>Ableitung: <span>$g'(a) = g(a)(1-g(a))$</span></li>
+<li>Ausgabe-Schicht: Index <span>$k$</span>: <span>$y_k = z_k = g(a_k) = g(\sum_j w_{kj} z_j)$</span></li>
+<li>Hidden Layer: Index <span>$j$</span>: <span>$z_j = g(a_j) = g(\sum_i w_{ji} z_i)$</span></li>
+<li>Eingabe-Schicht: Index <span>$i$</span>: <span>$z_i = x_i$</span></li>
+<li><span>$w_{kj}$</span>: Gewicht gehört zu Neuron <span>$k$</span>, Verbindung zu Neuron <span>$j$</span></li>
+</ul>
+<h3 id="display-math">Display Math</h3>
+<ul>
+<li>
+<p><strong>Fehler</strong>: Summe über alle Ausgabeneurone</p>
+<div>$$
+    E = \sum_d E^{(d)}
+$$</div>
+mit
+<div>$$
+    E^{(d)} = \dfrac{1}{2} \sum_k (y_k^{(d)} - t_k^{(d)})^2
+$$</div>
+</li>
+<li>
+<p><strong>Lernregel (Gradientenabstieg)</strong></p>
+<div>$$
+    w_{ji} \gets w_{ji} + \Delta w_{ji}
+$$</div>
+mit
+<div>$$
+    \Delta w_{ji} = -\eta \dfrac{\partial E}{\partial w_{ji}}
+$$</div>
+</li>
+<li>
+<p><strong>Entscheidungsbaum</strong> <span>$\alpha$</span>:</p>
+<div>$$
+    \alpha = \left\{ \begin{array}{ll}
+        \kappa  & \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\
+        x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Ausprägungen}
+    \end{array} \right.
+$$</div>
+</li>
+</ul>
+<p>Unterstützung für <a href="https://www.mathjax.org/">MathJax</a> muss erst noch über Partials implementiert werden. Hier eine <a href="https://geoffruddock.com/math-typesetting-in-hugo/">Anleitung</a>, hier noch eine <a href="https://www.morch.com/posts/2021-07-24-mathjax-in-hugo/">ähnliche Lösung</a>. Die beiden Anleitungen gehen auch auf das bedarfsweise Laden von MathJax ein. Dabei werden Mathe-Elemente in Spans/Divs oder Code-Blöcke eingeschlossen und eine Page-Variable <code>has-mathjax</code> gesetzt, um nur im Bedarfsfall die MathJax-Lib zu laden. Möglicherweise bietet es sich an, in einem Pandoc-Zwischenschritt die Inline- und Display-Math-Elemente entsprechend in Spans/Divs einzuschließen und die Page-Variable <code>has-mathjax</code> zu setzen.</p>
+<p><strong>Hinweis</strong>: Hugo und/oder MathJax hatten Probleme mit <code>\left\{</code>, <code>\right.</code> und <code>\begin{array}</code>. Wenn man die Display-Style-Formel in ein <code>&lt;div&gt;...&lt;/div&gt;</code> einschließt, klappt es dann wieder.</p>
+<h3 id="listings-und-math">Listings und Math</h3>
+<p>Wenn man in LaTeX <code>lstlistings</code> nutzt, kann man dort mit &quot;Math-Escapes&quot; arbeiten und mathematische Symbole darstellen lassen.</p>
+<p>Beispiel:</p>
+<pre><code>\begin{lstlisting}[mathescape,basicstyle=\scriptsize\ttfamily]
+a = $w_1$
+X = top
+while (X $ \neq \perp)$
+    if X = a
+        a = next symbol of w
+        pop
+    else if X $\in T$
+        error
+    else if $M[X, a]$ leer
+        error
+    else if $M[X, a] = X \rightarrow Y_1 Y_2 \ldots Y_k$
+        output($X \rightarrow Y_1 Y_2 \ldots Y_k$)
+        pop
+        push($Y_1 Y_2 \ldots Y_k$) ($Y_1$ = top of stack))
+    X = top
+\end{lstlisting}
+</code></pre>
+<p>Für diese spezielle Code-Umgebung gibt es in Pandoc-Markdown und in Hugo keinen Ersatz.
+Um diese Technik dennoch einsetzen zu können, wurde folgender Workaround definiert:</p>
+<ol>
+<li>Das Listing wird in eine TeX-Datei im Abbildungsordner der Seite ausgelagert, etwa <code>images/fancy_math.tex</code></li>
+<li>In einem Vorverarbeitungsschritt werden alle <code>*.tex</code>-Dateien in allen Unterordnern <code>images/</code> gesucht
+und mit LaTeX nach <code>.png</code> übersetzt</li>
+<li>Im Markdown wird entsprechend eine Abbildung eingebaut, die den Namen der TeX-Datei hat</li>
+</ol>
+<p>Hier die Abbildung für das Beispiel: <code>![Listings mit Mathescape](images/fancy_math.png)</code></p>
+<div class="center" style="width:auto;height:auto;"><figure><img src="images/fancy_math.png" alt="Listings mit Mathescape"><figcaption><h4>Listings mit Mathescape</h4></figcaption></figure></div>
+<h2 id="verlinkungen">Verlinkungen</h2>
+<ul>
+<li>
+<p>Links nach außen: <a href="https://pandoc.org/">Pandoc</a></p>
+</li>
+<li>
+<p>Links im Dokument (automatische Label): <a href="#stichpunkte">&quot;Stichpunkte&quot;</a></p>
+</li>
+<li>
+<p>Links auf andere Dokumente</p>
+<pre><code>* [Fahrplan](/kitest/orga/fahrplan/
+* [Note und Credits](/kitest/orga/note_und_credits/
+* [Syllabus](/kitest/orga/syllabus/
+* [Reading](/kitest/orga/reading/
+</code></pre>
+<p>Hinweis: Shortcodes funktionieren nicht so gut im Zusammenhang mit Pandoc! Also entweder Einsatz von Shortcodes plus direktes Erzeugen der Seiten mit Hugo, oder Verzicht auf Shortcodes plus Vorverarbeitung der Webseiten-Sourcen mit Pandoc und Erzeugung von Folien mit Pandoc!</p>
+</li>
+</ul>
+<h2 id="tabellen">Tabellen</h2>
+<table>
+<thead>
+<tr>
+<th>KW</th>
+<th>VL</th>
+<th>Praktikum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>45</td>
+<td>[Orga FHB] (<strong>Zoom</strong>) || [Einführung KI] | [Problemlösen]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Suche: [Tiefensuche] | [Breitensuche] | [Branch-and-Bound und Best First] | [A*]</td>
+<td>[FHB01: Grenzen der KI, Problemraum (T)]</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Lokale Suche: [Gradientenabstieg und Simulated Annealing] | [Evolutionäre/Genetische Algorithmen]</td>
+<td>[FHB02: Tiefen- und Breitensuche, A-Stern (T)]</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Spiele: [Minimax] | [Minimax Erweiterungen] | [Alpha-Beta-Pruning]</td>
+<td>[FHB03: Lokale Suche: Genetische Algorithmen (T,I)]</td>
+</tr>
+<tr>
+<td>49</td>
+<td>[Constraints] | [Backtracking, Heuristiken] | [Forward Checking und AC-3]</td>
+<td>[FHB04: Spiele: Minimax, Alpha-Beta-Pruning (T,I)]</td>
+</tr>
+<tr>
+<td>50</td>
+<td>[Machine Learning 101] | Entscheidungsbäume: [CAL2, Pruning] | [CAL3] | [Entropie] | [ID3 und C4.5]</td>
+<td>[FHB05: Constraints (AIMA), AC-3-Handsimulation (T,I)]</td>
+</tr>
+<tr>
+<td>51</td>
+<td>[Wahrscheinlichkeitstheorie 101] | Textklassifikation mit [Naive Bayes]</td>
+<td>[FHB06: Entscheidungsbäume (T)]</td>
+</tr>
+<tr>
+<td>52</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>53</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>01</td>
+<td>[ML Einführung, Vektorisierung, Perzeptron Lernalgorithmus]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>02</td>
+<td>[Lineare Regression, Fehlerfunktion, Mean Square Error (MSE), Gradientenabstieg]</td>
+<td>[TDU01: Perzeptron]</td>
+</tr>
+<tr>
+<td>03</td>
+<td>[Logistische Regression, Overfitting, Generalisierung, Regularisierung, Train-Dev-Test Sets]</td>
+<td>[TDU02: Lineare Regression]</td>
+</tr>
+<tr>
+<td>04</td>
+<td>[Nichtlineare Modelle] | [Overfitting und Regularisierung] | [Multi-Layer Perceptron (MLP)] | [Backpropagation] | [Backpropagation (Nachtrag)] || [Rückblick] | Umfrage | [Klausurvorbereitung] (<strong>Zoom</strong>)</td>
+<td>[TDU03: Logistische Regression und MLP]</td>
+</tr>
+</tbody>
+</table>
+<p>Es gehen lt. Doku nur <strong>Pipe-Tables</strong>?!</p>
+<h2 id="anhänge">Anhänge</h2>
+<p>Siehe <a href="https://learn.netlify.app/en/shortcodes/attachments/">Anleitung</a>: Wenn die Seite eine Markdown-Datei <code>&lt;name&gt;.md</code> ist, dann können Anhänge im Ordner <code>&lt;name&gt;.files/</code> gespeichert werden.</p>
+<p>Über den <a href="https://gohugo.io/content-management/shortcodes/">Shortcode</a> <code>attachments</code> können dann die zur Seite gehörigen Anhänge an dieser Stelle eingebunden werden. Im Beispiel werden nur PDF-Dateien angezeigt/verlinkt.</p>
+
+<section class="attachments ">
+	<label>
+		<i class="fas fa-paperclip" aria-hidden="true"></i>
+		Anhänge
+	</label>
+	
+		
+	
+	<div class="attachments-files">
+	
+		
+		
+			
+				<li>
+					<a href="/kitest/tbd/testseite/files/somefig.pdf" >
+						somefig.pdf
+					</a>
+					(5 kb)
+				</li>
+			
+		
+	
+	</div>
+	
+</section>
+
+
+<h2 id="tooggles-showme">Tooggles (&quot;ShowMe&quot;)</h2>
+<p>Mit dem Shortcode <code>expand</code> können Toggles realisiert werden.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand me...
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Kurzer Toggle ohne extra Namen ...</p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Was ist die Antwort?
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Toggle mit Namen ...</p>
+<h3 id="hier-überschrift-im-toggle">Hier Überschrift im Toggle</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">  <span style="color:#75715e">/*
+</span><span style="color:#75715e">   * cHelloWorld.c
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+      printf(<span style="color:#e6db74">&#34;Hello World from C  :-)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  }
+</code></pre></div>
+    </div>
+</div>
+<p><strong>Anmerkung</strong>: Laut <a href="https://gohugo.io/content-management/shortcodes/">https://gohugo.io/content-management/shortcodes/</a> werden Shortcodes mit <code>%</code> interpretiert und gerendert, während bei der Verwendung von <code>&lt;</code> der eingeschlossene Code kein weiteres Rendering erfährt.
+<strong>Achtung</strong>: Es gibt scheinbar Shortcodes (<a href="#videos">&quot;Videos&quot;</a>), die nur mit <code>&lt;</code> funktionieren ...</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show Me
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <div class='showme'>
+<p>Und mit &quot;native Divs&quot; aus Pandoc-Markdown (muss vorverarbeitet werden) ...</p>
+<ul>
+<li>Stichpunkt 1</li>
+<li>Stichpunkt 2</li>
+<li>...</li>
+</ul>
+</div>
+
+    </div>
+</div>
+<h2 id="buttons">Buttons</h2>
+
+<a  href="https://fh-bielefeld.de" target="_blank"  class="btn btn-default">
+  
+  
+  
+  FHB
+  
+</a>
+
+
+<a  class="btn btn-default">
+  
+  
+  
+  FHB
+  
+</a>
+
+<p><a class="btn btn-default btn-crossreference" >
+Beispiel: Wuppie
+</a></p>
+<h2 id="literatur">Literatur</h2>
+<h3 id="einsatz-von-variablen-im-yaml-header-der-seite">Einsatz von Variablen im YAML-Header der Seite</h3>
+<p>Im YAML-Header der Seite können Einträge definiert werden:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">readings</span>:
+  - <span style="color:#f92672">key</span>: <span style="color:#e6db74">&#34;Russell2020&#34;</span>
+  - <span style="color:#f92672">key</span>: <span style="color:#e6db74">&#34;Ertel2017&#34;</span>
+    <span style="color:#f92672">comment</span>: <span style="color:#e6db74">&#34;Kapitel 2 und 3&#34;</span>
+  - <span style="color:#f92672">key</span>: <span style="color:#e6db74">&#34;Wuppie&#34;</span>
+  - <span style="color:#f92672">key</span>: <span style="color:#e6db74">&#34;Fluppie&#34;</span>
+    <span style="color:#f92672">comment</span>: <span style="color:#e6db74">&#34;UGH!!&#34;</span>
+</code></pre></div><p>Dabei ist <code>readings</code> die Variable, unter der Tupel mit <code>key</code> und <code>comment</code> definiert werden können. Der <code>key</code> ist dabei der in <code>data/readings.yaml</code> verwendete BibTex-Key. Leere <code>comment</code> können weggelassen werden.</p>
+<p>Dann wird mit dem Shortcode <code>bib</code> (ohne Parameter) das Literaturverzeichnis generiert (inkl. H2-Überschrift &quot;Literatur&quot;).</p>
+
+
+
+
+<div class="bib">
+    <h2>Literatur</h2>
+    <ul>
+        
+            
+            
+            
+                
+                
+                
+                
+                
+
+                
+                
+                    
+                        
+                    
+                
+                
+                
+                
+                
+                
+
+                <li id="id_Ertel2017">
+                
+                    [Ertel2017] <strong>Introduction to artificial intelligence</strong>
+                
+                
+                    <br>Ertel, W., Springer, 2017.
+                    
+                        ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-3-319-58487-4" target="_blank" rel="nofollow noopener noreferrer">978-3-319-58487-4</a>.
+                    
+                    
+                        DOI <a href="https://doi.org/10.1007/978-3-319-58487-4" target="_blank" rel="nofollow noopener noreferrer">10.1007/978-3-319-58487-4</a>.
+                    
+                
+                
+                    <br><em>Kapitel 2 und 3</em>
+                
+                </li>
+            
+        
+            
+            
+            
+        
+            
+            
+            
+                
+                
+                
+                
+                
+
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                
+                
+                
+                
+                
+
+                <li id="id_Pedregosa2011">
+                
+                    [Pedregosa2011] <a href="https://scikit-learn.org" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Scikit-learn: Machine learning in Python</strong></a>
+                
+                
+                    <br>Pedregosa, F. und Varoquaux, G. und Gramfort, A. und Michel, V. und Thirion, B. und Grisel, O. und Blondel, M. und Prettenhofer, P. und Weiss, R. und Dubourg, V. und Vanderplas, J. und Passos, A. und Cournapeau, D. und Brucher, M. und Perrot, M. und Duchesnay, E., 2011.
+                    
+                    
+                
+                
+                </li>
+            
+        
+            
+            
+            
+                
+                
+                
+                
+                
+
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                
+                
+                
+                
+                
+
+                <li id="id_Russell2014">
+                
+                    [Russell2014] <a href="http://aima.cs.berkeley.edu" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Artificial intelligence: A modern approach</strong></a>
+                
+                
+                    <br>Russell, S. und Norvig, P., Pearson, 2014.
+                    
+                        ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-1-292-02420-2" target="_blank" rel="nofollow noopener noreferrer">978-1-292-02420-2</a>.
+                    
+                    
+                
+                
+                </li>
+            
+        
+            
+            
+            
+                
+                
+                
+                
+                
+
+                
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                
+                
+                
+                
+                
+
+                <li id="id_Russell2020">
+                
+                    [Russell2020] <a href="http://aima.cs.berkeley.edu" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Artificial intelligence: A modern approach</strong></a>
+                
+                
+                    <br>Russell, S. und Norvig, P., Pearson, 2020.
+                    
+                        ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-0134610993" target="_blank" rel="nofollow noopener noreferrer">978-0134610993</a>.
+                    
+                    
+                
+                
+                </li>
+            
+        
+            
+            
+            
+        
+        </ul>
+</div>
+
+
+<p><strong>Achtung</strong>: Die Einträge für <code>key</code> müssen als Schlüssel in <code>data/readings.yaml</code> vorkommen. Anderenfalls wird der Eintrag stillschweigend ignoriert (keine Fehlermeldung, da Verwendung in GH-Actions). Im Beispiel oben würden die Keys &quot;Wuppie&quot; und &quot;Fluppie&quot; nicht gefunden und die Einträge entsprechend nicht in die Seite aufgenommen.</p>
+<h3 id="freier-inhalt">Freier Inhalt</h3>
+<p>Dem Shortcode <code>bib</code> (ohne Parameter) kann auch Inhalt übergeben werden (zw. öffnendem und schließendem Shortcode). Dieser wird dann als Literaturverzeichnis angezeigt (<strong>ohne</strong> Default-Überschrift!).</p>
+<div class="bib">
+<p>Hier könnte ein Literaturverzeichnis entstehen ...</p>
+</div>
+<h3 id="vorrang">Vorrang</h3>
+<p>Der Aufruf des Shortcodes <code>bib</code> mit Inhalt hat Vorrang von dem Aufruf ohne Inhalte (aber mit gesetztem Parameter <code>readings</code>). Wenn beides nicht gesetzt/vorhanden ist, passiert nichts.</p>
+<h3 id="zitieren">Zitieren</h3>
+<p>Im Text werden die Keys normal benutzt: <code>@key</code>.</p>
+<p>Beim Erzeugen der Slides (Beamer/PDF) erzeugt Pandoc mit dem Bibtex-File und den Keys einen verlinkten Eintrag im Text und ggf. am Ende der Folien ein Literaturverzeichnis.</p>
+<p>Beim Erzeugen der Webseiten wird zunächst bei der Vorverarbeitung mit Pandoc plus einem Filter aus den Keys ein Link ins lokale Literaturverzeichnis erstellt und in den Text eingebettet. Danach kann beim Ausführen von Hugo der Shortcode/Partial <code>bib</code> das Literaturverzeichnis mit den entsprechenden Ankern generieren.</p>
+<p>Blablab <a href="#id_Russell2020">[Russell2020]</a> blublbubl <a href="#id_Russell2020">[Russell2020]</a> bla <a href="#id_Russell2020">[Russell2020, S.10]</a> ...</p>
+<p>Hier eine Mehrfachzitierung <a href="#id_Russell2014">[Russell2014]</a><a href="#id_Russell2020">[Russell2020]</a><a href="#id_Pedregosa2011">[Pedregosa2011]</a></p>
+<p>Lorem Ipsum.</p>
+<h2 id="sonstige-special-sections">Sonstige Special Sections</h2>
+<p>In der Datei <code>static/css/tldr.css</code> finden sich die Klassen für &quot;TLDR&quot; etc. aus meinem <a href="https://github.com/cagix/pandoc-lecture">Pandoc-Lecture</a>.</p>
+<p>Ein Versuch wäre, diese Klassen explizit über ein <code>&lt;div class=&quot;tldr&quot;&gt;</code> etc. einzubauen. ... Wird aber von Hugo aus Sicherheitsgründen unterdrückt, im Output steht dann nur noch <code>&lt;!-- raw HTML omitted --&gt;</code> ... Das könnte man ggf. durch eine Konfiguration aktivieren (siehe <a href="https://stackoverflow.com/questions/63198652/hugo-shortcode-ignored-saying-raw-html-omitted">Stackoverflow</a>).</p>
+<p>Ein anderer Weg könnten <a href="https://gohugo.io/templates/shortcode-templates/">&quot;Custom Shortcode Templates&quot;</a> sein. Aber auch hier muss man letztlich das &quot;unsafe&quot; Rendering explizit freischalten. Offenbar wird ein Unterscheid zwischen eigenen Shortcode Templates und denen aus einem Theme gemacht (warum?!).</p>
+<h3 id="tldr">TL;DR</h3>
+<h4 id="ohne-parameter-und-mit-inner-direktes-rendering">Ohne Parameter und mit <code>.Inner</code>: Direktes Rendering</h4>
+<div class="tldr">
+<ul>
+<li>Behebung von Bad Smells durch Refactoring</li>
+</ul>
+<p>Blablabla</p>
+</div>
+<h4 id="ohne-parameter-auslesen-der-page-resource-tldrmd">Ohne Parameter: Auslesen der Page-Resource <code>tldr.md</code></h4>
+
+
+
+<div class="tldr">
+    <h2>TL;DR</h2>
+    
+        <p>hier kommt eine kurze Zusammenfassung der Lektion hin (&ldquo;TL;DR&rdquo;) &hellip; wird vom Partial/Template gezogen und an die richtige Stelle gesetzt.</p>
+<ul>
+<li>beliebiges Markdown sollte</li>
+<li>gehen
+<ul>
+<li>Einrückungen natürlich auch &hellip;</li>
+</ul>
+</li>
+</ul>
+
+    
+</div>
+
+
+<h3 id="lernziele">Lernziele</h3>
+<h4 id="ohne-parameter-und-mit-inner-direktes-rendering-1">Ohne Parameter und mit <code>.Inner</code>: Direktes Rendering</h4>
+<div class="outcomes">
+<p>Platz für Lernziele</p>
+<ul>
+<li>Behebung von Bad Smells durch Refactoring</li>
+</ul>
+<p>Blablabla</p>
+</div>
+<h4 id="ohne-parameter-auslesen-der-page-resource-outcomesmd">Ohne Parameter: Auslesen der Page-Resource <code>outcomes.md</code></h4>
+
+
+
+<div class="outcomes">
+    <h2>Lernziele</h2>
+    
+        <p>Lernziele aufschreiben.</p>
+<h3>Kennen (K1)</h3>
+<ul>
+<li>Wuppie</li>
+<li>Fluppie</li>
+</ul>
+<h3>Verstehen (K2)</h3>
+<ul>
+<li>foo</li>
+<li>bar</li>
+</ul>
+<h3>Anwenden (K3)</h3>
+<p>hammwanich</p>
+<h3>Analysieren (K4)</h3>
+<p>gibbetsooch</p>
+
+    
+</div>
+
+
+<h3 id="quizzes">Quizzes</h3>
+<p>Quizzes werden auf Kahoot angelegt. Diese kann man entweder in der Vorlesung nutzen/starten oder als einzeln zu spielendes Quizz einstellen. Die bisherigen Quizzfragen werden als Kahoot-Quizzes in der zweiten Form (einzeln zu spielen) eingepflegt.</p>
+<p>Über &quot;Play &gt; Assign &gt; Invite more Players &gt; Copy URL&quot; wird die URL zu einem Self-Play-Kahoot kopiert.</p>
+<p>Im YAML-Block einer Seite wird unter dem Schlüssel <code>quizzes</code> dann die URL sowie ein Name oder kurze Beschreibung hinterlegt. Dies kann mehrfach wiederholt werden. Alle Quizzes werden über das <code>lecture</code>-Template am Ende des Skripts mit einem buntem Hintergrund aufgelistet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">quizzes</span>:
+  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Quizz Thema X&#34;</span>
+    <span style="color:#f92672">link</span>: <span style="color:#ae81ff">https://kahoot.it/challenge/01262821?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629455219268</span>
+  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Quizz Thema Y&#34;</span>
+    <span style="color:#f92672">link</span>: <span style="color:#ae81ff">https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499</span>
+</code></pre></div><h3 id="challenges">Challenges</h3>
+<p>Zum Einsatz als Bonusaufgabe steht der Shortcode <code>challenges</code> bereit. Der Inhalt wird als Markdown gerendert und leicht farbig vom Rest abgehoben.</p>
+<div class="challenges">
+<p>Erstellen Sie ...</p>
+</div>
+<h2 id="videos">Videos</h2>
+<p>Es gibt einen Shortcode für YouTube: <code>youtube</code>. Hier kann man die ID eines Videos als Parameter übergeben, und das Video wird an dieser Stelle mit einem Player in der Webseite eingebettet.</p>
+<p>Beispiel:
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/JOmyP1ypJBs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+<p>Für das FH-Medienportal gibt es analog einen Shortcode <code>fhmedia</code>, der als Parameter den Key des Direkt-Links bekommt.</p>
+<p>Beispiel:
+<div class="fhmedia">
+    <a href="https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67" target="_blank" rel="nofollow noopener noreferrer">Direkt-Link FH-Medienportal</a>
+</div>
+</p>
+<p>Zusätzlich kann man im YAML-Header der Page zum Schlüssel <code>youtube</code> eine oder mehrere Video-IDs in <code>id</code> ablegen oder alternativ mit <code>link</code> den Link zum Video eingeben. In <code>name</code> kann man optional jeweils einen String eingeben, der als H3-Header vor dem Video gesetzt wird:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">youtube</span>:
+  - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">JOmyP1ypJBs</span>
+  - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">ooWCzdWL2Co</span>
+  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Use As Header H3 Before Video&#34;</span>
+    <span style="color:#f92672">link</span>: <span style="color:#ae81ff">https://youtu.be/ooWCzdWL2Co</span>
+</code></pre></div><p>Diese werden dann über das <code>lecture</code>-Template automatisch im Block &quot;TL;DR&quot; am Anfang des Scripts eingebunden.</p>
+<p>Analog funktioniert der Eintrag <code>fhmedia</code> im YAML-Header. Hier wird die ID bzw. die URL des Direkt-Links des Videos eingetragen.</p>
+<h2 id="schedule">Schedule</h2>
+<p>Zum Erzeugen eines Schedules (aka &quot;Fahrplan&quot;) gibt es den Shortcode <code>schedule</code>.
+Dabei wird die Datei <code>data/schedule.yaml</code> ausgelesen und verarbeitet.</p>
+
+
+
+<div class="schedule">
+    <table>
+    <thead>
+        <tr>
+        <th>Woche</th>
+        <th>Vorlesung</th>
+        <th>Praktikum/Übung</th>
+        
+        
+            
+        
+            
+        
+            
+        
+        
+        </tr>
+    </thead>
+    <tbody>
+    
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <td>
+                1
+                <br>
+                (KW40)
+            </td>
+            <td>
+            
+            <ul>
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        ORGA &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/orga/syllabus/"><strong>Syllabus</strong></a>
+                        
+                        
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td><td>
+            <ul>
+            
+            </ul>
+            
+            </td>
+            
+        </tr>
+    
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <td>
+                2
+                <br>
+                (KW41)
+            </td>
+            <td>
+            
+            <ul>
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        SUCHE &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/suche/intro/"><strong>Einführung</strong></a>
+                         (cagi)
+                        <br><em>Hinweis: Classes go all-virtual</em>
+                    </li>
+                    
+                
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        SUCHE &gt; INFORMIERT &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/suche/informiert/astar/"><strong>Suche mit A*</strong></a>
+                        
+                        
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td><td>
+            <ul>
+            
+                
+                
+                
+                    
+                    <li>
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/praktikum/blatt01/"><strong>Blatt 01</strong></a>
+                        <br>(Abgabe: 14.10.)
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td>
+            
+        </tr>
+    
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <td>
+                3
+                <br>
+                (KW42)
+            </td>
+            <td>
+            
+            <ul>
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/mlp/"><strong>ML: Perzeptron und MLP</strong></a>
+                        
+                        
+                    </li>
+                    
+                
+            
+                
+                
+                
+                
+                    
+                    <li>
+                        
+                        CSP &gt; 
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/csp/ac3/"><strong>Kantenkonsistenz und AC-3</strong></a>
+                         (bc)
+                        
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td><td>
+            <ul>
+            
+                
+                
+                
+                    
+                    <li>
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/praktikum/blatt01/"><strong>Blatt 01</strong></a>
+                        
+                    </li>
+                    
+                
+            
+                
+                
+                
+                    
+                    <li>
+                        
+                        <a href="https://ki-vorlesung.github.io/kitest/praktikum/blatt01/"><strong>Blatt 01</strong></a>
+                        <br>(Abgabe: 21.10.)
+                    </li>
+                    
+                
+            
+            </ul>
+            
+            </td>
+            
+        </tr>
+    
+    </tbody>
+    </table>
+</div>
+
+
+<h2 id="pandoc-native-divsspans">Pandoc native Divs/Spans</h2>
+<p>Native Divs <code>::: slides ... :::</code> and <code>::: notes ... :::</code> werden je nach Kontext durch den Pandoc-Filter entfernt, also beim Erzeugen von Folien (PDF/Beamer) wird der Inhalt von <code>::: slides</code> berücksichtigt und <code>::: notes</code> komplett entfernt und beim Generien der Webseiten anders herum.</p>
+<p>Andere native Divs wie <code>::: cbox ... :::</code> und <code>::: center ... :::</code> werden in &quot;normale&quot; Divs mit der entsprechenden Klasse umgewandelt, so dass über Hugo und das passende CSS die Formatierung erreicht wird.</p>
+<p>Analoges gilt für native Spans wie <code>[]{.origin}</code> und <code>[]{.alert}</code>.</p>
+<p>Für manche Elemente wie <code>::: showme ... :::</code> und <code>[]{.bsp}</code> werden passende Shortcodes eingesetzt.</p>
+<div class='cbox'>
+<p>Hier ein wichtiger Text!</p>
+</div>
+<p>Oder zentriert:</p>
+<div class='center'>
+<p>Hier wird zentriert ...</p>
+</div>
+<p>Dies ist eine <span class='alert'>wichtige</span> Bemerkung. Und noch <span class='alert'><strong>wichtiger</strong></span> ... Und hier noch ein <span class='origin'>Quellenhinweis: <a href="https://www.google.de/">URL</a></span>.</p>
+<p>Für <code>::: columns ... :::</code> wurde noch kein passender Ersatz gefunden.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show Me
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <div class='showme'>
+<p>Das hier ist erstmal versteckt!</p>
+<ul>
+<li>Punkt 1</li>
+<li>Punkt 2</li>
+<li>Punkt 3</li>
+</ul>
+</div>
+
+    </div>
+</div>
+<p><a class="btn btn-default btn-crossreference" >
+Hier ein Beispiel
+</a></p>
+<p>Dieser Text erscheint nur auf den Webseiten, nicht aber auf den Folien.</p>
+
+    
+
+
+<div class="quizzes">
+    <h2>Quizzes ...</h2>
+    <ul>
+    
+        
+        
+        
+        <li>
+            <a href="https://kahoot.it/challenge/01262821?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629455219268" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Testquizz 1</strong></a>
+        </li>
+        
+    
+        
+        
+        
+        <li>
+            <a href="https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Testquizz 2</strong></a>
+        </li>
+        
+    
+    </ul>
+</div>
+
+
+    
+
+
+
+
+    
+
+
+
+<div class="bib">
+    <h2>Literatur</h2>
+    <ul>
+    
+        
+        
+        
+            
+            
+            
+            
+            
+
+            
+            
+                
+                    
+                
+            
+            
+            
+            
+            
+            
+
+            <li id="id_Ertel2017">
+            
+                [Ertel2017] <strong>Introduction to artificial intelligence</strong>
+            
+            
+                <br>Ertel, W., Springer, 2017.
+                
+                    ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-3-319-58487-4" target="_blank" rel="nofollow noopener noreferrer">978-3-319-58487-4</a>.
+                
+                
+                    DOI <a href="https://doi.org/10.1007/978-3-319-58487-4" target="_blank" rel="nofollow noopener noreferrer">10.1007/978-3-319-58487-4</a>.
+                
+            
+            
+                <br><em>Kapitel 2 und 3</em>
+            
+            </li>
+        
+    
+        
+        
+        
+    
+        
+        
+        
+            
+            
+            
+            
+            
+
+            
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+            
+            
+            
+            
+            
+
+            <li id="id_Pedregosa2011">
+            
+                [Pedregosa2011] <a href="https://scikit-learn.org" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Scikit-learn: Machine learning in Python</strong></a>
+            
+            
+                <br>Pedregosa, F. und Varoquaux, G. und Gramfort, A. und Michel, V. und Thirion, B. und Grisel, O. und Blondel, M. und Prettenhofer, P. und Weiss, R. und Dubourg, V. und Vanderplas, J. und Passos, A. und Cournapeau, D. und Brucher, M. und Perrot, M. und Duchesnay, E., 2011.
+                
+                
+            
+            
+            </li>
+        
+    
+        
+        
+        
+            
+            
+            
+            
+            
+
+            
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+            
+            
+            
+            
+            
+
+            <li id="id_Russell2014">
+            
+                [Russell2014] <a href="http://aima.cs.berkeley.edu" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Artificial intelligence: A modern approach</strong></a>
+            
+            
+                <br>Russell, S. und Norvig, P., Pearson, 2014.
+                
+                    ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-1-292-02420-2" target="_blank" rel="nofollow noopener noreferrer">978-1-292-02420-2</a>.
+                
+                
+            
+            
+            </li>
+        
+    
+        
+        
+        
+            
+            
+            
+            
+            
+
+            
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+            
+            
+            
+            
+            
+
+            <li id="id_Russell2020">
+            
+                [Russell2020] <a href="http://aima.cs.berkeley.edu" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Artificial intelligence: A modern approach</strong></a>
+            
+            
+                <br>Russell, S. und Norvig, P., Pearson, 2020.
+                
+                    ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-0134610993" target="_blank" rel="nofollow noopener noreferrer">978-0134610993</a>.
+                
+                
+            
+            
+            </li>
+        
+    
+        
+        
+        
+    
+    </ul>
+</div>
+
+
+
+
+
+        
+        </div>
+        <p><div style="color: darkgray; font-size: smaller;">
+<p>
+    <!-- https://creativecommons.org/choose/ -->
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;margin:0;display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> Unless otherwise noted, <a href="https://github.com/KI-Vorlesung/Lecture">this work</a> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/cyildiz" property="cc:attributionName" rel="cc:attributionURL">Canan Yıldız</a>, <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/cagix" property="cc:attributionName" rel="cc:attributionURL">Carsten Gips</a>, and <a href="https://github.com/KI-Vorlesung/Lecture/graphs/contributors">contributors</a> is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+<br />
+    Icons by <a href="https://fontawesome.com/">Font Awesome</a>.
+    Built with <a href="https://github.com/jgm/pandoc">Pandoc</a> using <a href="https://github.com/cagix/pandoc-lecture">Pandoc-Lecture</a> and <a href="https://github.com/gohugoio/hugo">Hugo</a> using the <a href="https://github.com/matcornic/hugo-theme-learn">Hugo Learn Theme</a> (deriving from <a href="https://github.com/getgrav/grav">Grav</a>).
+</p>
+</div>
+</p>
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/kitest/js/clipboard.min.js?1634036685"></script>
+    <script src="/kitest/js/perfect-scrollbar.min.js?1634036685"></script>
+    <script src="/kitest/js/perfect-scrollbar.jquery.min.js?1634036685"></script>
+    <script src="/kitest/js/jquery.sticky.js?1634036685"></script>
+    <script src="/kitest/js/featherlight.min.js?1634036685"></script>
+    <script src="/kitest/js/highlight.pack.js?1634036685"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/kitest/js/modernizr.custom-3.6.0.js?1634036685"></script>
+    <script src="/kitest/js/learn.js?1634036685"></script>
+    <script src="/kitest/js/hugo-learn.js?1634036685"></script>
+    
+    
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </body>
+</html>
+

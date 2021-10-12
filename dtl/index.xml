@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entscheidungsbäume on </title>
+    <link>https://ki-vorlesung.github.io/kitest/dtl/</link>
+    <description>Recent content in Entscheidungsbäume on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/dtl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning 101</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/mlbasics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/mlbasics/</guid>
+      <description>Was ist Lernen? &amp;hellip;
+Warum Lernen? &amp;hellip;
+Learning Agent &amp;hellip;
+Feedback während des Lernens &amp;hellip;
+Beispiele &amp;hellip;
+Lernen durch Beobachten: Lernen einer Funktion $\operatorname{f}$ &amp;hellip;
+Konstruieren einer konsistenten Hypothese &amp;hellip;
+Occam&amp;rsquo;s Razor &amp;hellip;
+Trainingsdaten und Merkmalsvektoren &amp;hellip;
+Beispiel &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>CAL2</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/cal2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/cal2/</guid>
+      <description>Entscheidungsbäume: Klassifikation ...
+Definition Entscheidungsbaum   Erinnerung: Merkmalsvektor für Objekt $v$:
+$$ \mathbf{x}(v) = (x_1, x_2, \ldots, x_n) $$  $n$ Merkmale (Attribute) Attribut $x_t$ hat $m_t$ mögliche Ausprägungen Ausprägung von $v$ bzgl. $x_t$: $\quad x_t(v) = i \quad$ (mit $i = 1 \ldots m_t$)    Alphabet für Baum:
+$$ \{x_t |\; t=1,\ldots,n\} \cup \{\kappa |\; \kappa = *,A,B,C,\ldots\} \cup \{(,)\} $$   Entscheidungsbaum $\alpha$:
+$$ \alpha = \left\{ \begin{array}{ll} \kappa &amp; \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\ x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) &amp; x_t \text{ Testattribut mit } m_t \text{ Ausprägungen} \end{array} \right.</description>
+    </item>
+    
+    <item>
+      <title>Pruning</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/pruning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/pruning/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>CAL3</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/cal3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/cal3/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Entropie</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/entropie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/entropie/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>ID3 und C4.5</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/id3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/id3/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

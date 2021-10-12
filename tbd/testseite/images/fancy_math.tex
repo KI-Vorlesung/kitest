@@ -1,0 +1,30 @@
+\documentclass[
+	border=0.2cm,
+	convert={density=600}
+]{standalone}
+
+\usepackage{listings}
+\usepackage{standalone}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage{color}
+
+\begin{document}
+\begin{lstlisting}[mathescape,basicstyle=\scriptsize\ttfamily]
+a = $w_1$
+X = top
+while (X $ \neq \perp)$
+    if X = a
+        a = next symbol of w
+        pop
+    else if X $\in T$
+        error
+    else if $M[X, a]$ leer
+        error
+    else if $M[X, a] = X \rightarrow Y_1 Y_2 \ldots Y_k$
+        output($X \rightarrow Y_1 Y_2 \ldots Y_k$)
+        pop
+        push($Y_1 Y_2 \ldots Y_k$) ($Y_1$ = top of stack))
+    X = top
+\end{lstlisting}
+\end{document}

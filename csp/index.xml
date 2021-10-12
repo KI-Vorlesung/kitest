@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Constrainsolving on </title>
+    <link>https://ki-vorlesung.github.io/kitest/csp/</link>
+    <description>Recent content in Constrainsolving on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/csp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Einführung</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/intro/</guid>
+      <description>Motivation: Einfärben von Landkarten &amp;hellip; Beispiel Map-Coloring-Problem
+Problem &amp;hellip;
+Lösung &amp;hellip;
+Formalisierung &amp;hellip;
+Definition: Constraint Satisfaction Problem (CSP) &amp;hellip;
+Constraint-Graph &amp;hellip;
+Constraints und Arität &amp;hellip;
+Unterscheidung Wertebereiche &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Lösen von diskreten CSP</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/tiefensuche/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/tiefensuche/</guid>
+      <description>Suche mit TS und Backtracking &amp;hellip; Tiefensuche angewendet</description>
+    </item>
+    
+    <item>
+      <title>Heuristiken</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/heuristiken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/heuristiken/</guid>
+      <description>Auswahl der Variablen &amp;hellip;
+Gleichstand &amp;hellip;
+Auswahl der Werte &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Kantenkonsistenz und AC-3</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/ac3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/ac3/</guid>
+      <description>Problem bei BT-Suche &amp;hellip;
+INFERENCE: Vorab-Prüfung (Forward Checking) &amp;hellip;
+Definition Kantenkonsistenz (Arc Consistency) &amp;hellip;
+AC-3 Algorithmus: Herstellen von Kantenkonsistenz &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

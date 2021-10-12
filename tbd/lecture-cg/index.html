@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+<meta name="author" content="cagix">
+
+    <link rel="icon" href="/kitest/images/favicon.png" type="image/png">
+
+    <title>Test-Vorlesung für Carsten   </title>
+
+    
+    <link href="/kitest/css/nucleus.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/fontawesome-all.min.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/hybrid.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/featherlight.min.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/perfect-scrollbar.min.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/auto-complete.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/atom-one-dark-reasonable.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/theme.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/tabs.css?1634036685" rel="stylesheet">
+    <link href="/kitest/css/hugo-theme.css?1634036685" rel="stylesheet">
+    
+    <link href="/kitest/css/theme-green.css?1634036685" rel="stylesheet">
+    
+    
+
+    <script src="/kitest/js/jquery-3.3.1.min.js?1634036685"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    <style type="text/css">
+
+ 
+.center {
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+.alert {
+    color: #ff3333;
+}
+.bsp {
+    padding: 0.05cm;
+    border-width: 0.05cm;
+    border-style: solid;
+    border-color: #ddd;
+    background-color: #ddd;
+    border-radius: 25px;
+    float: right;
+}
+.cbox {
+    padding: 0.2cm;
+    border-width: 0.1cm;
+    border-style: solid;
+    border-color: #4070a0;
+    background-color: #f2f2f2;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    overflow: auto;
+}
+.blueArrow {
+    color: #4070a0;
+    font-family: "Courier New", "Courier", monospace;
+    font-weight: bold;
+}
+.origin {
+    background-color: #ededed;
+    font-size: 0.8em;
+}
+.showme {
+    background-color: #ededed;
+    font-size: 0.8em;
+}
+
+
+ 
+.tldr {
+    background: #dbe4ed;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.recap {
+    
+    
+   margin: 4px 0px 26px 0px;
+}
+.bib {
+    background: #dbe4ed;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.outcomes {
+    background: #d9e9d5;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.quizzes {
+    background: #d9e9d5;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.challenges {
+    background: #ebe4d6;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+.assignments {
+    background: #ebe4d6;
+    padding: 12px;
+    margin: 4px 0px 26px 0px;
+}
+h1.tldr, h1.recap, h1.bib, h1.outcomes, h1.quizzes, h1.challenges, h1.assignments {
+    padding: 0px;
+}
+
+
+ 
+.noJsAlert {
+    padding: 20px;
+    background-color: #f44336;  
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+ 
+.embed-video-player {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+}
+.youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:0;
+}
+
+
+ 
+#header-wrapper {
+    padding:0.6rem;
+}
+
+
+ 
+#chapter p {
+    text-align: left;
+}
+
+
+ 
+figcaption h4 {
+    margin-top:-2.5rem;
+}
+.border1 {
+    border:1px solid black;
+}
+
+ 
+td ul, td ol {
+    margin: 0 0 1rem 0.5rem;
+    padding: 0 0 0 0.5rem;
+}
+
+ 
+h1 { font-size:2.8rem !important;}
+h2 { font-size:2.2rem; margin:1.2rem 0}
+h3 { font-size:1.9rem; text-align:left !important; font-weight:400 !important;}
+h4 { font-size:1.6rem}
+h5 { font-size:1.3rem}
+h6 { font-size:1rem}
+
+h2 {
+    width:100% !important;
+    border-bottom:1px solid #5e5e5e !important;
+    padding-bottom: 2px;
+}
+.tldr h2, .recap h2, .bib h2, .outcomes h2, .quizzes h2, .challenges h2, .assignments h2 {
+    margin:0.5rem 0
+}
+
+.btn-crossreference, .btn-crossreference:hover {
+    cursor: initial !important;
+    color: #333 !important;
+    background-color: #fff !important;
+    border-color: #ccc !important;
+}
+
+</style>
+
+  </head>
+  <body class="" data-url="/kitest/tbd/lecture-cg/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='https://ki-vorlesung.github.io/kitest/'>
+    <img style="max-width:35%" alt="icon" src='/kitest/images/logo.png'>
+</a>
+
+    </div>
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/" title="Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/">
+          Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/intro/" title="Einführung" class="dd-item ">
+        <a href="/kitest/suche/intro/">
+        Einführung
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/modellierung/" title="Modellierung" class="dd-item ">
+        <a href="/kitest/suche/modellierung/">
+        Modellierung
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/uninformiert/" title="Uninformierte Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/uninformiert/">
+          Uninformierte Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/uninformiert/tiefensuche/" title="Suche mit Tiefensuche" class="dd-item ">
+        <a href="/kitest/suche/uninformiert/tiefensuche/">
+        Suche mit Tiefensuche
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/uninformiert/breitensuche/" title="Suche mit Breitensuche" class="dd-item ">
+        <a href="/kitest/suche/uninformiert/breitensuche/">
+        Suche mit Breitensuche
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/informiert/" title="Informierte Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/informiert/">
+          Informierte Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/informiert/branchandbound/" title="Suche mit Branch-and-Bound" class="dd-item ">
+        <a href="/kitest/suche/informiert/branchandbound/">
+        Suche mit Branch-and-Bound
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/informiert/bestfirst/" title="Suche mit Best First" class="dd-item ">
+        <a href="/kitest/suche/informiert/bestfirst/">
+        Suche mit Best First
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/suche/informiert/astar/" title="Suche mit A*" class="dd-item ">
+        <a href="/kitest/suche/informiert/astar/">
+        Suche mit A*
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/suche/lokal/" title="Lokale Suche" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/suche/lokal/">
+          Lokale Suche
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/ea/" title="Genetische Algorithmen" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/ea/">
+          Genetische Algorithmen
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/spiele/" title="Spiele" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/spiele/">
+          Spiele
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/optimalespiele/" title="Optimale Spiele" class="dd-item ">
+        <a href="/kitest/spiele/optimalespiele/">
+        Optimale Spiele
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/minimax/" title="Minimax" class="dd-item ">
+        <a href="/kitest/spiele/minimax/">
+        Minimax
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/heuristiken/" title="Heuristiken" class="dd-item ">
+        <a href="/kitest/spiele/heuristiken/">
+        Heuristiken
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/spiele/alphabetapruning/" title="Alpha-Beta-Pruning" class="dd-item ">
+        <a href="/kitest/spiele/alphabetapruning/">
+        Alpha-Beta-Pruning
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/csp/" title="Constrainsolving" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/csp/">
+          Constrainsolving
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/intro/" title="Einführung" class="dd-item ">
+        <a href="/kitest/csp/intro/">
+        Einführung
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/tiefensuche/" title="Lösen von diskreten CSP" class="dd-item ">
+        <a href="/kitest/csp/tiefensuche/">
+        Lösen von diskreten CSP
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/heuristiken/" title="Heuristiken" class="dd-item ">
+        <a href="/kitest/csp/heuristiken/">
+        Heuristiken
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/csp/ac3/" title="Kantenkonsistenz und AC-3" class="dd-item ">
+        <a href="/kitest/csp/ac3/">
+        Kantenkonsistenz und AC-3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/dtl/" title="Entscheidungsbäume" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/dtl/">
+          Entscheidungsbäume
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/mlbasics/" title="Machine Learning 101" class="dd-item ">
+        <a href="/kitest/dtl/mlbasics/">
+        Machine Learning 101
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/cal2/" title="CAL2" class="dd-item ">
+        <a href="/kitest/dtl/cal2/">
+        CAL2
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/pruning/" title="Pruning" class="dd-item ">
+        <a href="/kitest/dtl/pruning/">
+        Pruning
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/cal3/" title="CAL3" class="dd-item ">
+        <a href="/kitest/dtl/cal3/">
+        CAL3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/entropie/" title="Entropie" class="dd-item ">
+        <a href="/kitest/dtl/entropie/">
+        Entropie
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/dtl/id3/" title="ID3 und C4.5" class="dd-item ">
+        <a href="/kitest/dtl/id3/">
+        ID3 und C4.5
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/naivebayes/" title="Naive Bayes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/naivebayes/">
+          Naive Bayes
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/mlp/" title="ML: Perzeptron und MLP" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kitest/mlp/">
+          ML: Perzeptron und MLP
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kitest/tbd/" title="Testkapitel" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/kitest/tbd/">
+          Testkapitel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/testseite/" title="Test der verschiedenen Markdown-Elemente" class="dd-item ">
+        <a href="/kitest/tbd/testseite/">
+        Test der verschiedenen Markdown-Elemente
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/test2/" title="Test2: Ordner statt Datei" class="dd-item ">
+        <a href="/kitest/tbd/test2/">
+        Test2: Ordner statt Datei
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/test3/" title="Test3: Pure HTML" class="dd-item ">
+        <a href="/kitest/tbd/test3/">
+        Test3: Pure HTML
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/lecture-cg/" title="Test-Vorlesung für Carsten" class="dd-item active">
+        <a href="/kitest/tbd/lecture-cg/">
+        Test-Vorlesung für Carsten
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/lecture-cy/" title="Test-Vorlesung für Canan" class="dd-item ">
+        <a href="/kitest/tbd/lecture-cy/">
+        Test-Vorlesung für Canan
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kitest/tbd/lecture-bc/" title="Test-Vorlesung für BC" class="dd-item ">
+        <a href="/kitest/tbd/lecture-bc/">
+        Test-Vorlesung für BC
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/fahrplan"><i class='fas fa-bookmark'></i> Fahrplan</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/praktikum"><i class='fas fa-bookmark'></i> Praktikum</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/note_und_credits"><i class='fas fa-bookmark'></i> Note/Credits</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/syllabus"><i class='fas fa-bookmark'></i> Syllabus</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://ki-vorlesung.github.io/kitest/orga/reading"><i class='fas fa-bookmark'></i> Reading</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>
+    <a href='/kitest/misc/imprint'>Impressum</a>,
+    <a href='/kitest/misc/privacy'>Datenschutz</a>,
+    <a href='/kitest/misc/credits'>Credits</a>
+</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/KI-Vorlesung/kitest/edit/master/markdown/tbd/lecture-cg/index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/kitest/'>KI W21</a> > <a href='/kitest/tbd/'>Testkapitel</a> > Test-Vorlesung für Carsten
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#standard-markdown">Standard-Markdown</a>
+          <ul>
+            <li><a href="#stichpunkte">Stichpunkte</a></li>
+            <li><a href="#hervorhebungen">Hervorhebungen</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+          </ul>
+        </li>
+        <li><a href="#abbildungen">Abbildungen</a>
+          <ul>
+            <li><a href="#lokale-abbildungen-mit-markdown">Lokale Abbildungen mit Markdown</a></li>
+            <li><a href="#lokale-abbildungen-mit-shortcodes">Lokale Abbildungen mit Shortcodes</a></li>
+          </ul>
+        </li>
+        <li><a href="#code-und-syntax-highlighting">Code und Syntax-Highlighting</a></li>
+        <li><a href="#mathe-und-formeln">Mathe und Formeln</a>
+          <ul>
+            <li><a href="#inline-math">Inline Math</a></li>
+            <li><a href="#display-math">Display Math</a></li>
+          </ul>
+        </li>
+        <li><a href="#listings-und-math-markdown-ohne-manuelle-skalierung">Listings und Math: Markdown (ohne manuelle Skalierung)</a></li>
+        <li><a href="#listings-und-math-pandoc">Listings und Math: Pandoc</a></li>
+        <li><a href="#listings-und-math-pandoc-empty-titlealt">Listings und Math: Pandoc (empty title/alt)</a></li>
+        <li><a href="#verlinkungen">Verlinkungen</a></li>
+        <li><a href="#tabellen">Tabellen</a></li>
+        <li><a href="#tooggles-showme">Tooggles (&quot;ShowMe&quot;)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Test-Vorlesung für Carsten
+            </h1>
+          
+
+        
+
+
+
+
+    
+
+
+
+
+
+<div class="tldr">
+    <h2>TL;DR</h2>
+
+    
+        <p>hier kommt eine kurze Zusammenfassung der Lektion hin (&ldquo;TL;DR&rdquo;) &hellip; wird vom Partial/Template gezogen und an die richtige Stelle gesetzt.</p>
+<ul>
+<li>beliebiges Markdown sollte</li>
+<li>gehen
+<ul>
+<li>Einrückungen natürlich auch &hellip;</li>
+</ul>
+</li>
+</ul>
+
+    
+
+    
+        <h3>Videos (YouTube)</h3>
+        
+
+<ul>
+
+    
+    
+
+    
+        
+        
+        <div class="embed-video-player">
+            <iframe class="youtube-player" src="https://www.youtube-nocookie.com/embed/JOmyP1ypJBs" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+    
+
+    
+    
+
+    
+    
+        
+    
+
+    
+
+    
+    
+        <li><a href="https://youtu.be/JOmyP1ypJBs" target="_blank" rel="nofollow noopener noreferrer">Use This As Link Text (Link from &#39;share&#39;-Button)</a></li>
+    
+
+</ul>
+
+    
+
+    
+        <h3>Videos (FH-Medienportal)</h3>
+        
+
+<ul>
+
+    
+    
+        
+    
+
+    
+    
+    
+        
+    
+
+    
+        <li><a href="https://www.fh-bielefeld.de/medienportal/m/c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67" target="_blank" rel="nofollow noopener noreferrer">Use This As Link Text (Direkt-Link from &#39;share&#39;-Button)</a></li>
+    
+
+</ul>
+
+    
+
+    
+</div>
+
+
+    
+
+
+<div class="outcomes">
+    <h2>Lernziele</h2>
+    
+        <p>Lernziele aufschreiben.</p>
+<h3>Kennen (K1)</h3>
+<ul>
+<li>Wuppie</li>
+<li>Fluppie</li>
+</ul>
+<h3>Verstehen (K2)</h3>
+<ul>
+<li>foo</li>
+<li>bar</li>
+</ul>
+<h3>Anwenden (K3)</h3>
+<p>hammwanich</p>
+<h3>Analysieren (K4)</h3>
+<p>gibbetsooch</p>
+
+    
+</div>
+
+
+    <h2 id="standard-markdown">Standard-Markdown</h2>
+<h3 id="stichpunkte">Stichpunkte</h3>
+<ul>
+<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+<ul>
+<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</li>
+<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</li>
+</ul>
+</li>
+<li>sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+a)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...
+b)  sed diam nonumy eirmod tempor invidunt ut labore et dolore ...</li>
+<li>magna aliquyam erat, sed diam voluptua.
+<ol>
+<li>magna aliquyam erat, sed diam voluptua.</li>
+<li>magna aliquyam erat, sed diam voluptua.</li>
+</ol>
+</li>
+</ul>
+<p>Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., ...</p>
+<h3 id="hervorhebungen">Hervorhebungen</h3>
+<ul>
+<li>Use <code>*italic*</code> to <em>emphasize</em> in Markdown</li>
+<li>Use <code>**bold**</code> to <strong>emphasize</strong> in Markdown</li>
+</ul>
+<h3 id="quotes">Quotes</h3>
+<blockquote>
+<p>Artificial Intelligence is the study of how to make computers do things at
+which, at the moment, people are better.</p>
+<p>-- Elaine Rich (&quot;Artificial Intelligence&quot;, McGraw-Hill, 1983)</p>
+</blockquote>
+<h2 id="abbildungen">Abbildungen</h2>
+<h3 id="lokale-abbildungen-mit-markdown">Lokale Abbildungen mit Markdown</h3>
+<div class="center" style="width:auto;height:auto;"><figure><img src="images/somefig.png" alt="Bildunterschrift"><figcaption><h4>Bildunterschrift</h4></figcaption></figure></div>
+<h3 id="lokale-abbildungen-mit-shortcodes">Lokale Abbildungen mit Shortcodes</h3>
+<figure><img src="images/somefig.png"/><figcaption>
+            <h4>Bildunterschrift</h4>
+        </figcaption>
+</figure>
+<h2 id="code-und-syntax-highlighting">Code und Syntax-Highlighting</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">  <span style="color:#75715e">/*
+</span><span style="color:#75715e">   * cHelloWorld.c
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+      printf(<span style="color:#e6db74">&#34;Hello World from C  :-)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  }
+</code></pre></div><p>Well, inline code like <code>int main()</code> works too :)
+Also with syntax highlighting like <code>int main()</code> ...</p>
+<h2 id="mathe-und-formeln">Mathe und Formeln</h2>
+<h3 id="inline-math">Inline Math</h3>
+<ul>
+<li>Aktivierung Neuron <span>$j$</span>: <span>$a_j = \sum_i w_{ji} z_i$</span></li>
+<li>Ausgabe von Neuron <span>$j$</span>: <span>$z_j = g(a_j)$</span></li>
+<li>Transferfunktion: <span>$g(a) = 1/(1+\exp(-a))$</span></li>
+<li>Ableitung: <span>$g'(a) = g(a)(1-g(a))$</span></li>
+<li>Ausgabe-Schicht: Index <span>$k$</span>: <span>$y_k = z_k = g(a_k) = g(\sum_j w_{kj} z_j)$</span></li>
+<li>Hidden Layer: Index <span>$j$</span>: <span>$z_j = g(a_j) = g(\sum_i w_{ji} z_i)$</span></li>
+<li>Eingabe-Schicht: Index <span>$i$</span>: <span>$z_i = x_i$</span></li>
+<li><span>$w_{kj}$</span>: Gewicht gehört zu Neuron <span>$k$</span>, Verbindung zu Neuron <span>$j$</span></li>
+</ul>
+<h3 id="display-math">Display Math</h3>
+<ul>
+<li>
+<p><strong>Fehler</strong>: Summe über alle Ausgabeneurone</p>
+<div>$$
+    E = \sum_d E^{(d)}
+$$</div>
+mit
+<div>$$
+    E^{(d)} = \dfrac{1}{2} \sum_k (y_k^{(d)} - t_k^{(d)})^2
+$$</div>
+</li>
+<li>
+<p><strong>Lernregel (Gradientenabstieg)</strong></p>
+<div>$$
+    w_{ji} \gets w_{ji} + \Delta w_{ji}
+$$</div>
+mit
+<div>$$
+    \Delta w_{ji} = -\eta \dfrac{\partial E}{\partial w_{ji}}
+$$</div>
+</li>
+</ul>
+<p>Unterstützung für <a href="https://www.mathjax.org/">MathJax</a> muss erst noch über Partials implementiert werden. Hier eine <a href="https://geoffruddock.com/math-typesetting-in-hugo/">Anleitung</a>.</p>
+<h2 id="listings-und-math-markdown-ohne-manuelle-skalierung">Listings und Math: Markdown (ohne manuelle Skalierung)</h2>
+<div class="center" style="width:auto;height:auto;"><figure><img src="images/fancy2.png" alt="Listings mit Mathescape"><figcaption><h4>Listings mit Mathescape</h4></figcaption></figure></div>
+<h2 id="listings-und-math-pandoc">Listings und Math: Pandoc</h2>
+<div class="center" style="width:60%;height:auto;"><figure><img src="images/fancy2.png" alt="Listings mit Mathescape"><figcaption><h4>Listings mit Mathescape</h4></figcaption></figure></div>
+<h2 id="listings-und-math-pandoc-empty-titlealt">Listings und Math: Pandoc (empty title/alt)</h2>
+<div class="center" style="width:60%;height:auto;"><figure><img src="images/fancy2.png" alt=""><figcaption><h4></h4></figcaption></figure></div>
+<h2 id="verlinkungen">Verlinkungen</h2>
+<ul>
+<li>Links nach außen: <a href="https://pandoc.org/">Pandoc</a></li>
+<li>Links im Dokument (automatische Label): <a href="#stichpunkte">&quot;Stichpunkte&quot;</a></li>
+<li>Links auf andere Dokumente:
+<ul>
+<li>[Fahrplan](/kitest/orga/fahrplan/)</li>
+<li>[Note und Credits](/kitest/orga/note_und_credits/)</li>
+<li>[Syllabus](/kitest/orga/syllabus/)</li>
+<li>[Reading](/kitest/orga/reading/)</li>
+<li>[Reading]( /kitest/orga/reading/ )</li>
+<li><code>&lt;a href='/kitest/orga/reading/'&gt;</code>{=html}Reading<code>&lt;/a&gt;</code>{=html}</li>
+</ul>
+</li>
+</ul>
+<h2 id="tabellen">Tabellen</h2>
+<table>
+<thead>
+<tr>
+<th>KW</th>
+<th>VL</th>
+<th>Praktikum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>45</td>
+<td>[Orga FHB] (<strong>Zoom</strong>) || [Einführung KI] | [Problemlösen]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Suche: [Tiefensuche] | [Breitensuche] | [Branch-and-Bound und Best First] | [A*]</td>
+<td>[FHB01: Grenzen der KI, Problemraum (T)]</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Lokale Suche: [Gradientenabstieg und Simulated Annealing] | [Evolutionäre/Genetische Algorithmen]</td>
+<td>[FHB02: Tiefen- und Breitensuche, A-Stern (T)]</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Spiele: [Minimax] | [Minimax Erweiterungen] | [Alpha-Beta-Pruning]</td>
+<td>[FHB03: Lokale Suche: Genetische Algorithmen (T,I)]</td>
+</tr>
+<tr>
+<td>49</td>
+<td>[Constraints] | [Backtracking, Heuristiken] | [Forward Checking und AC-3]</td>
+<td>[FHB04: Spiele: Minimax, Alpha-Beta-Pruning (T,I)]</td>
+</tr>
+<tr>
+<td>50</td>
+<td>[Machine Learning 101] | Entscheidungsbäume: [CAL2, Pruning] | [CAL3] | [Entropie] | [ID3 und C4.5]</td>
+<td>[FHB05: Constraints (AIMA), AC-3-Handsimulation (T,I)]</td>
+</tr>
+<tr>
+<td>51</td>
+<td>[Wahrscheinlichkeitstheorie 101] | Textklassifikation mit [Naive Bayes]</td>
+<td>[FHB06: Entscheidungsbäume (T)]</td>
+</tr>
+<tr>
+<td>52</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>53</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>01</td>
+<td>[ML Einführung, Vektorisierung, Perzeptron Lernalgorithmus]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>02</td>
+<td>[Lineare Regression, Fehlerfunktion, Mean Square Error (MSE), Gradientenabstieg]</td>
+<td>[TDU01: Perzeptron]</td>
+</tr>
+<tr>
+<td>03</td>
+<td>[Logistische Regression, Overfitting, Generalisierung, Regularisierung, Train-Dev-Test Sets]</td>
+<td>[TDU02: Lineare Regression]</td>
+</tr>
+<tr>
+<td>04</td>
+<td>[Nichtlineare Modelle] | [Overfitting und Regularisierung] | [Multi-Layer Perceptron (MLP)] | [Backpropagation] | [Backpropagation (Nachtrag)] || [Rückblick] | Umfrage | [Klausurvorbereitung] (<strong>Zoom</strong>)</td>
+<td>[TDU03: Logistische Regression und MLP]</td>
+</tr>
+</tbody>
+</table>
+<p>Es gehen lt. Doku nur <strong>Pipe-Tables</strong>?!</p>
+<h2 id="tooggles-showme">Tooggles (&quot;ShowMe&quot;)</h2>
+<p>Mit dem Shortcode <code>expand</code> können Toggles realisiert werden.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand me...
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Kurzer Toggle ohne extra Namen ...</p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Was ist die Antwort?
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Toggle mit Namen ...</p>
+<h3 id="hier-überschrift-im-toggle">Hier Überschrift im Toggle</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">  <span style="color:#75715e">/*
+</span><span style="color:#75715e">   * cHelloWorld.c
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+      printf(<span style="color:#e6db74">&#34;Hello World from C  :-)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  }
+</code></pre></div>
+    </div>
+</div>
+<p><strong>Anmerkung</strong>: Laut <a href="https://gohugo.io/content-management/shortcodes/">https://gohugo.io/content-management/shortcodes/</a> werden Shortcodes mit <code>%</code> interpretiert und gerendert, während bei der Verwendung von <code>&lt;</code> der eingeschlossene Code kein weiteres Rendering erfährt.
+<strong>Achtung</strong>: Es gibt scheinbar Shortcodes (<a href="#videos">&quot;Videos&quot;</a>), die nur mit <code>&lt;</code> funktionieren ...</p>
+
+    
+
+
+<div class="quizzes">
+    <h2>Quizzes ...</h2>
+    <ul>
+    
+        
+        
+        
+        <li>
+            <a href="https://kahoot.it/challenge/01262821?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629455219268" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Testquizz 1 (URL from &#39;Invite more Players&#39;)</strong></a>
+        </li>
+        
+    
+        
+        
+        
+        <li>
+            <a href="https://kahoot.it/challenge/01899073?challenge-id=8471c25d-77c6-4c83-b473-6edcacfcb770_1629456236499" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Testquizz 2 (URL from &#39;Invite more Players&#39;)</strong></a>
+        </li>
+        
+    
+    </ul>
+</div>
+
+
+    
+
+
+
+<div class="assignments">
+    <h2>Übungsblätter</h2>
+
+    <ul>
+    
+        
+        
+        <li>
+            <a href="https://ki-vorlesung.github.io/kitest/praktikum/blatt01/"><strong>Blatt 01</strong></a>
+            
+                
+            
+                
+                    
+                         (Abgabe: 14.10.)
+                    
+                
+            
+                
+                    
+                        
+                    
+                
+                    
+                         (Abgabe: 21.10.)
+                    
+                
+            
+        </li>
+        
+    
+    </ul>
+
+</div>
+
+
+    
+
+
+
+<div class="bib">
+    <h2>Literatur</h2>
+    <ul>
+    
+        
+        
+        
+            
+            
+            
+            
+            
+
+            
+            
+                
+                    
+                
+            
+            
+            
+            
+            
+            
+
+            <li id="id_Ertel2017">
+            
+                [Ertel2017] <strong>Introduction to artificial intelligence</strong>
+            
+            
+                <br>Ertel, W., Springer, 2017.
+                
+                    ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-3-319-58487-4" target="_blank" rel="nofollow noopener noreferrer">978-3-319-58487-4</a>.
+                
+                
+                    DOI <a href="https://doi.org/10.1007/978-3-319-58487-4" target="_blank" rel="nofollow noopener noreferrer">10.1007/978-3-319-58487-4</a>.
+                
+            
+            
+                <br><em>Kapitel 2 und 3</em>
+            
+            </li>
+        
+    
+        
+        
+        
+            
+            
+            
+            
+            
+
+            
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+            
+            
+            
+            
+            
+
+            <li id="id_Russell2020">
+            
+                [Russell2020] <a href="http://aima.cs.berkeley.edu" class="icon reading" target="_blank" rel="nofollow noopener noreferrer"><strong>Artificial intelligence: A modern approach</strong></a>
+            
+            
+                <br>Russell, S. und Norvig, P., Pearson, 2020.
+                
+                    ISBN <a href="https://www.digibib.net/openurl/Bi10?isbn=978-0134610993" target="_blank" rel="nofollow noopener noreferrer">978-0134610993</a>.
+                
+                
+            
+            
+            </li>
+        
+    
+    </ul>
+</div>
+
+
+
+
+
+        
+        </div>
+        <p><div style="color: darkgray; font-size: smaller;">
+<p>
+    <!-- https://creativecommons.org/choose/ -->
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;margin:0;display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> Unless otherwise noted, <a href="https://github.com/KI-Vorlesung/Lecture">this work</a> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/cyildiz" property="cc:attributionName" rel="cc:attributionURL">Canan Yıldız</a>, <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/cagix" property="cc:attributionName" rel="cc:attributionURL">Carsten Gips</a>, and <a href="https://github.com/KI-Vorlesung/Lecture/graphs/contributors">contributors</a> is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+<br />
+    Icons by <a href="https://fontawesome.com/">Font Awesome</a>.
+    Built with <a href="https://github.com/jgm/pandoc">Pandoc</a> using <a href="https://github.com/cagix/pandoc-lecture">Pandoc-Lecture</a> and <a href="https://github.com/gohugoio/hugo">Hugo</a> using the <a href="https://github.com/matcornic/hugo-theme-learn">Hugo Learn Theme</a> (deriving from <a href="https://github.com/getgrav/grav">Grav</a>).
+</p>
+</div>
+</p>
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/kitest/js/clipboard.min.js?1634036685"></script>
+    <script src="/kitest/js/perfect-scrollbar.min.js?1634036685"></script>
+    <script src="/kitest/js/perfect-scrollbar.jquery.min.js?1634036685"></script>
+    <script src="/kitest/js/jquery.sticky.js?1634036685"></script>
+    <script src="/kitest/js/featherlight.min.js?1634036685"></script>
+    <script src="/kitest/js/highlight.pack.js?1634036685"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/kitest/js/modernizr.custom-3.6.0.js?1634036685"></script>
+    <script src="/kitest/js/learn.js?1634036685"></script>
+    <script src="/kitest/js/hugo-learn.js?1634036685"></script>
+    
+    
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </body>
+</html>
+

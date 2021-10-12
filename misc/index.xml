@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on </title>
+    <link>https://ki-vorlesung.github.io/kitest/misc/</link>
+    <description>Recent content in Misc on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Credits</title>
+      <link>https://ki-vorlesung.github.io/kitest/misc/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/misc/credits/</guid>
+      <description>Beim Generieren der Vortrags-Folien und der Webseiten für das Unterrichtsmaterial kommen einige externe Projekte zum Einsatz, die unter eigenen Lizenzen stehen und die nicht von der CC BY-SA 4.0 Lizenz dieses Projekts erfasst sind.
+Erzeugen der Folien Für das Erzeugen der Vortrags-Folien kommen u.a. folgende Projekte zum Einsatz:
+ Pandoc Pandoc-Lecture TeX Live Beamer Metropolis  Erzeugen der Webseiten Für die Vorverarbeitung des Materials werden die beiden Projekte eingesetzt:
+ Pandoc Pandoc-Lecture  Die Webseiten für das Unterrichtsmaterial werden mit folgenden Projekten erzeugt:</description>
+    </item>
+    
+    <item>
+      <title>Datenschutzerklärung</title>
+      <link>https://ki-vorlesung.github.io/kitest/misc/datenschutz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/misc/datenschutz/</guid>
+      <description>Hinweise zum Datenschutz: Cookies, Informationen, &amp;hellip; (TODO: zu klären mit ORCA-Team)</description>
+    </item>
+    
+    <item>
+      <title>Impressum</title>
+      <link>https://ki-vorlesung.github.io/kitest/misc/impressum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/misc/impressum/</guid>
+      <description>Hier kommt ein Impressum hin (TODO: zu klären mit ORCA-Team)</description>
+    </item>
+    
+  </channel>
+</rss>

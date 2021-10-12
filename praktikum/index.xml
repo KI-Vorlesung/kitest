@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Praktikum on </title>
+    <link>https://ki-vorlesung.github.io/kitest/praktikum/</link>
+    <description>Recent content in Praktikum on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/praktikum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blatt 01</title>
+      <link>https://ki-vorlesung.github.io/kitest/praktikum/blatt01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/praktikum/blatt01/</guid>
+      <description>Hier kommt der Inhalt für Blatt 01 hin &amp;hellip;
+Aufgabe 1: XYZ (2P) tbd
+Aufgabe 2: XYZ (3P) tbd
+Bonus: Wuppie (2P) Erstellen Sie &amp;hellip;
+ </description>
+    </item>
+    
+  </channel>
+</rss>

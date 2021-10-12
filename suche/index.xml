@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Suche on </title>
+    <link>https://ki-vorlesung.github.io/kitest/suche/</link>
+    <description>Recent content in Suche on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/suche/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Einführung</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/intro/</guid>
+      <description>Was ist (künstliche) Intelligenz? &amp;hellip;
+Definition Intelligenz &amp;hellip;
+Versuch einer Definition für &amp;ldquo;KI&amp;rdquo; &amp;hellip;
+Alan Turing 1950: Turing-Test &amp;hellip; begründet Zweige der KI
+Starke vs. schwache KI &amp;hellip;
+Typische Ansätze in der KI &amp;hellip;
+Kurzer Geschichtsüberblick &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Modellierung</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/modellierung/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/modellierung/</guid>
+      <description>Motivation &amp;hellip; Beispiel Staubsaugerwelt
+Modellierung Zustände, Aktionen, Problemgraph</description>
+    </item>
+    
+  </channel>
+</rss>

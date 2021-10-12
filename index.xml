@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KI W21 on </title>
+    <link>https://ki-vorlesung.github.io/kitest/</link>
+    <description>Recent content in KI W21 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language><atom:link href="https://ki-vorlesung.github.io/kitest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Einführung</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/intro/</guid>
+      <description>Motivation: Einfärben von Landkarten &amp;hellip; Beispiel Map-Coloring-Problem
+Problem &amp;hellip;
+Lösung &amp;hellip;
+Formalisierung &amp;hellip;
+Definition: Constraint Satisfaction Problem (CSP) &amp;hellip;
+Constraint-Graph &amp;hellip;
+Constraints und Arität &amp;hellip;
+Unterscheidung Wertebereiche &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Einführung</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/intro/</guid>
+      <description>Was ist (künstliche) Intelligenz? &amp;hellip;
+Definition Intelligenz &amp;hellip;
+Versuch einer Definition für &amp;ldquo;KI&amp;rdquo; &amp;hellip;
+Alan Turing 1950: Turing-Test &amp;hellip; begründet Zweige der KI
+Starke vs. schwache KI &amp;hellip;
+Typische Ansätze in der KI &amp;hellip;
+Kurzer Geschichtsüberblick &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning 101</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/mlbasics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/mlbasics/</guid>
+      <description>Was ist Lernen? &amp;hellip;
+Warum Lernen? &amp;hellip;
+Learning Agent &amp;hellip;
+Feedback während des Lernens &amp;hellip;
+Beispiele &amp;hellip;
+Lernen durch Beobachten: Lernen einer Funktion $\operatorname{f}$ &amp;hellip;
+Konstruieren einer konsistenten Hypothese &amp;hellip;
+Occam&amp;rsquo;s Razor &amp;hellip;
+Trainingsdaten und Merkmalsvektoren &amp;hellip;
+Beispiel &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Optimale Spiele</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/optimalespiele/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/optimalespiele/</guid>
+      <description>Backgammon: Weiss hat 6+5 gewürfelt und hat 4 legale Züge &amp;hellip;
+Motivation: Unterschied zu Suche?! &amp;hellip;
+Spiele und Umgebungen &amp;hellip;
+Brettspiele sind interessant für KI &amp;hellip;
+Eigenschaften guter Spielalgorithmen &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Suche mit Branch-and-Bound</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/informiert/branchandbound/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/informiert/branchandbound/</guid>
+      <description>Branch-and-Bound &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Suche mit Tiefensuche</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/uninformiert/tiefensuche/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/uninformiert/tiefensuche/</guid>
+      <description>Tiefensuche &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Test der verschiedenen Markdown-Elemente</title>
+      <link>https://ki-vorlesung.github.io/kitest/tbd/testseite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/tbd/testseite/</guid>
+      <description>Some Chapter title Lorem Ipsum.
+Math $E = m c^2$
+Statt $P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)|}{|S(h)|}$ nutze $P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)| + m \cdot p_i}{|S(h)| + m}$
+$$ \begin{array}{rcl} h_{MAP} &amp;=&amp; \operatorname{argmax}_{h \in H} P(h|D_1, ..., D_n) \\\\[5pt] &amp;=&amp; \operatorname{argmax}_{h \in H} P(h) \prod_i P(D_i|h) \\\\[5pt] &amp;=&amp; \operatorname{argmax}_{h \in H} [\log(P(h)) + \sum_i \log(P(D_i|h))] \end{array} $$  Entscheidungsbaum $\alpha$: $$ \alpha = \left\{ \begin{array}{ll} \kappa &amp; \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\ x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) &amp; x_t \text{ Testattribut mit } m_t \text{ Ausprägungen} \end{array} \right.</description>
+    </item>
+    
+    <item>
+      <title>CAL2</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/cal2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/cal2/</guid>
+      <description>Entscheidungsbäume: Klassifikation ...
+Definition Entscheidungsbaum   Erinnerung: Merkmalsvektor für Objekt $v$:
+$$ \mathbf{x}(v) = (x_1, x_2, \ldots, x_n) $$  $n$ Merkmale (Attribute) Attribut $x_t$ hat $m_t$ mögliche Ausprägungen Ausprägung von $v$ bzgl. $x_t$: $\quad x_t(v) = i \quad$ (mit $i = 1 \ldots m_t$)    Alphabet für Baum:
+$$ \{x_t |\; t=1,\ldots,n\} \cup \{\kappa |\; \kappa = *,A,B,C,\ldots\} \cup \{(,)\} $$   Entscheidungsbaum $\alpha$:
+$$ \alpha = \left\{ \begin{array}{ll} \kappa &amp; \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\ x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) &amp; x_t \text{ Testattribut mit } m_t \text{ Ausprägungen} \end{array} \right.</description>
+    </item>
+    
+    <item>
+      <title>Lösen von diskreten CSP</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/tiefensuche/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/tiefensuche/</guid>
+      <description>Suche mit TS und Backtracking &amp;hellip; Tiefensuche angewendet</description>
+    </item>
+    
+    <item>
+      <title>Minimax</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/minimax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/minimax/</guid>
+      <description>Spiele als Suchproblem: Minimax &amp;hellip;
+Minimax-Algorithmus: Funktionen für MAX- und MIN-Knoten &amp;hellip;
+Minimax-Algorithmus: Sonderbehandlung Startknoten &amp;hellip;
+Minimax Beispiel &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Modellierung</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/modellierung/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/modellierung/</guid>
+      <description>Motivation &amp;hellip; Beispiel Staubsaugerwelt
+Modellierung Zustände, Aktionen, Problemgraph</description>
+    </item>
+    
+    <item>
+      <title>Suche mit Best First</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/informiert/bestfirst/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/informiert/bestfirst/</guid>
+      <description>Best First &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Suche mit Breitensuche</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/uninformiert/breitensuche/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/uninformiert/breitensuche/</guid>
+      <description>Breitensuche &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Test2: Ordner statt Datei</title>
+      <link>https://ki-vorlesung.github.io/kitest/tbd/test2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/tbd/test2/</guid>
+      <description>Lokale Abbildungen mit Markdown Lokale Abbildungen mit Shortcodes  Bildunterschrift   Achtung: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt tbd/testseite.md und referenziert eine Abbildung images/somefig.png. Dann muss diese im Ordner tbd/testseite/images/somefig.png liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!
+Anmerkung: Lt. der Doku sind die folgenden Strukturen äquivalent:
+content/ |___ _index.md &amp;lt;= mit Unterstrich (Chapter) |___ mypage.</description>
+    </item>
+    
+    <item>
+      <title>Heuristiken</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/heuristiken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/heuristiken/</guid>
+      <description>Auswahl der Variablen &amp;hellip;
+Gleichstand &amp;hellip;
+Auswahl der Werte &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Heuristiken</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/heuristiken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/heuristiken/</guid>
+      <description>Wenn die Zeit nicht reicht: Suchtiefe begrenzen &amp;hellip;
+Beispiel Schach &amp;hellip;
+Minimax mit mehreren Spielern &amp;hellip;
+Zufallsspiele &amp;hellip;
+Minimax mit Zufallsspielen: ZUFALLS-Knoten &amp;hellip;
+Minimax mit Zufall: Expectimax &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Pruning</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/pruning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/pruning/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Suche mit A*</title>
+      <link>https://ki-vorlesung.github.io/kitest/suche/informiert/astar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/suche/informiert/astar/</guid>
+      <description>A* ...</description>
+    </item>
+    
+    <item>
+      <title>Test3: Pure HTML</title>
+      <link>https://ki-vorlesung.github.io/kitest/tbd/test3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/tbd/test3/</guid>
+      <description>Mit Pandoc HTML erzeugen und in Hugo einbinden  Leeres Pandoc-Template body.html erzeugen, Inhalt: eine einzige Zeile mit $body Aus einer Markdown-Datei eine self-contained HTML-Datei machen: pandoc --template body.html --self-contained --standalone index.md -o test3.html Der neuen HTML-Datei einen YAML-Header geben, sonst taucht das Ergebnis nicht im Menü auf!   Vorteil: Bei diesem Vorgehen muss man keine Rücksicht auf Ordnerstrukturen von Hugo nehmen, die Abbildungen etc. sind bereits in das HTML eingebettet.</description>
+    </item>
+    
+    <item>
+      <title>Alpha-Beta-Pruning</title>
+      <link>https://ki-vorlesung.github.io/kitest/spiele/alphabetapruning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/spiele/alphabetapruning/</guid>
+      <description>Verbesserung Minimax-Algorithmus &amp;hellip;
+Beobachtungen &amp;hellip; alpha-beta-Pruning
+Pruning-Regeln &amp;hellip;
+alpha-beta-Pruning &amp;ndash; Der Algorithmus (Skizze) &amp;hellip;
+alpha-beta-Pruning &amp;ndash; Eigenschaften &amp;hellip;
+Verbesserungen für alpha-beta-Pruning &amp;hellip;
+Beispiele &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>CAL3</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/cal3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/cal3/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Kantenkonsistenz und AC-3</title>
+      <link>https://ki-vorlesung.github.io/kitest/csp/ac3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/csp/ac3/</guid>
+      <description>Problem bei BT-Suche &amp;hellip;
+INFERENCE: Vorab-Prüfung (Forward Checking) &amp;hellip;
+Definition Kantenkonsistenz (Arc Consistency) &amp;hellip;
+AC-3 Algorithmus: Herstellen von Kantenkonsistenz &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Test-Vorlesung für Carsten</title>
+      <link>https://ki-vorlesung.github.io/kitest/tbd/lecture-cg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/tbd/lecture-cg/</guid>
+      <description>Standard-Markdown Stichpunkte  Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr,   sed diam nonumy eirmod tempor invidunt ut labore et dolore ... a) sed diam nonumy eirmod tempor invidunt ut labore et dolore ... b) sed diam nonumy eirmod tempor invidunt ut labore et dolore ... magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Entropie</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/entropie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/entropie/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Test-Vorlesung für Canan</title>
+      <link>https://ki-vorlesung.github.io/kitest/tbd/lecture-cy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/tbd/lecture-cy/</guid>
+      <description>Zusammenfassung / Recap Hier könnte eine längere oder kürzere Zusammenfassung (&amp;ldquo;Recap&amp;rdquo;) stehen. Sogar mit weiterer Untergliederung (H3 und tiefer) &amp;hellip;
+  Listings mit Mathescape    Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border Listings mit Mathescape and border         </description>
+    </item>
+    
+    <item>
+      <title>ID3 und C4.5</title>
+      <link>https://ki-vorlesung.github.io/kitest/dtl/id3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/dtl/id3/</guid>
+      <description>&amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Test-Vorlesung für BC</title>
+      <link>https://ki-vorlesung.github.io/kitest/tbd/lecture-bc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/tbd/lecture-bc/</guid>
+      <description>Wiederholung Folie: Frage Lorem Ipsum.
+Motivation Folie: Idee/Problem Lorem Ipsum.
+Themen für heute Lorem Ipsum.
+Thema I Folie 1 ...
+Folie 2 ...
+Folie 3 ...
+Thema II Folie 1 ...
+Folie 2 ...
+Folie 3 ...
+Wrap-Up Wrap-Up Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Blatt 01</title>
+      <link>https://ki-vorlesung.github.io/kitest/praktikum/blatt01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/praktikum/blatt01/</guid>
+      <description>Hier kommt der Inhalt für Blatt 01 hin &amp;hellip;
+Aufgabe 1: XYZ (2P) tbd
+Aufgabe 2: XYZ (3P) tbd
+Bonus: Wuppie (2P) Erstellen Sie &amp;hellip;
+ </description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>https://ki-vorlesung.github.io/kitest/misc/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/misc/credits/</guid>
+      <description>Beim Generieren der Vortrags-Folien und der Webseiten für das Unterrichtsmaterial kommen einige externe Projekte zum Einsatz, die unter eigenen Lizenzen stehen und die nicht von der CC BY-SA 4.0 Lizenz dieses Projekts erfasst sind.
+Erzeugen der Folien Für das Erzeugen der Vortrags-Folien kommen u.a. folgende Projekte zum Einsatz:
+ Pandoc Pandoc-Lecture TeX Live Beamer Metropolis  Erzeugen der Webseiten Für die Vorverarbeitung des Materials werden die beiden Projekte eingesetzt:
+ Pandoc Pandoc-Lecture  Die Webseiten für das Unterrichtsmaterial werden mit folgenden Projekten erzeugt:</description>
+    </item>
+    
+    <item>
+      <title>Datenschutzerklärung</title>
+      <link>https://ki-vorlesung.github.io/kitest/misc/datenschutz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/misc/datenschutz/</guid>
+      <description>Hinweise zum Datenschutz: Cookies, Informationen, &amp;hellip; (TODO: zu klären mit ORCA-Team)</description>
+    </item>
+    
+    <item>
+      <title>Fahrplan</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/fahrplan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/fahrplan/</guid>
+      <description>Hier kommt eine Tabelle hin: In welcher Woche gibt es welches Thema, verlinkt auf die Unterseiten.
+   Woche Vorlesung Praktikum/Übung      1 (KW40)     ORGA &amp;gt; Syllabus          2 (KW41)     SUCHE &amp;gt; Einführung (cagi) Hinweis: Classes go all-virtual   SUCHE &amp;gt; INFORMIERT &amp;gt; Suche mit A*      Blatt 01 (Abgabe: 14.</description>
+    </item>
+    
+    <item>
+      <title>Impressum</title>
+      <link>https://ki-vorlesung.github.io/kitest/misc/impressum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/misc/impressum/</guid>
+      <description>Hier kommt ein Impressum hin (TODO: zu klären mit ORCA-Team)</description>
+    </item>
+    
+    <item>
+      <title>Lernziele</title>
+      <link>https://ki-vorlesung.github.io/kitest/tbd/test5/outcomes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/tbd/test5/outcomes/</guid>
+      <description>Kennen (K1)  Wuppie Fluppie  Verstehen (K2)  foo bar  Anwenden (K3) hammwanich
+Analysieren (K4) gibbetsooch</description>
+    </item>
+    
+    <item>
+      <title>Note_und_credits</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/note_und_credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/note_und_credits/</guid>
+      <description>Hinweise zur Prüfungsgestaltung: Prüfungsform, Ablauf, Bedingungen &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Reading</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/reading/</guid>
+      <description>Was brauche ich? Literatur &amp;hellip; &amp;hellip;
+Was brauche ich noch? Tools &amp;hellip; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Syllabus</title>
+      <link>https://ki-vorlesung.github.io/kitest/orga/syllabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ki-vorlesung.github.io/kitest/orga/syllabus/</guid>
+      <description>Worum geht&amp;rsquo;s hier? Welche Inhalte kommen in diesem Semester in KI dran? Und welche explizit nicht? Was ist das Ziel der Veranstaltung?
+Überblick Modulinhalte &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>
