@@ -31,7 +31,7 @@ $$
     $$
         \alpha = \left\lbrace \begin{array}{ll}
             \kappa  & \text{Terminalsymbole: } \kappa = \ast,A,B, \ldots \\
-            x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Ausprägungen}
+            x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Auspr\"agungen}
         \end{array} \right.
     $$
 
