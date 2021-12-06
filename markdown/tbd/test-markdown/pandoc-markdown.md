@@ -29,6 +29,7 @@ $$
 $$
 
 *   **Entscheidungsbaum** $\alpha$:
+
     $$
         \alpha = \left\lbrace \begin{array}{ll}
             \kappa  & \text{Terminalsymbole: } \kappa = \ast,A,B, \ldots \\
@@ -116,5 +117,3 @@ Also with syntax highlighting like `int main()`{.c} ...
 | 02 | [Lineare Regression, Fehlerfunktion, Mean Square Error (MSE), Gradientenabstieg]                                                                                                                                   | [TDU01: Perzeptron]                                    |
 | 03 | [Logistische Regression, Overfitting, Generalisierung, Regularisierung, Train-Dev-Test Sets]                                                                                                                       | [TDU02: Lineare Regression]                            |
 | 04 | [Nichtlineare Modelle] \| [Overfitting und Regularisierung] \| [Multi-Layer Perceptron (MLP)] \| [Backpropagation] \| [Backpropagation (Nachtrag)] \|\| [Rückblick] \| Umfrage \| [Klausurvorbereitung] (**Zoom**) | [TDU03: Logistische Regression und MLP]                |
-
-Es gehen lt. Doku nur **Pipe-Tables**?!
