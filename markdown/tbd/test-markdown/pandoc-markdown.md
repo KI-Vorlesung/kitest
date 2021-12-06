@@ -5,7 +5,8 @@ title: "Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)"
 
 
 <!--
-pandoc -s --webtex --toc --toc-depth=2 --strip-comments -t gfm  pandoc-markdown.md  -o gh-markdown.md
+pandoc -s --webtex --toc --toc-depth=2 --strip-comments -t gfm    pandoc-markdown.md  -o gh-markdown.md
+pandoc -s          --toc --toc-depth=2 --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
 -->
 
 
