@@ -66,7 +66,7 @@ $$
     $$
 
 ## Images
-![Sky](images/somefig.png#height=50px)
+![Sky](images/somefig.png){:height="50%" width="50%"}
 
 ## Data Table
 `{{< schedule >}}`{=markdown}
