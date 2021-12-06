@@ -44,13 +44,13 @@ nutze
     ![\\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha"):
 
     ![
-        \\alpha = \\left\\{ \\begin{array}{ll}
-            \\kappa  & \\text{Terminalsymbole: } \\kappa = \*,A,B, \\ldots \\\\
+        \\alpha = \\left\\lbrace \\begin{array}{ll}
+            \\kappa  & \\text{Terminalsymbole: } \\kappa = \\ast,A,B, \\ldots \\\\
             x_t(\\alpha_1, \\alpha_2, \\ldots, \\alpha\_{m_t}) & x_t \\text{ Testattribut mit } m_t \\text{ Ausprägungen}
         \\end{array} \\right.
-    ](https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Calpha%20%3D%20%5Cleft%5C%7B%20%5Cbegin%7Barray%7D%7Bll%7D%0A%20%20%20%20%20%20%20%20%5Ckappa%20%20%26%20%5Ctext%7BTerminalsymbole%3A%20%7D%20%5Ckappa%20%3D%20%2A%2CA%2CB%2C%20%5Cldots%20%5C%5C%0A%20%20%20%20%20%20%20%20x_t%28%5Calpha_1%2C%20%5Calpha_2%2C%20%5Cldots%2C%20%5Calpha_%7Bm_t%7D%29%20%26%20x_t%20%5Ctext%7B%20Testattribut%20mit%20%7D%20m_t%20%5Ctext%7B%20Auspr%C3%A4gungen%7D%0A%20%20%20%20%5Cend%7Barray%7D%20%5Cright.%0A "
-        \alpha = \left\{ \begin{array}{ll}
-            \kappa  & \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\
+    ](https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Calpha%20%3D%20%5Cleft%5Clbrace%20%5Cbegin%7Barray%7D%7Bll%7D%0A%20%20%20%20%20%20%20%20%5Ckappa%20%20%26%20%5Ctext%7BTerminalsymbole%3A%20%7D%20%5Ckappa%20%3D%20%5Cast%2CA%2CB%2C%20%5Cldots%20%5C%5C%0A%20%20%20%20%20%20%20%20x_t%28%5Calpha_1%2C%20%5Calpha_2%2C%20%5Cldots%2C%20%5Calpha_%7Bm_t%7D%29%20%26%20x_t%20%5Ctext%7B%20Testattribut%20mit%20%7D%20m_t%20%5Ctext%7B%20Auspr%C3%A4gungen%7D%0A%20%20%20%20%5Cend%7Barray%7D%20%5Cright.%0A "
+        \alpha = \left\lbrace \begin{array}{ll}
+            \kappa  & \text{Terminalsymbole: } \kappa = \ast,A,B, \ldots \\
             x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Ausprägungen}
         \end{array} \right.
     ")
