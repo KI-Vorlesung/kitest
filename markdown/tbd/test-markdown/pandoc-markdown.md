@@ -25,6 +25,7 @@ jupyter:
 <!--
 pandoc -s --webtex --toc --toc-depth=2 --wrap=preserve --strip-comments -t gfm    pandoc-markdown.md  -o gh-markdown.md
 pandoc -s                              --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
+pandoc -s --slide-level=2              --wrap=preserve --strip-comments -t pptx   pandoc-markdown.md  -o gh-markdown.pptx
 -->
 
 
