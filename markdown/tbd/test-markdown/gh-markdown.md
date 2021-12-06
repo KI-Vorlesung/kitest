@@ -7,6 +7,8 @@ title: Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)
 -   [Math](#math)
 -   [Images](#images)
 -   [Stichpunkte](#stichpunkte)
+-   [Hervorhebungen](#hervorhebungen)
+-   [Quotes](#quotes)
 -   [Lokale Abbildungen](#lokale-abbildungen)
 -   [Abbildungen im Web](#abbildungen-im-web)
 -   [Skalierte Abbildungen](#skalierte-abbildungen)
@@ -73,12 +75,12 @@ nutze
 
 Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., …
 
-### Hervorhebungen
+## Hervorhebungen
 
 -   Use `*italic*` to *emphasize* in Markdown
 -   Use `**bold**` to **emphasize** in Markdown
 
-### Quotes
+## Quotes
 
 > Artificial Intelligence is the study of how to make computers do
 > things at which, at the moment, people are better.
