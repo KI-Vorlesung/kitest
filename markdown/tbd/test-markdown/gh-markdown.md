@@ -40,10 +40,7 @@ Lorem Ipsum.
 
 ![E = m c^2](https://latex.codecogs.com/png.latex?E%20%3D%20m%20c%5E2 "E = m c^2")
 
-Statt
-![P(D_i=x\|h) = \\dfrac{\|S\_{D_i}(x) \\cap S(h)\|}{\|S(h)\|}](https://latex.codecogs.com/png.latex?P%28D_i%3Dx%7Ch%29%20%3D%20%5Cdfrac%7B%7CS_%7BD_i%7D%28x%29%20%5Ccap%20S%28h%29%7C%7D%7B%7CS%28h%29%7C%7D "P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)|}{|S(h)|}")
-nutze
-![P(D_i=x\|h) = \\dfrac{\|S\_{D_i}(x) \\cap S(h)\| + m \\cdot p_i}{\|S(h)\| + m}](https://latex.codecogs.com/png.latex?P%28D_i%3Dx%7Ch%29%20%3D%20%5Cdfrac%7B%7CS_%7BD_i%7D%28x%29%20%5Ccap%20S%28h%29%7C%20%2B%20m%20%5Ccdot%20p_i%7D%7B%7CS%28h%29%7C%20%2B%20m%7D "P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)| + m \cdot p_i}{|S(h)| + m}")
+Statt ![P(D_i=x\|h) = \\dfrac{\|S\_{D_i}(x) \\cap S(h)\|}{\|S(h)\|}](https://latex.codecogs.com/png.latex?P%28D_i%3Dx%7Ch%29%20%3D%20%5Cdfrac%7B%7CS_%7BD_i%7D%28x%29%20%5Ccap%20S%28h%29%7C%7D%7B%7CS%28h%29%7C%7D "P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)|}{|S(h)|}") nutze ![P(D_i=x\|h) = \\dfrac{\|S\_{D_i}(x) \\cap S(h)\| + m \\cdot p_i}{\|S(h)\| + m}](https://latex.codecogs.com/png.latex?P%28D_i%3Dx%7Ch%29%20%3D%20%5Cdfrac%7B%7CS_%7BD_i%7D%28x%29%20%5Ccap%20S%28h%29%7C%20%2B%20m%20%5Ccdot%20p_i%7D%7B%7CS%28h%29%7C%20%2B%20m%7D "P(D_i=x|h) = \dfrac{|S_{D_i}(x) \cap S(h)| + m \cdot p_i}{|S(h)| + m}")
 
 ![
     \\begin{array}{rcl}
@@ -59,19 +56,18 @@ nutze
     \end{array}
 ")
 
--   **Entscheidungsbaum**
-    ![\\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha"):
+-   **Entscheidungsbaum** ![\\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\alpha"):
 
     ![
-        \\alpha = \\left\\lbrace \\begin{array}{ll}
-            \\kappa  & \\text{Terminalsymbole: } \\kappa = \\ast,A,B, \\ldots \\\\
-            x_t(\\alpha_1, \\alpha_2, \\ldots, \\alpha\_{m_t}) & x_t \\text{ Testattribut mit } m_t \\text{ Auspr\\"agungen}
-        \\end{array} \\right.
-    ](https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Calpha%20%3D%20%5Cleft%5Clbrace%20%5Cbegin%7Barray%7D%7Bll%7D%0A%20%20%20%20%20%20%20%20%5Ckappa%20%20%26%20%5Ctext%7BTerminalsymbole%3A%20%7D%20%5Ckappa%20%3D%20%5Cast%2CA%2CB%2C%20%5Cldots%20%5C%5C%0A%20%20%20%20%20%20%20%20x_t%28%5Calpha_1%2C%20%5Calpha_2%2C%20%5Cldots%2C%20%5Calpha_%7Bm_t%7D%29%20%26%20x_t%20%5Ctext%7B%20Testattribut%20mit%20%7D%20m_t%20%5Ctext%7B%20Auspr%5C%22agungen%7D%0A%20%20%20%20%5Cend%7Barray%7D%20%5Cright.%0A "
-        \alpha = \left\lbrace \begin{array}{ll}
-            \kappa  & \text{Terminalsymbole: } \kappa = \ast,A,B, \ldots \\
-            x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Auspr\"agungen}
-        \end{array} \right.
+    \\alpha = \\left\\lbrace \\begin{array}{ll}
+        \\kappa  & \\text{Terminalsymbole: } \\kappa = \\ast,A,B, \\ldots \\\\
+        x_t(\\alpha_1, \\alpha_2, \\ldots, \\alpha\_{m_t}) & x_t \\text{ Testattribut mit } m_t \\text{ Auspr\\"agungen}
+    \\end{array} \\right.
+    ](https://latex.codecogs.com/png.latex?%0A%5Calpha%20%3D%20%5Cleft%5Clbrace%20%5Cbegin%7Barray%7D%7Bll%7D%0A%20%20%20%20%5Ckappa%20%20%26%20%5Ctext%7BTerminalsymbole%3A%20%7D%20%5Ckappa%20%3D%20%5Cast%2CA%2CB%2C%20%5Cldots%20%5C%5C%0A%20%20%20%20x_t%28%5Calpha_1%2C%20%5Calpha_2%2C%20%5Cldots%2C%20%5Calpha_%7Bm_t%7D%29%20%26%20x_t%20%5Ctext%7B%20Testattribut%20mit%20%7D%20m_t%20%5Ctext%7B%20Auspr%5C%22agungen%7D%0A%5Cend%7Barray%7D%20%5Cright.%0A "
+    \alpha = \left\lbrace \begin{array}{ll}
+        \kappa  & \text{Terminalsymbole: } \kappa = \ast,A,B, \ldots \\
+        x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Auspr\"agungen}
+    \end{array} \right.
     ")
 
 ## Images
@@ -99,8 +95,8 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., …
 
 ## Quotes
 
-> Artificial Intelligence is the study of how to make computers do
-> things at which, at the moment, people are better.
+> Artificial Intelligence is the study of how to make computers do things at
+> which, at the moment, people are better.
 >
 > – Elaine Rich (“Artificial Intelligence”, McGraw-Hill, 1983)
 
@@ -110,8 +106,8 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., …
 
 ## Abbildungen im Web
 
-![Minion](https://octodex.github.com/images/minion.png) (Quelle:
-https://learn.netlify.app/en/cont/markdown/)
+![Minion](https://octodex.github.com/images/minion.png)
+(Quelle: https://learn.netlify.app/en/cont/markdown/)
 
 ## Skalierte Abbildungen
 
@@ -136,8 +132,8 @@ https://learn.netlify.app/en/cont/markdown/)
   }
 ```
 
-Well, inline code like `int main()` works too :) Also with syntax
-highlighting like `int main()` …
+Well, inline code like `int main()` works too :)
+Also with syntax highlighting like `int main()` …
 
 ## Tabellen
 
