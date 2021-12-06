@@ -24,7 +24,7 @@ jupyter:
 
 <!--
 pandoc -s --webtex --toc --toc-depth=2 --strip-comments -t gfm    pandoc-markdown.md  -o gh-markdown.md
-pandoc -s          --toc --toc-depth=2 --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
+pandoc                                 --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
 -->
 
 
