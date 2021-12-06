@@ -16,6 +16,7 @@ title: Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)
 -   [Abbildungen im Web](#abbildungen-im-web)
 -   [Skalierte Abbildungen](#skalierte-abbildungen)
 -   [Code und Syntax-Highlighting](#code-und-syntax-highlighting)
+-   [Code-Block](#code-block)
 -   [Tabellen](#tabellen)
 -   [Columns](#columns)
 
@@ -138,20 +139,53 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., …
 ## Code und Syntax-Highlighting
 
 ``` c
-  /*
-   * cHelloWorld.c
-   *
-   */
-  #include <stdio.h>
+/*
+ * cHelloWorld.c
+ *
+ */
+#include <stdio.h>
 
-  int main() {
-      printf("Hello World from C  :-)\n");
-      return 0;
-  }
+int main() {
+    printf("Hello World from C  :-)\n");
+    return 0;
+}
 ```
 
 Well, inline code like `int main()` works too :)
 Also with syntax highlighting like `int main()` …
+
+## Code-Block
+
+<div class="cell code" execution_count="1">
+
+``` python
+print("hello")
+```
+
+<div class="output stream stdout">
+
+    hello
+
+</div>
+
+</div>
+
+<div class="cell code" execution_count="2">
+
+``` c
+/*
+ * cHelloWorld.c
+ *
+ */
+#include <stdio.h>
+
+int main() {
+    printf("Hello World from C  :-)\n");
+    return 0;
+}
+```
+
+</div>
 
 ## Tabellen
 

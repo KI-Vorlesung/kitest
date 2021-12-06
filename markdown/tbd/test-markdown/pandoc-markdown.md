@@ -9,9 +9,10 @@ jupyter:
 
 
 <!--
-pandoc -s --webtex --toc --toc-depth=2 --wrap=preserve --strip-comments -t gfm    pandoc-markdown.md  -o gh-markdown.md
-pandoc -s                              --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
-pandoc -s --slide-level=2              --wrap=preserve --strip-comments -t pptx   pandoc-markdown.md  -o gh-markdown.pptx
+pandoc -s --webtex --toc --toc-depth=2               --wrap=preserve --strip-comments -t gfm    pandoc-markdown.md  -o gh-markdown.md
+pandoc -s -f markdown-raw_html-raw_tex+raw_attribute --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
+pandoc -s                                            --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
+pandoc -s --slide-level=2                            --wrap=preserve --strip-comments -t pptx   pandoc-markdown.md  -o gh-markdown.pptx
 -->
 
 
@@ -117,20 +118,51 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., ...
 ## Code und Syntax-Highlighting
 
 ```c
-  /*
-   * cHelloWorld.c
-   *
-   */
-  #include <stdio.h>
+/*
+ * cHelloWorld.c
+ *
+ */
+#include <stdio.h>
 
-  int main() {
-      printf("Hello World from C  :-)\n");
-      return 0;
-  }
+int main() {
+    printf("Hello World from C  :-)\n");
+    return 0;
+}
 ```
 
 Well, inline code like `int main()` works too :)
 Also with syntax highlighting like `int main()`{.c} ...
+
+## Code-Block
+
+:::::: {.cell .code execution_count=1}
+``` {.python}
+print("hello")
+```
+
+::: {.output .stream .stdout}
+```
+hello
+```
+:::
+::::::
+
+
+:::::: {.cell .code execution_count=2}
+```c
+/*
+ * cHelloWorld.c
+ *
+ */
+#include <stdio.h>
+
+int main() {
+    printf("Hello World from C  :-)\n");
+    return 0;
+}
+```
+::::::
+
 
 ## Tabellen
 
