@@ -66,7 +66,7 @@ $$
     $$
 
 ## Images
-![Sky](images/somefig.png)
+![Sky](images/somefig.png?height=50px)
 
 ## Data Table
 `{{< schedule >}}`{=markdown}
@@ -140,7 +140,7 @@ Dann könnte der Abbildungsordner unterhalb von `content/mypage/` liegen und wä
 
 ### Abbildungen im Web
 
-![Minion](https://octodex.github.com/images/minion.png)
+![Minion](https://octodex.github.com/images/minion.png?height=50px)
 (Quelle: https://learn.netlify.app/en/cont/markdown/)
 
 
