@@ -1,20 +1,6 @@
 ---
 author: Carsten Gips (FH Bielefeld)
 jupyter:
-  kernelspec:
-    display_name: Python 2
-    language: python
-    name: python2
-  language_info:
-    codemirror_mode:
-      name: ipython
-      version: 2
-    file_extension: .py
-    mimetype: text/x-python
-    name: python
-    nbconvert_exporter: python
-    pygments_lexer: ipython2
-    version: 2.7.15
   nbformat: 4
   nbformat_minor: 5
 title: Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)
@@ -31,6 +17,7 @@ title: Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)
 -   [Skalierte Abbildungen](#skalierte-abbildungen)
 -   [Code und Syntax-Highlighting](#code-und-syntax-highlighting)
 -   [Tabellen](#tabellen)
+-   [Columns](#columns)
 
 ## BlueArrow
 
@@ -180,3 +167,22 @@ Also with syntax highlighting like `int main()` …
 | 02  | \[Lineare Regression, Fehlerfunktion, Mean Square Error (MSE), Gradientenabstieg\]                                                                                                                                               | \[TDU01: Perzeptron\]                                    |
 | 03  | \[Logistische Regression, Overfitting, Generalisierung, Regularisierung, Train-Dev-Test Sets\]                                                                                                                                   | \[TDU02: Lineare Regression\]                            |
 | 04  | \[Nichtlineare Modelle\] \| \[Overfitting und Regularisierung\] \| \[Multi-Layer Perceptron (MLP)\] \| \[Backpropagation\] \| \[Backpropagation (Nachtrag)\] \|\| \[Rückblick\] \| Umfrage \| \[Klausurvorbereitung\] (**Zoom**) | \[TDU03: Logistische Regression und MLP\]                |
+
+## Columns
+
+<div class="columns">
+
+<div class="column" width="40%">
+
+Hinweis:
+![\\log_2 x = \\frac{\\log\_{10} x}{\\log\_{10} 2} = \\frac{\\log x}{\\log 2}](https://latex.codecogs.com/png.latex?%5Clog_2%20x%20%3D%20%5Cfrac%7B%5Clog_%7B10%7D%20x%7D%7B%5Clog_%7B10%7D%202%7D%20%3D%20%5Cfrac%7B%5Clog%20x%7D%7B%5Clog%202%7D "\log_2 x = \frac{\log_{10} x}{\log_{10} 2} = \frac{\log x}{\log 2}")
+
+</div>
+
+<div class="column" width="50%">
+
+![](images/somefig.png)
+
+</div>
+
+</div>

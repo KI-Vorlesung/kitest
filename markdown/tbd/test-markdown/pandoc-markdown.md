@@ -5,20 +5,6 @@ title: "Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)"
 jupyter:
   nbformat: 4
   nbformat_minor: 5
-  kernelspec:
-     display_name: Python 2
-     language: python
-     name: python2
-  language_info:
-     codemirror_mode:
-       name: ipython
-       version: 2
-     file_extension: ".py"
-     mimetype: "text/x-python"
-     name: "python"
-     nbconvert_exporter: "python"
-     pygments_lexer: "ipython2"
-     version: "2.7.15"
 ---
 
 
@@ -157,3 +143,16 @@ Also with syntax highlighting like `int main()`{.c} ...
 | 02 | [Lineare Regression, Fehlerfunktion, Mean Square Error (MSE), Gradientenabstieg]                                                                                                                                   | [TDU01: Perzeptron]                                    |
 | 03 | [Logistische Regression, Overfitting, Generalisierung, Regularisierung, Train-Dev-Test Sets]                                                                                                                       | [TDU02: Lineare Regression]                            |
 | 04 | [Nichtlineare Modelle] \| [Overfitting und Regularisierung] \| [Multi-Layer Perceptron (MLP)] \| [Backpropagation] \| [Backpropagation (Nachtrag)] \|\| [Rückblick] \| Umfrage \| [Klausurvorbereitung] (**Zoom**) | [TDU03: Logistische Regression und MLP]                |
+
+
+## Columns
+
+:::::: columns
+::: {.column width="40%"}
+Hinweis:
+$\log_2 x = \frac{\log_{10} x}{\log_{10} 2} = \frac{\log x}{\log 2}$
+:::
+::: {.column width="50%"}
+![](images/somefig.png)
+:::
+::::::
