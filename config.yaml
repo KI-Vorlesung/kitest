@@ -1,8 +1,9 @@
 baseURL: "https://ki-vorlesung.github.io/kitest/"
+canonifyURLs: true
 
 languageCode: "de-DE"
 metaDataFormat: "yaml"
-theme: "hugo-theme-learn"
+theme: "hugo-theme-relearn"
 
 contentDir: content
 publishDir: docs
@@ -19,6 +20,10 @@ params:
   disableSearch: true
   disableLandingPageButton: true
   disableMermaid: true
+  themeVariant:
+  - "green"
+  - "relearn-light"
+  - "relearn-dark"
 
 menu:
   shortcuts:
