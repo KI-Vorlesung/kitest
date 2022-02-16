@@ -3,10 +3,25 @@ author: Carsten Gips (FH Bielefeld)
 jupyter:
   nbformat: 4
   nbformat_minor: 5
+lang: de-DE
+link-citations: true
+references:
+- author:
+  - family: Ertel
+    given: W.
+  doi: 10.1007/978-3-319-58487-4
+  edition: 2nd edition
+  id: Ertel2017
+  isbn: 978-3-319-58487-4
+  issued: 2017
+  publisher: Springer
+  title: Introduction to artificial intelligence
+  type: book
 title: Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)
 ---
 
 -   [BlueArrow](#bluearrow)
+-   [Literatur](#literatur)
 -   [Math](#math)
 -   [Images](#images)
 -   [Stichpunkte](#stichpunkte)
@@ -19,10 +34,15 @@ title: Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)
 -   [Code-Block](#code-block)
 -   [Tabellen](#tabellen)
 -   [Columns](#columns)
+-   [Quellen](#quellen)
 
 ## BlueArrow
 
 Lorem Ipsum.
+
+## Literatur
+
+Wir nutzen ([Ertel 2017](#ref-Ertel2017)) als Hauptliteratur.
 
 ## Math
 
@@ -99,8 +119,8 @@ Geht das auch im Fließtext?
     -   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
     -   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 -   sed diam nonumy eirmod tempor invidunt ut labore et dolore …
-    1.  sed diam nonumy eirmod tempor invidunt ut labore et dolore …
-    2.  sed diam nonumy eirmod tempor invidunt ut labore et dolore …
+    1)  sed diam nonumy eirmod tempor invidunt ut labore et dolore …
+    2)  sed diam nonumy eirmod tempor invidunt ut labore et dolore …
 -   magna aliquyam erat, sed diam voluptua.
     1.  magna aliquyam erat, sed diam voluptua.
     2.  magna aliquyam erat, sed diam voluptua.
@@ -131,7 +151,8 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., …
 ## Skalierte Abbildungen
 
 <figure>
-<img src="images/somefig.png" style="width:10.0%" alt="Bildunterschrift" /><figcaption aria-hidden="true">Bildunterschrift</figcaption>
+<img src="images/somefig.png" style="width:10.0%" alt="Bildunterschrift" />
+<figcaption aria-hidden="true">Bildunterschrift</figcaption>
 </figure>
 
 <img src="images/somefig.png" style="width:10.0%" />
@@ -219,6 +240,18 @@ Hinweis:
 <div class="column" width="50%">
 
 ![](images/somefig.png)
+
+</div>
+
+</div>
+
+## Quellen
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-Ertel2017" class="csl-entry">
+
+Ertel, W. 2017. *Introduction to artificial intelligence*. 2nd edition. Springer. <https://doi.org/10.1007/978-3-319-58487-4>.
 
 </div>
 

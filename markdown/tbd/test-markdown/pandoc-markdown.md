@@ -1,24 +1,43 @@
 ---
 author: "Carsten Gips (FH Bielefeld)"
 title: "Test der verschiedenen Markdown-Elemente (Pandoc-Markdown)"
+lang: de-DE
+link-citations: true
 
 jupyter:
   nbformat: 4
   nbformat_minor: 5
+
+references:
+- author:
+  - family: Ertel
+    given: W.
+  doi: 10.1007/978-3-319-58487-4
+  edition: 2nd edition
+  id: Ertel2017
+  isbn: 978-3-319-58487-4
+  issued: 2017
+  publisher: Springer
+  title: Introduction to artificial intelligence
+  type: book
 ---
 
 
 <!--
-pandoc -s --webtex --toc --toc-depth=2               --wrap=preserve --strip-comments -t gfm    pandoc-markdown.md  -o gh-markdown.md
-pandoc -s -f markdown-raw_html-raw_tex+raw_attribute --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
-pandoc -s                                            --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
-pandoc -s --slide-level=2                            --wrap=preserve --strip-comments -t pptx   pandoc-markdown.md  -o gh-markdown.pptx
+pandoc -s --webtex --toc --toc-depth=2                                   --citeproc --wrap=preserve --strip-comments -t gfm    pandoc-markdown.md  -o gh-markdown.md
+pandoc -s -f markdown-raw_html-raw_tex+raw_attribute --toc --toc-depth=2 --citeproc --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown.ipynb
+pandoc -s --toc --toc-depth=2                                            --citeproc --wrap=preserve --strip-comments -t ipynb  pandoc-markdown.md  -o gh-markdown_.ipynb
+pandoc -s --slide-level=2 --toc --toc-depth=2                            --citeproc --wrap=preserve --strip-comments -t pptx   pandoc-markdown.md  -o gh-markdown.pptx
 -->
 
 
 ## BlueArrow
 
 Lorem \blueArrow Ipsum.
+
+## Literatur
+
+Wir nutzen [@Ertel2017] als Hauptliteratur.
 
 ## Math
 
@@ -194,3 +213,9 @@ $\log_2 x = \frac{\log_{10} x}{\log_{10} 2} = \frac{\log x}{\log 2}$
 ![](images/somefig.png)
 :::
 ::::::
+
+
+## Quellen
+
+::: {#refs}
+:::
