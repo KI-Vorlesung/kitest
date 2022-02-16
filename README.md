@@ -24,11 +24,11 @@ den Startpunkt für die Studis dar und zeigt auf diese Dateien/Branch.
 
 ## Fahrplan
 
-| Woche | Vorlesung                                                                   | Praktikum           | Literatur         |
-|-------|-----------------------------------------------------------------------------|---------------------|-------------------|
-| 01    | Wuppie (Jupyter v1) [skript][skript01] [video][video01] [slides][slides01]  | [Blatt 01][sheet01] | Ertel, Kapitel 12 |
-| 02    | Fluppie (Jupyter v2) [skript][skript02] [video][video02] [slides][slides02] | [Blatt 02][sheet02] | Ertel, Kapitel 13 |
-| 03    | Foo (Markdown) [skript][skript03] [video][video03] [slides][slides03]       | [Blatt 03][sheet03] | Ertel, Kapitel 14 |
+| Woche | Vorlesung                                                                         | Praktikum           | Literatur         |
+|-------|-----------------------------------------------------------------------------------|---------------------|-------------------|
+| 01    | Wuppie (Jupyter v1) [[skript]][skript01] [[video]][video01] [[slides]][slides01]  | [Blatt 01][sheet01] | Ertel, Kapitel 12 |
+| 02    | Fluppie (Jupyter v2) [[skript]][skript02] [[video]][video02] [[slides]][slides02] | [Blatt 02][sheet02] | Ertel, Kapitel 13 |
+| 03    | Foo (Markdown) [[skript]][skript03] [[video]][video03] [[slides]][slides03]       | [Blatt 03][sheet03] | Ertel, Kapitel 14 |
 
 Hinweis: Die Links sind nur teilweise sinnvoll und zeigen teilweise auf die
 selben Dokumente. Dies ist nur ein Test, ob das so funktionieren könnte.
