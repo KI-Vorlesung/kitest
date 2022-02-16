@@ -2,7 +2,9 @@
 
 Die Vorlesungsmaterialien werden als Markdown plus Bilder plus Code im Repo
 abgelegt. Da die Pipeline `.md > Pandoc > .md > Hugo > .html` etwas fragil
-ist, hier der Test, ob man alternativ nur mit Pandoc arbeiten kann.
+ist, hier der Test, ob man alternativ nur mit Pandoc arbeiten kann. Zusätzlich
+erfolgt die Bereitstellung ausschließlich über Github, d.h. die Vorschau
+von Github wird zwingend benötigt.
 
 Github kann einige Formate direkt als Vorschau rendern, dabei sind auch
 Markdown und Jupyter.
@@ -19,8 +21,13 @@ anlegen.
 Test: Die Materialien werden mit Pandoc übersetzt: Markdown (Formeln
 als Link nach https://latex.codecogs.com/) und Jupyter und in einem
 eigenen Branch eingebunden und bereit gestellt. Das Readme stellt dann
-den Startpunkt für die Studis dar und zeigt auf diese Dateien/Branch.
+den Startpunkt für die Studis dar und zeigt auf diese Dateien im
+entsprechenden Branch.
 
+Das bedeutet, dass das Readme im Gegensatz zu den anderen Dokumenten
+**semesterabhängig** ist. In der bisher genutzten Variante mit der
+Webseite wären dagegen die Konfigdatei `data/schedule.yaml` und im
+Markdown-Ordner die Einstiegsseite semesterabhängig.
 
 ## Fahrplan
 
