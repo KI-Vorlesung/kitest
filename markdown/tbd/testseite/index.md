@@ -107,7 +107,22 @@ Nummerierte Aufzählungen funktionieren scheinbar nur mit 1., 2., ...
 
 #### Lokale Abbildungen mit Markdown
 
+Lokal mit Bildunterschrift
+
 ![Bildunterschrift](images/somefig.png)
+
+Lokal ohne Bildunterschrift
+
+![](images/somefig.png)
+
+Web (Repo) mit Bildunterschrift
+
+![Bildunterschrift](https://raw.githubusercontent.com/KI-Vorlesung/kitest/test-struktur/markdown/tbd/testseite/images/somefig.png)
+
+Web (Repo) ohne Bildunterschrift
+
+![](https://raw.githubusercontent.com/KI-Vorlesung/kitest/test-struktur/markdown/tbd/testseite/images/somefig.png)
+
 
 #### Lokale Abbildungen mit Shortcodes
 
